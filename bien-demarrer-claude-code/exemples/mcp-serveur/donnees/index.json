@@ -1,0 +1,23 @@
+{
+  "description": "Catalogue SYNTHÉTIQUE de projets fictifs, pour les exemples du guide. Aucune donnée réelle.",
+  "projets": [
+    {
+      "id": "FICHE-001",
+      "titre": "Réservation de salles de réunion",
+      "statut": "en cours",
+      "fiche": "fiches/FICHE-001.md"
+    },
+    {
+      "id": "FICHE-002",
+      "titre": "Tableau de bord de la qualité des données",
+      "statut": "cadrage",
+      "fiche": "fiches/FICHE-002.md"
+    },
+    {
+      "id": "FICHE-003",
+      "titre": "Archivage des comptes rendus",
+      "statut": "terminé",
+      "fiche": "fiches/FICHE-003.md"
+    }
+  ]
+}

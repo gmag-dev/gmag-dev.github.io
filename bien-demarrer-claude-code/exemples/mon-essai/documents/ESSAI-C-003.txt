@@ -1,0 +1,8 @@
+Document fictif ESSAI-C-003, créé pour ce guide.
+Régie de l'eau de Rivelune (organisme fictif)
+Objet : échéancier de votre facture d'eau
+
+Madame, Monsieur,
+Votre facture du second semestre s'élève à 186,60 euros.
+Comme vous l'avez demandé, elle est répartie en trois prélèvements de 62,20 euros, les 15/01/2027, 15/02/2027 et 15/03/2027.
+Un prélèvement rejeté entraîne des frais de 7,50 euros.

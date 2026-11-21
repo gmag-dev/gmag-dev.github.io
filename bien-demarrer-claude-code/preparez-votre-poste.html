@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Préparez votre poste : Bien démarrer avec Claude Code</title>
+<style>
+:root{color-scheme:light dark;--bg:#f7f9fc;--text:#0d1520;--muted:#4a5a6e;--code:#eaf0f6;--border:#66768c;
+  --box-trap:#fde7ee;--bx-trap:#b8134f;--bx-tip:#a16207}
+@media (prefers-color-scheme: dark){:root{--bg:#0a0e14;--text:#e6edf3;--muted:#9fb0c3;--code:#111821;--border:#6b7a90;
+  --box-trap:#2c0f1b;--bx-trap:#ff5c8a;--bx-tip:#facc15}}
+body{margin:0;background:var(--bg);color:var(--text);font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,
+  "Helvetica Neue",Arial,sans-serif}
+main{max-width:44rem;margin:0 auto;padding:1.5rem 1rem 2.5rem}
+.version{color:var(--muted)}
+.box{border-left:5px solid var(--border);padding:.6rem .9rem .7rem;margin:1.1rem 0;border-radius:0 4px 4px 0}
+.box > :last-child{margin-bottom:0}
+.box-title{font-weight:700;margin:0 0 .3rem;font-size:.98rem}
+.box-warn{border-left-color:var(--bx-trap);background:var(--box-trap);border-left-width:6px}
+.box-tip{border-left-color:var(--bx-tip);background:color-mix(in srgb,#ca8a04 8%,transparent)}
+.box pre{background:var(--code);padding:.6rem .8rem;border-radius:4px;white-space:pre-wrap;overflow-wrap:anywhere}
+.retour{margin:0 0 1rem}
+.retour-bas{margin:2.4rem 0 0}
+@media print{.box{break-inside:avoid;border:1px solid #777;border-left-width:5px}.retour,.retour-bas{display:none}}
+</style>
+</head>
+<body>
+<main>
+<p class="retour"><a href="index.html">Retour au guide</a></p>
+<h1>Préparez votre poste</h1>
+<p class="version">Bien démarrer avec Claude Code, version 3.2.0+publique.web · 21 novembre 2026</p>
+<p>Cette page vous sert si votre ordinateur est fourni par votre employeur ou par une autre organisation. Chez vous, sur votre propre ordinateur et avec votre propre compte, vous n’en avez pas besoin : la page « Prérequis » du guide suffit.</p><div class="box box-warn" role="note" aria-labelledby="bx-poste-13"><p class="box-title" id="bx-poste-13"><span aria-hidden="true">⚠️</span> Attention</p>
+<p>Sur un ordinateur fourni par votre employeur ou par une autre organisation, n’installez rien de ce guide avant son accord : ni git, ni Python, ni Claude Code. Posez d’abord quatre questions à la personne qui gère le poste. Claude Code y est-il permis ? Avec quel compte ? Pouvez-vous installer vous-même un logiciel, Git for Windows et Python compris ? Le réseau de l’organisation demande-t-il un réglage, un proxy par exemple ? Ses règles passent avant ce guide (section 23.1 du guide). Des données de votre employeur ne passent que par le compte que votre organisation vous fournit pour cela, un compte commercial Team, Enterprise ou API : jamais par un compte que vous avez ouvert vous-même, ni par un abonnement Pro, Max ou Ultra, même payé par votre employeur. Qu’une installation passe sans droits d’administration ne veut pas dire qu’elle est permise. Si un installeur demande des droits que vous n’avez pas, si PowerShell refuse un script, ou si la connexion échoue sur le réseau de l’organisation, ne contournez rien : arrêtez-vous et posez la question.</p>
+</div>
+<div class="box box-tip" role="note" aria-labelledby="bx-poste-21"><p class="box-title" id="bx-poste-21"><span aria-hidden="true">💡</span> Conseil</p>
+<p>Le message à transmettre à la personne qui gère votre poste, à copier tel quel :</p>
+<pre><code class="language-text">Bonjour,
+Je voudrais essayer Claude Code, l'outil d'Anthropic, avec un guide de prise en main. Avant d'installer quoi que ce soit sur mon poste, pouvez-vous me dire :
+1. Claude Code est-il permis sur ce poste, et avec quel compte de l'organisation (Team, Enterprise ou API) ?
+2. Puis-je installer moi-même git (Git for Windows sous Windows) et Python 3, ou devez-vous le faire ?
+3. Le réseau demande-t-il un réglage, un proxy par exemple ?
+4. Quelles données de l'organisation ai-je le droit de lui confier ?
+Merci.</code></pre>
+</div>
+<p class="retour-bas"><a href="index.html">Retour au guide</a></p>
+</main>
+</body>
+</html>

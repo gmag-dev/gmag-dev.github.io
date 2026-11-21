@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "catalogue": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "-I",
+        "-B",
+        "${CATALOGUE_SERVEUR:-exemples/mcp-serveur/serveur_catalogue.py}"
+      ],
+      "env": {}
+    }
+  }
+}

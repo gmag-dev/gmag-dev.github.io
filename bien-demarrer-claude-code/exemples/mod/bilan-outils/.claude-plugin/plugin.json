@@ -1,0 +1,6 @@
+{
+  "name": "bilan-outils",
+  "version": "0.1.0",
+  "description": "Compte les appels d'outils de Claude par nom d'outil et ajoute la commande /bilan-outils. Lecture seule : aucun fichier, aucun processus, aucun réseau.",
+  "author": { "name": "Exemple du guide" }
+}

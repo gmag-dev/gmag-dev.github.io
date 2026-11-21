@@ -1,0 +1,11 @@
+# Robots qui collectent des textes pour entraîner des modèles : refusés.
+# Jetons lus le 2026-11-21 dans la documentation de chaque éditeur
+# (OpenAI, Anthropic, Google).
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+Disallow: /
+
+# Tous les autres robots, dont la recherche et la lecture à la demande : admis.
+User-agent: *
+Allow: /

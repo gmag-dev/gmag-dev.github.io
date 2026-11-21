@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "deny": [
+      "Edit(./.claude/hooks/**)",
+      "Edit(./.claude/settings.json)",
+      "Edit(./.claude/settings.local.json)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["-I", "-B", "${CLAUDE_PROJECT_DIR}/.claude/hooks/garde_bash.py"],
+            "timeout": 10,
+            "onFailure": "block"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["-I", "-B", "${CLAUDE_PROJECT_DIR}/.claude/hooks/apres_ecriture.py"],
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["-I", "-B", "${CLAUDE_PROJECT_DIR}/.claude/hooks/debut_session.py"],
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
