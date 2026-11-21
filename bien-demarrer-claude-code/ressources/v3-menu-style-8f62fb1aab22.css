@@ -1,0 +1,13 @@
+
+.rc-bar .v3-plus{display:none}
+@media screen and (max-width:32.49rem){
+  .rc-bar > :is(.rn-bar-b,.rc-gallery-toggle,.v3-fs,.rc-opts-toggle){display:none}
+  .rc-bar .v3-plus{display:inline-flex;align-items:center}
+  .rc-bar .v3-plus-pan{position:absolute;top:100%;right:.75rem;margin-top:.3rem;display:flex;flex-direction:column;gap:.4rem;
+    min-width:13rem;padding:.6rem;background:var(--bg,#ffffff);border:1px solid var(--border,#6b7380);border-radius:8px;
+    box-shadow:0 8px 28px rgba(0,0,0,.3)}
+  .rc-bar .v3-plus-pan[hidden]{display:none}
+  .rc-bar .v3-plus-pan > button{display:flex;align-items:center;width:100%;text-align:left}
+  :root .rc-bar .v3-plus-pan > button .rc-txt{display:inline}
+  .rc-bar .v3-plus-pan > button .rc-i{margin-right:.6em}
+}

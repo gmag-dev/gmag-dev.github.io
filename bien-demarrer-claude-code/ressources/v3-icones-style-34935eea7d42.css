@@ -1,0 +1,8 @@
+
+:root.rc-fold .rc-bar > button .rc-txt{display:none}
+:root.rc-fold .rc-bar > button .rc-i{margin-right:0}
+@media screen and (max-width:62.49rem){
+  .rc-bar > button .rc-txt{display:none}
+  .rc-bar > button .rc-i{margin-right:0}
+}
+:root.rc-opts-open .rc-bar .rc-opts{max-height:calc(100vh - var(--rc-barh,3rem) - 1rem);overflow-y:auto;overscroll-behavior:contain}

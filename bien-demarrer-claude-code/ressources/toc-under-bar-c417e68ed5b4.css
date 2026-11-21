@@ -1,0 +1,2 @@
+
+@media (min-width:48rem){ nav.toc{top:var(--rc-bar-h,0px);max-height:calc(100vh - var(--rc-bar-h,0px))} }

@@ -1,0 +1,13 @@
+
+
+.rc-nouveau{display:inline-block;margin:0 .1em 0 0;padding:0 .45em;border:1px solid currentColor;border-radius:.45em;
+  font-size:.82em;font-weight:700;line-height:1.55;white-space:normal;max-width:100%;box-sizing:border-box;text-indent:0;color:var(--heading);
+  background:var(--nav-bg);background:color-mix(in srgb,var(--heading) 9%,var(--bg))}
+@media (forced-colors:active){.rc-nouveau{border-color:CanvasText;color:CanvasText;background:Canvas}}
+
+html.rc-new-only main section.chapter:not(:has(.rc-nouveau)):not(:has(#lire-quoi-de-neuf)){display:none!important}
+html.rc-new-only main section.chapter section:not(:has(.rc-nouveau)):not(#lire-quoi-de-neuf){display:none!important}
+html.rc-new-only main section.chapter>:not(h2):not(section):not(.back):not(:has(.rc-nouveau)){display:none!important}
+html.rc-new-only main .part-title{display:none!important}
+html.rc-new-only nav.toc li.rc-new-off{display:none!important}
+.rc-nv-note{font-size:.85em;margin:.2rem 0 0}

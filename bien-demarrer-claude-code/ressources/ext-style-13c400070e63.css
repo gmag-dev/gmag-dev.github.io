@@ -1,0 +1,26 @@
+
+
+dialog.rc-ext{width:min(32rem,calc(100vw - 2rem));padding:1.1rem 1.2rem;border:2px solid var(--focus);border-radius:12px;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.5;box-shadow:0 14px 40px rgb(0 0 0 / .45)}
+html[data-style="classic"] dialog.rc-ext{border-color:var(--border)}
+dialog.rc-ext::backdrop{background:rgb(0 0 0 / .55)}
+.rc-ext-title{margin:0 0 .5rem;font-weight:700;font-size:1.2rem}
+dialog.rc-ext p{margin:.5rem 0}
+.rc-ext-url{display:block;padding:.4rem .55rem;border-radius:6px;background:var(--code);overflow-wrap:anywhere;word-break:break-word;white-space:normal;font-size:.88em}
+.rc-ext-q label{display:inline-flex;align-items:center;gap:.45rem;cursor:pointer}
+.rc-ext-q input{width:1.1rem;height:1.1rem;accent-color:var(--link)}
+.rc-ext-btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.rc-ext-btns button{font:inherit;font-weight:700;line-height:1.2;padding:.5rem 1rem;border-radius:999px;cursor:pointer}
+.rc-ext-btns button:focus-visible,.rc-ext-q input:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.rc-ext-stay{border:1px solid var(--border);background:var(--nav-bg);color:var(--text)}
+.rc-ext-go{border:1px solid #b35c00;background:#ff9a1f;color:#111111;transition:transform .12s ease-out,box-shadow .12s ease-out;
+  box-shadow:0 4px 0 #b35c00,0 0 10px rgb(255 154 31 / .4)}
+.rc-ext-go:hover{transform:translateY(-2px);box-shadow:0 6px 0 #b35c00,0 0 14px rgb(255 154 31 / .5)}
+.rc-ext-go:active{transform:translateY(3px);box-shadow:0 1px 0 #b35c00}
+@media (prefers-color-scheme: dark){ html:not([data-theme="light"]):not([data-style="classic"]) .rc-ext-go{box-shadow:0 4px 0 #b35c00,0 0 12px rgb(255 154 31 / .65),0 0 28px rgb(255 154 31 / .4)} }
+html[data-theme="dark"]:not([data-style="classic"]) .rc-ext-go{box-shadow:0 4px 0 #b35c00,0 0 12px rgb(255 154 31 / .65),0 0 28px rgb(255 154 31 / .4)}
+html[data-style="classic"] .rc-ext-go{background:#e07b00;color:#111111;border-color:#8a4b00;box-shadow:0 3px 0 #8a4b00}
+html.rc-motion-off .rc-ext-go{transition:none} html.rc-motion-off .rc-ext-go:is(:hover,:active){transform:none}
+@media (prefers-reduced-motion: reduce){ .rc-ext-go{transition:none} .rc-ext-go:is(:hover,:active){transform:none} }
+@media (forced-colors: active){ .rc-ext-go{box-shadow:none;border:2px solid ButtonText} }
+@media print{ dialog.rc-ext{display:none!important} }

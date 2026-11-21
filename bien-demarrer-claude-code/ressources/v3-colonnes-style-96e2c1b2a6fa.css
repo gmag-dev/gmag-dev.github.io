@@ -1,0 +1,2 @@
+
+.rc-dp-copy :is(button,input,select,textarea,summary,label,iframe,audio,video,[role=button],[contenteditable]){pointer-events:none}

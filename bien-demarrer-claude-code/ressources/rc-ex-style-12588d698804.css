@@ -1,0 +1,4 @@
+
+
+html.rc-no-ex :is(.box-ex,.box-place,.box-quiz){display:none!important}
+.rc-ex-note{font-size:.85em;margin:.2rem 0 0}
