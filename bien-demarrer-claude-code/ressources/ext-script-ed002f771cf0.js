@@ -7,7 +7,22 @@
     var h; try { h = new URL(href).hostname.toLowerCase().replace(/\.$/, ""); } catch (e) { return false; }
     return OFFICIAL_HOSTS.some(function (o) { return h === o || h.slice(-(o.length + 1)) === "." + o; });
   }
-  window.rcOfficialHost = official;                         
+  window.rcOfficialHost = official;
+  // Les liens de l'autrice (son profil, sa page de soutien) n'avertissent pas : ce sont ses propres pages. Leurs adresses
+  // viennent de la clé « contacts » de la configuration ; l'exemption porte sur l'adresse exacte, pas sur son hôte.
+  var siennes = null;
+  function nue(u) { return String(u || "").replace(/[?#].*$/, "").replace(/\/+$/, ""); }
+  function sienne(href) {
+    if (!siennes) {
+      siennes = [];
+      try {
+        var c = (JSON.parse(document.getElementById("rc-config").textContent) || {}).contacts || {};
+        [c.linkedin, c.tipeee].forEach(function (u) { u = nue(String(u || "").trim()); if (/^https:\/\/[^\s"<>]+$/.test(u)) { siennes.push(u); } });
+      } catch (x) {}
+    }
+    var h = nue(href);
+    return siennes.some(function (s) { return h === s; });
+  }
   function quiet() { try { return sessionStorage.getItem(SKEY) === "1"; } catch (e) { return false; } }
   function build() {
     dlg = document.createElement("dialog");
@@ -39,7 +54,7 @@
     if (e.type === "auxclick" && e.button !== 1) return;
     var a = e.target.closest && e.target.closest('a[href^="http"]');
     if (!a || (dlg && dlg.contains(a)) || a.host === location.host) return;
-    if (official(a.href)) {                                 
+    if (official(a.href) || sienne(a.href)) {                                 
       if (e.type === "click" && !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey && a.target !== "_blank") {
         e.preventDefault(); window.open(a.href, "_blank", "noopener,noreferrer");
       }
