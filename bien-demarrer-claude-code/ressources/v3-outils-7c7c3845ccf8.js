@@ -68,21 +68,31 @@
     if (!/^[^\s@"<>]+@[^\s@"<>]+\.[^\s@"<>]+$/.test(mel)) { mel = ""; }
     if (!/^https:\/\/[^\s"<>]+$/.test(tip)) { tip = ""; }
     if (!li && !mel && !tip) { return; }
+    // Logo décoratif devant le texte d'un lien (demande de l'autrice du 2026-11-21) : le texte porte seul le nom accessible.
+    function logo(sym, cls) {
+      var s = document.createElementNS("http://www.w3.org/2000/svg", "svg"), u = document.createElementNS("http://www.w3.org/2000/svg", "use");
+      s.setAttribute("class", "ico-marque " + cls); s.setAttribute("aria-hidden", "true"); s.setAttribute("focusable", "false");
+      u.setAttribute("href", "#" + sym); s.appendChild(u);
+      return s;
+    }
     function liste(cls) {
       var ul = el("ul", { "class": cls });
       if (li) {
         var a = el("a", { href: li, target: "_blank", rel: "noopener noreferrer" }), s1 = el("span", { "aria-hidden": "true" }), s2 = el("span", { "class": "sr-only" });
         a.textContent = "LinkedIn"; s1.textContent = " ↗"; s2.textContent = " (nouvel onglet)"; a.appendChild(s1); a.appendChild(s2);
+        a.insertBefore(logo("ti-brand-linkedin-filled", "ico-li"), a.firstChild);
         ul.appendChild(el("li")).appendChild(a);
       }
       if (mel) {
         var m = el("a", { href: "mailto:" + mel }), t = el("span", { "class": "v3-ct-adr" });
         m.textContent = "Écrire à l’autrice "; t.textContent = mel; m.appendChild(t);
+        m.insertBefore(logo("ti-mail", "ico-mel"), m.firstChild);
         ul.appendChild(el("li")).appendChild(m);
       }
       if (tip) {
         var s = el("a", { href: tip, target: "_blank", rel: "noopener noreferrer" }), s3 = el("span", { "aria-hidden": "true" }), s4 = el("span", { "class": "sr-only" });
         s.textContent = "Soutenir sur Tipeee"; s3.textContent = " ↗"; s4.textContent = " (nouvel onglet)"; s.appendChild(s3); s.appendChild(s4);
+        s.insertBefore(logo("ti-heart", "ico-tip"), s.firstChild);
         ul.appendChild(el("li")).appendChild(s);
       }
       return ul;

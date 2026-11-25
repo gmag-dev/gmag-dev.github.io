@@ -1,0 +1,25 @@
+
+:root.rc-fold .rc-bar > button .rc-txt{display:none}
+:root.rc-fold .rc-bar > button .rc-i{margin-right:0}
+@media screen and (max-width:62.49rem){
+  .rc-bar > button .rc-txt{display:none}
+  .rc-bar > button .rc-i{margin-right:0}
+}
+/* Logos devant les liens de l'autrice (LinkedIn, Tipeee) : décoratifs, le texte du lien porte seul le nom accessible ;
+   une marge, pas une espace, les sépare du texte, pour que ce nom reste le même. */
+.ico-marque{display:inline-block;width:1.15em;height:1.15em;margin-right:.45em;vertical-align:-.2em;flex:none}
+/* [in] de LinkedIn : sa charte (brand.linkedin.com/in-logo, lue le 2026-11-21) n'admet que le bleu, le noir ou le blanc,
+   jamais les couleurs du thème ; bleu sur fond clair, blanc sur fond sombre, noir à l'impression ; 21 px au moins à l'écran,
+   comptés sur le dessin [in] : le symbole est recadré (viewBox 2 2 20 20) pour que sa boîte soit le dessin même.
+   Écart ouvert (2026-11-25) : ce dessin est celui de Tabler (MIT), un [in] redessiné ; la charte interdit d'en modifier
+   la forme. Le fichier officiel (brand.linkedin.com/downloads) s'obtient en acceptant les conditions de LinkedIn, ce que
+   seule l'autrice peut faire ; il remplacera alors le tracé du symbole, sans autre changement. */
+.ico-marque.ico-li{width:max(21px,1.3em);height:max(21px,1.3em);vertical-align:-.3em;color:#0a66c2}
+:root[data-theme="dark"] .ico-marque.ico-li{color:#fff}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .ico-marque.ico-li{color:#fff} }
+@media print{ .ico-marque.ico-li{color:#000!important} }
+/* Menus Contacts : chaque logo (le [in], le cœur, l'enveloppe) occupe la largeur du [in], et l'adresse se décale d'autant,
+   pour que les textes commencent tous au même endroit (adresse en .92em : 1.3em et .45em du lien valent 1.413em et .489em). */
+.v3-ct-pan .ico-marque,.v3-ct-l .ico-marque{width:max(21px,1.3em)}
+.v3-ct-pan .v3-ct-adr,.v3-ct-l .v3-ct-adr{padding-left:calc(max(21px,1.413em) + .489em)}
+:root.rc-opts-open .rc-bar .rc-opts{max-height:calc(100vh - var(--rc-barh,3rem) - 1rem);overflow-y:auto;overscroll-behavior:contain}
