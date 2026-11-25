@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 10. Sécurité », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 10. Sécurité », partie 2 sur 2.
 >
 > - Précédent : [10. Sécurité (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/10-securite-1.md)
 > - Suivant : [11. Commits et collaboration](https://gmag-dev.github.io/bien-demarrer-claude-code/md/11-commits-et-collaboration.md)

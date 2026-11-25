@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 2. Bien démarrer », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 2. Bien démarrer », partie 2 sur 2.
 >
 > - Précédent : [2. Bien démarrer (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/2-bien-demarrer-1.md)
 > - Suivant : [3. La fenêtre de contexte](https://gmag-dev.github.io/bien-demarrer-claude-code/md/3-la-fenetre-de-contexte.md)
@@ -19,6 +19,8 @@ Deux sortes de règles s’appliquent avant le classificateur, dans tous les mod
 > - À la version 2.1.319, une session interactive dans le terminal ou VS Code démarre en mode auto 🕘 depuis la version 2.1.283, s’il est disponible pour votre modèle et votre compte. Sinon, ou si un réglage le désactive, elle démarre en Manual [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes). Les règles deny et ask et les hooks d’avant outil s’appliquent dans tous les modes, sauf ce qu’approuve un [mod](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-mod), un plugin qui contrôle lui-même les appels d’outils ([section 10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-1)) [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-best-practices), et les hooks, dans les limites de la [section 17.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-3). Une règle deny porte sur l’appel d’outil : un script lancé par Claude peut encore lire le fichier qu’elle protège [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permissions).
 > - Ce qui tient : la barre d’état, qui affiche le mode actif, et l’option `--permission-mode`, qui en choisit un au lancement.
 > - Pour aller plus loin : sections [10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-1) et [17.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-3).
+
+À la première lecture, seule la ligne `manual` du tableau vous sert, car c’est le mode que ce guide vous fait prendre. Les cinq autres lignes sont là pour y revenir le jour où vous en aurez besoin (sections [10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-1) et [17.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-2), [annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-l), [section L.8](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-l-8)).
 
 **Tableau 2.2 :** Les modes de permission, d’après [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes).
 

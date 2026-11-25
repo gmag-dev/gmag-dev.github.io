@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques », partie 1 sur 5.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques », partie 1 sur 5.
 >
 > - Précédent : [Annexe K. Listes des figures et des tableaux (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-k-listes-des-figures-et-des-tableaux-2.md)
 > - Suivant : [Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques (partie 2 sur 5)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-l-fiches-des-composants-2.md)

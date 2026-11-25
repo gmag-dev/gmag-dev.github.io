@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 1. Ce qu’est Claude Code ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 1. Ce qu’est Claude Code ».
 >
 > - Précédent : [Prérequis](https://gmag-dev.github.io/bien-demarrer-claude-code/md/prerequis.md)
 > - Suivant : [2. Bien démarrer (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/2-bien-demarrer-1.md)
@@ -160,7 +160,7 @@ Une règle qui ne souffre aucune exception ne peut pas dépendre d’un modèle 
 
 | Question | Consigne (Claude décide) | Règle imposée (le harnais applique) |
 | --- | --- | --- |
-| Que faire ? | le prompt, `CLAUDE.md`, un skill, même réservé à votre commande : Claude lit ses étapes et décide (sauf ses commandes injectées, que le harnais exécute avant, [annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-l), [section L.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-l-2)) | un hook |
+| Que faire ? | le prompt, `CLAUDE.md`, un skill, même réservé à votre commande : Claude lit ses étapes et décide | un hook |
 | Que peut-il toucher ? | le jugement de Claude, et en mode auto un second modèle qui filtre les actions, sans garantie ([section 2.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s2-3)) | les règles `deny`, le bac à sable, les réglages gérés |
 | Quand est-ce fini ? | une demande de preuve | les tests, un hook qui relance le travail tant qu’un contrôle échoue ([chapitre 5](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch5)) |
 | Qui a le dernier mot ? | le résumé de Claude | une personne qui relit et approuve |
@@ -181,6 +181,7 @@ Le même choix, en texte :
 
 > **🔀 Quand la règle cède**
 >
+> - Un skill reste une consigne, à une exception près. Ses commandes injectées, le harnais les exécute avant que Claude lise le skill ([annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-l), [section L.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-l-2)).
 > - Une règle imposée tient dans ses propres limites. Une règle `deny` porte sur le texte de l’appel d’outil, pas sur l’intention : un script lancé par Claude peut encore lire le fichier qu’elle protège [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permissions). Un hook a ses cas où il ne bloque pas ([chapitre 18](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch18)).
 > - Ce qui tient : ce qui doit tenir à coup sûr se place aussi là où le poste ne peut pas l’atteindre, comme la protection d’une branche sur le serveur, ou l’intégration continue quand sa définition est elle-même protégée (chapitres [11](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch11) et [17](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch17)).
 > - Pour aller plus loin : [section 17.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-3) et [chapitre 18](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch18).

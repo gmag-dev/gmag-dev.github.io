@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « Avant-propos ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « Avant-propos ».
 >
 > - Précédent : aucun, début du guide
 > - Suivant : [Comment lire ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/md/comment-lire-ce-guide.md)
@@ -15,7 +15,7 @@
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
 
 - **Autrice** : [Gabrielle Magnan](https://www.linkedin.com/in/gabrielle-magnan/)
-- **Version** : 3.2.2+publique.web · 26 novembre 2026
+- **Version** : 3.2.3+publique.web · 26 novembre 2026
 - **Soutenir** : [sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.

@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 12. Diagnostiquer, rendre lisible, reformuler ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 12. Diagnostiquer, rendre lisible, reformuler ».
 >
 > - Précédent : [11. Commits et collaboration](https://gmag-dev.github.io/bien-demarrer-claude-code/md/11-commits-et-collaboration.md)
 > - Suivant : [13. Les pièges fréquents](https://gmag-dev.github.io/bien-demarrer-claude-code/md/13-les-pieges-frequents.md)

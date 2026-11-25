@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « Annexe A. Ma première semaine ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « Annexe A. Ma première semaine ».
 >
 > - Précédent : [23. Sécurité et propriété intellectuelle en entreprise (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/23-securite-et-propriete-intellectuelle-en-entreprise-2.md)
 > - Suivant : [Annexe B. Glossaire (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-b-glossaire-1.md)

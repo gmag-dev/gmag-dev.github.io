@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « Sources », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « Sources », partie 2 sur 2.
 >
 > - Reprise : ce morceau poursuit une liste du morceau précédent, coupée entre deux entrées
 > - Précédent : [Sources (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-1.md)
@@ -69,7 +69,7 @@ Bien démarrer avec Claude Code
 
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
 
-Autrice : Gabrielle Magnan · Version : 3.2.2+publique.web · 26 novembre 2026 · Édition publique
+Autrice : Gabrielle Magnan · Version : 3.2.3+publique.web · 26 novembre 2026 · Édition publique
 
 [Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
