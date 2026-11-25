@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 19. Plusieurs sessions en parallèle ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 19. Plusieurs sessions en parallèle ».
 >
 > - Précédent : [18. Hooks, serveurs MCP, ligne d’état et tâches planifiées (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/18-hooks-serveurs-mcp-ligne-d-etat-et-taches-planifiees-2.md)
 > - Suivant : [20. Piloter sa consommation et son projet (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/20-piloter-sa-consommation-et-son-projet-1.md)
@@ -135,6 +135,26 @@ Pesez-la avant de l’adopter. Une session qui coordonne concentre le contexte :
 > - Des contrôles avant chaque commit, et jamais `--no-verify`.
 > - La session prépare, la personne exécute tout geste irréversible, ou qui sort de la machine. Avant une délégation, les consignes sont claires, et le rapport attend la personne à son retour.
 > - Une session de coordination se pèse avant de s’adopter : elle concentre le contexte, et la personne décide.
+
+> **✏️ Exercice**
+>
+> **Compétence visée** : coordonner deux sessions par une trace écrite, un seul écrivain par fichier partagé et des questions rassemblées en un seul endroit. Comptez 20 à 30 minutes.
+>
+> Sur un dépôt d’essai, avec deux sessions lancées par `claude --permission-mode manual` :
+>
+> 1. Créez un fichier `trace.md`. Demandez à chaque session d’y ajouter une ligne quand elle commence une tâche et quand elle la finit, sans jamais réécrire une ligne existante, et de n’y mettre que des pointeurs, un chemin ou un nom de fichier, jamais un contenu.
+> 2. Créez un fichier partagé, `lexique.md` par exemple, et écrivez dans son en-tête quelle session est seule à l’écrire. Demandez à l’autre session d’y ajouter une définition. Elle doit la proposer dans la trace au lieu de l’écrire, et la session qui écrit ne la reprend qu’après votre accord.
+> 3. Faites poser par chaque session une question qui vous est destinée, dans un seul fichier `questions.md`, avec ce qu’elle bloque et la recommandation en tête. Répondez dans ce fichier, puis vérifiez que les deux sessions lisent la même réponse.
+>
+> **Sans code** : faites le même exercice dans un dossier de notes, sans dépôt. Les trois fichiers suffisent.
+>
+> **Critère de réussite** : la trace montre les lignes des deux sessions dans l’ordre, sans ligne réécrite ni contenu recopié, le fichier partagé n’a été écrit que par la session nommée dans son en-tête, et chaque question figure une seule fois, avec sa réponse.
+>
+> **Pour vous corriger**, sans corrigé : relisez votre travail contre ces trois points. Chacun se voit dans ce que vous avez écrit ou obtenu.
+>
+> 1. La trace ne porte que des pointeurs, et aucune ligne n’a été réécrite ([section 19.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s19-2)).
+> 2. La session qui n’écrit pas le fichier partagé a proposé son changement au lieu de l’écrire, et l’écrivain ne l’a repris qu’après votre décision ([section 19.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#s19-5)).
+> 3. Chaque question dit ce qu’elle bloque, donne la recommandation en tête, et sa réponse est consignée là où les deux sessions la lisent ([section 19.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s19-4)).
 
 [Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
 

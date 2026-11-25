@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Sources », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « Sources », partie 1 sur 2.
 >
 > - Précédent : [Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques (partie 5 sur 5)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-l-fiches-des-composants-5.md)
 > - Suivant : [Sources (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-2.md)
@@ -105,7 +105,7 @@ Les sources sont numérotées dans l'ordre de leur première citation. Une adres
 91. \[91\] METR. *We are Changing our Developer Productivity Experiment Design, 24 février 2026*. [https://metr.org/blog/2026-02-24-uplift-update/](https://metr.org/blog/2026-02-24-uplift-update/). Consultée le 2026-11-10.
 92. \[92\] Anthropic Engineering (Erik S. et Barry Zhang). *Building effective agents, 19 décembre 2024*. [https://www.anthropic.com/research/building-effective-agents](https://www.anthropic.com/research/building-effective-agents). Consultée le 2026-11-06.
 93. \[93\] S. Kambhampati et al.. *LLMs Can’t Plan, But Can Help Planning in LLM-Modulo Frameworks, ICML 2024, PMLR 235*. [https://arxiv.org/abs/2402.01817](https://arxiv.org/abs/2402.01817). Consultée le 2026-11-06.
-94. \[94\] Unapei. *Explication de la liste de vérification FALC, janvier 2020*. [http://www.unapei.org/wp-content/uploads/2020/01/explication\_liste\_verification\_FALC-v2020-01-14.pdf](http://www.unapei.org/wp-content/uploads/2020/01/explication_liste_verification_FALC-v2020-01-14.pdf). Consultée le 2026-11-07.
+94. \[94\] Unapei. *Explication de la liste de vérification FALC, janvier 2020*. [https://www.unapei.org/wp-content/uploads/2020/01/explication\_liste\_verification\_FALC-v2020-01-14.pdf](https://www.unapei.org/wp-content/uploads/2020/01/explication_liste_verification_FALC-v2020-01-14.pdf). Consultée le 2026-11-07.
 95. \[95\] Anthropic Engineering. *Demystifying evals for AI agents*. [https://www.anthropic.com/research/demystifying-evals-for-ai-agents](https://www.anthropic.com/research/demystifying-evals-for-ai-agents). Consultée le 2026-11-06.
 96. \[96\] Anthropic. *Claude Whiteboards, Sheets and Data, billet du 10 novembre 2026*. [https://claude.com/blog/sheets-whiteboards-data](https://claude.com/blog/sheets-whiteboards-data). Consultée le 2026-11-18.
 97. \[97\] Anthropic. *Get started with Claude Whiteboards*. [https://support.claude.com/en/articles/18324319-get-started-with-claude-whiteboards](https://support.claude.com/en/articles/18324319-get-started-with-claude-whiteboards). Consultée le 2026-11-18.
@@ -131,7 +131,7 @@ Les sources sont numérotées dans l'ordre de leur première citation. Une adres
 117. \[117\] Anthropic. *Claude Code GitLab CI/CD*. [https://code.claude.com/docs/en/gitlab-ci-cd](https://code.claude.com/docs/en/gitlab-ci-cd). Consultée le 2026-11-18.
 118. \[118\] Anthropic. *Agent SDK overview*. [https://code.claude.com/docs/en/agent-sdk/overview](https://code.claude.com/docs/en/agent-sdk/overview). Consultée le 2026-11-08.
 119. \[119\] G. Klein. *Performing a Project Premortem, Harvard Business Review, septembre 2007*. [https://hbr.org/2007/09/performing-a-project-premortem](https://hbr.org/2007/09/performing-a-project-premortem). Consultée le 2026-11-06.
-120. \[120\] J. Lunney et S. Lueder, Google. *Postmortem Culture: Learning from Failure, Site Reliability Engineering, [chapitre 16](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch16)*. [https://sre.google/sre-book/postmortem-culture/](https://sre.google/sre-book/postmortem-culture/). Consultée le 2026-11-06.
+120. \[120\] J. Lunney et S. Lueder, Google. *Postmortem Culture: Learning from Failure, Site Reliability Engineering, chapitre 15*. [https://sre.google/sre-book/postmortem-culture/](https://sre.google/sre-book/postmortem-culture/). Consultée le 2026-11-06.
 121. \[121\] Projet Git. *git-diff*. [https://git-scm.com/docs/git-diff](https://git-scm.com/docs/git-diff). Consultée le 2026-11-09.
 122. \[122\] Projet Git. *git-log*. [https://git-scm.com/docs/git-log](https://git-scm.com/docs/git-log). Consultée le 2026-11-09.
 123. \[123\] Projet Git. *git-config*. [https://git-scm.com/docs/git-config](https://git-scm.com/docs/git-config). Consultée le 2026-11-09.
@@ -152,7 +152,7 @@ Les sources sont numérotées dans l'ordre de leur première citation. Une adres
 138. \[138\] C. Sanders, sur martinfowler.com. *Principles of Mechanical Sympathy, 7 avril 2026*. [https://martinfowler.com/articles/mechanical-sympathy-principles.html](https://martinfowler.com/articles/mechanical-sympathy-principles.html). Consultée le 2026-11-06.
 139. \[139\] Projet Git. *githooks, documentation de référence*. [https://git-scm.com/docs/githooks](https://git-scm.com/docs/githooks). Consultée le 2026-11-06.
 140. \[140\] Anthropic. *Monitoring*. [https://code.claude.com/docs/en/monitoring-usage](https://code.claude.com/docs/en/monitoring-usage). Consultée le 2026-11-06.
-141. \[141\] T. Manshreck. *Software Engineering at Google, [chapitre 11](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch11), Documentation*. [https://abseil.io/resources/swe-book/html/ch11.html](https://abseil.io/resources/swe-book/html/ch11.html). Consultée le 2026-11-07.
+141. \[141\] T. Manshreck. *Software Engineering at Google, chapitre 10, Documentation*. [https://abseil.io/resources/swe-book/html/ch10.html](https://abseil.io/resources/swe-book/html/ch10.html). Consultée le 2026-11-25.
 142. \[142\] Microsoft, dépôt hve-core. *Documentation maintenance*. [https://microsoft.github.io/hve-core/docs/contributing/documentation-maintenance](https://microsoft.github.io/hve-core/docs/contributing/documentation-maintenance). Consultée le 2026-11-07.
 143. \[143\] Anthropic. *Visuals in Claude, page mise à jour le 22 avril 2026*. [https://support.claude.com/en/articles/13979539-visuals-in-claude](https://support.claude.com/en/articles/13979539-visuals-in-claude). Consultée le 2026-11-09.
 144. \[144\] Microsoft. *Markdown and Visual Studio Code*. [https://code.visualstudio.com/docs/languages/markdown](https://code.visualstudio.com/docs/languages/markdown). Consultée le 2026-11-09.
@@ -173,3 +173,4 @@ Les sources sont numérotées dans l'ordre de leur première citation. Une adres
 159. \[159\] Microsoft. *GraphRAG, Query overview*. [https://microsoft.github.io/graphrag/query/overview/](https://microsoft.github.io/graphrag/query/overview/). Consultée le 2026-11-06.
 160. \[160\] E. Newren. *git filter-repo*. [https://github.com/newren/git-filter-repo](https://github.com/newren/git-filter-repo). Consultée le 2026-11-06.
 161. \[161\] Projet Git. *git-filter-branch*. [https://git-scm.com/docs/git-filter-branch](https://git-scm.com/docs/git-filter-branch). Consultée le 2026-11-06.
+162. \[162\] OWASP GenAI Security Project, Agentic Security Initiative. *OWASP Top 10 for Agentic Applications 2026*. [https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/). Consultée le 2026-11-06.

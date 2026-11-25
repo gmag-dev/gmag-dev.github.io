@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 8. Le travail en parallèle », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 8. Le travail en parallèle », partie 2 sur 2.
 >
 > - Précédent : [8. Le travail en parallèle (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/8-le-travail-en-parallele-1.md)
 > - Suivant : [9. Usage et coût sans crédits d’usage](https://gmag-dev.github.io/bien-demarrer-claude-code/md/9-usage-et-cout-sans-credits-d-usage.md)

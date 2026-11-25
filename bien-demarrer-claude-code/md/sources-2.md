@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Sources », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « Sources », partie 2 sur 2.
 >
 > - Reprise : ce morceau poursuit une liste du morceau précédent, coupée entre deux entrées
 > - Précédent : [Sources (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-1.md)
@@ -9,7 +9,6 @@
 
 ---
 
-162. \[162\] OWASP GenAI Security Project, Agentic Security Initiative. *OWASP Top 10 for Agentic Applications 2026*. [https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/). Consultée le 2026-11-06.
 163. \[163\] NIST. *SP 800-218, Secure Software Development Framework (SSDF) Version 1.1*. [https://csrc.nist.gov/pubs/sp/800/218/final](https://csrc.nist.gov/pubs/sp/800/218/final). Consultée le 2026-11-06.
 164. \[164\] NIST. *Secure Software Development Framework*. [https://csrc.nist.gov/projects/ssdf](https://csrc.nist.gov/projects/ssdf). Consultée le 2026-11-06.
 165. \[165\] NIST. *SP 800-218 Rev. 1 (initial public draft), SSDF Version 1.2*. [https://csrc.nist.gov/pubs/sp/800/218/r1/ipd](https://csrc.nist.gov/pubs/sp/800/218/r1/ipd). Consultée le 2026-11-06.
@@ -37,6 +36,8 @@
 187. \[187\] Amazon Web Services. *Data retention, Amazon Bedrock*. [https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html](https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html). Consultée le 2026-11-25.
 188. \[188\] Projet Git. *git-stash*. [https://git-scm.com/docs/git-stash](https://git-scm.com/docs/git-stash). Consultée le 2026-11-25.
 189. \[189\] La Plateforme de l’inclusion. *Calcul de clé NIR*. [https://cle-nir.inclusion.gouv.fr/](https://cle-nir.inclusion.gouv.fr/). Consultée le 2026-11-25.
+190. \[190\] Anthropic. *Consumer Terms of Service*. [https://www.anthropic.com/legal/consumer-terms](https://www.anthropic.com/legal/consumer-terms). Consultée le 2026-11-25.
+191. \[191\] CNIL. *Le règlement général sur la protection des données, chapitre IV, Responsable du traitement et sous-traitant*. [https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4). Consultée le 2026-11-25.
 
 [Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
 
@@ -60,7 +61,7 @@ Exemples de code : les fichiers du dossier `exemples/` et les blocs de code de c
 
 Permissions supplémentaires : le partage interne à une équipe ou à une entreprise, sans contrepartie, est autorisé. Une formation interne à une équipe ou à une organisation peut s’appuyer sur ce guide, sans contrepartie, en citant son titre, son autrice et sa licence. Toute utilisation dans une formation payante demande une autorisation écrite préalable de l’autrice : écrivez à [gmag.contact@pm.me](mailto:gmag.contact@pm.me).
 
-Ce guide est indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » et « Claude Code » sont des marques d’Anthropic.
+Ce guide est indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » et « Claude Code » sont des marques d’Anthropic. Les autres noms de produits et de marques cités dans le guide appartiennent à leurs titulaires.
 
 Éditrice, hébergeur et données personnelles : [mentions légales](https://gmag-dev.github.io/bien-demarrer-claude-code/mentions-legales.html).
 
@@ -68,7 +69,7 @@ Bien démarrer avec Claude Code
 
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
 
-Autrice : Gabrielle Magnan · Version : 3.2.1+publique.web · 25 novembre 2026 · Édition publique
+Autrice : Gabrielle Magnan · Version : 3.2.2+publique.web · 26 novembre 2026 · Édition publique
 
 [Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 

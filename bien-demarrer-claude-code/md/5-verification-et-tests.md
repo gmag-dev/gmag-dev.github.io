@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 5. Vérification et tests ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 5. Vérification et tests ».
 >
 > - Précédent : [4. La méthode de travail (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/4-la-methode-de-travail-2.md)
 > - Suivant : [6. Choisir ses extensions (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/6-choisir-ses-extensions-1.md)

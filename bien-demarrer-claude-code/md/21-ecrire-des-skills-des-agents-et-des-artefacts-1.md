@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 21. Écrire des skills, des agents et des artefacts », partie 1 sur 3.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 21. Écrire des skills, des agents et des artefacts », partie 1 sur 3.
 >
 > - Précédent : [20. Piloter sa consommation et son projet (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/20-piloter-sa-consommation-et-son-projet-2.md)
 > - Suivant : [21. Écrire des skills, des agents et des artefacts (partie 2 sur 3)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/21-ecrire-des-skills-des-agents-et-des-artefacts-2.md)

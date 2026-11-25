@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 4. La méthode de travail », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 4. La méthode de travail », partie 1 sur 2.
 >
 > - Précédent : [3. La fenêtre de contexte](https://gmag-dev.github.io/bien-demarrer-claude-code/md/3-la-fenetre-de-contexte.md)
 > - Suivant : [4. La méthode de travail (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/4-la-methode-de-travail-2.md)
@@ -18,7 +18,7 @@
 >
 > **Ce que vous apprenez** : planifier avant de coder, corriger le plan plutôt que le code, et écrire un prompt de réalisation avec ses quatre ingrédients. En complément, poser une question neutre sur un fait passé, et la bonne question avant le prompt.
 >
-> **Deux chemins** : si vous débutez, lisez tout le chapitre et faites les trois barreaux : comptez 35 à 45 minutes pour l’exercice. Si vous répondez juste à la question ci-dessous, lisez les encadrés « Quand la règle cède » et « La limite », la dernière ligne des tableaux à trois niveaux, et faites le barreau ③.
+> **Deux chemins** : si vous débutez, lisez le chapitre et faites les trois barreaux : comptez 35 à 45 minutes pour l’exercice. Les sections [4.6](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-6) et [4.8](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-8) sont des compléments que l’exercice ne demande pas, et elles peuvent attendre le jour où vous en aurez besoin. Si vous répondez juste à la question ci-dessous, lisez les encadrés « Quand la règle cède » et « La limite », la dernière ligne des tableaux à trois niveaux, et faites le barreau ③.
 >
 > **Le fil rouge** 🌉 Passerelle : Inès fait planifier le circuit d’un courrier, du courrier au brouillon puis à la relecture, en mode plan. Samia lit le plan et en corrige une étape. Inès mène aussi l’entretien de besoin avec Samia, puis écrit avec Bernard le prompt de réalisation que les bénévoles reprennent pour chaque courrier, et Thomas lui fait ajouter la raison d’une contrainte.
 >

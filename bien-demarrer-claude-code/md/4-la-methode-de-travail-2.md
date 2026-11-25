@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 4. La méthode de travail », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 4. La méthode de travail », partie 2 sur 2.
 >
 > - Précédent : [4. La méthode de travail (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/4-la-methode-de-travail-1.md)
 > - Suivant : [5. Vérification et tests](https://gmag-dev.github.io/bien-demarrer-claude-code/md/5-verification-et-tests.md)

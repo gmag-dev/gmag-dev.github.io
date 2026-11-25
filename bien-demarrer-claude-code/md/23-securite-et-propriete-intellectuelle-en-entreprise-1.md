@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 1 sur 2.
 >
 > - Précédent : [22. Une architecture de référence du harnais](https://gmag-dev.github.io/bien-demarrer-claude-code/md/22-une-architecture-de-reference-du-harnais.md)
 > - Suivant : [23. Sécurité et propriété intellectuelle en entreprise (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/23-securite-et-propriete-intellectuelle-en-entreprise-2.md)
@@ -37,7 +37,7 @@ Ce guide en tire quatre conséquences pratiques :
 3. Les transcriptions locales sont des données : elles suivent la classification de ce qu’elles contiennent. On ne copie pas les transcriptions d’un poste d’organisation vers un poste personnel.
 4. Ce qui se commite est synthétique : des identifiants fictifs, avec un préfixe choisi par le projet. Les vraies données vivent hors du dépôt, exclues par `.gitignore`, et le code les trouve par une variable d’environnement.
 
-Pourquoi cette règle : les conditions d’utilisation distinguent deux familles de comptes, les comptes grand public (Free, Pro, Max, Ultra) et les comptes commerciaux (Team, Enterprise, API, plateformes tierces), et leurs régimes diffèrent sur l’entraînement des modèles et sur la conservation côté serveur [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage).
+Pourquoi cette règle : les conditions d’utilisation distinguent deux familles de comptes, les comptes grand public (Free, Pro, Max, Ultra) et les comptes commerciaux (Team, Enterprise, API, plateformes tierces), et leurs régimes diffèrent sur l’entraînement des modèles et sur la conservation côté serveur [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage). Les conditions grand public qui s’appliquent aux consommateurs de l’Espace économique européen et de la Suisse prévoient en outre un usage non commercial [\[190\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-consumer-terms). Avant de vous servir d’un compte grand public pour une activité professionnelle, lisez les conditions qui s’appliquent au vôtre.
 
 **Tableau 23.1 :** Les régimes des comptes grand public et commerciaux, d’après [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage), [\[186\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-privacy-org-retention) et [\[187\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-bedrock-retention).
 
@@ -48,6 +48,8 @@ Pourquoi cette règle : les conditions d’utilisation distinguent deux familles
 | `/feedback`, `/bug`, `/share` | la transcription envoyée est conservée cinq ans | idem |
 | enquête « Can Anthropic look at your session transcript? », réponse « Yes » | transcription, transcriptions des sous-agents et journal brut envoyés, code compris, motifs de clés et de jetons masqués, conservés jusqu’à six mois | idem. La question n’apparaît pas avec la rétention zéro, ni quand une politique coupe le retour produit ou le trafic non essentiel |
 
+Sur une plateforme tierce comme Amazon Bedrock ou l’Agent Platform de Google Cloud, `/feedback` n’envoie rien à Anthropic. Le rapport s’écrit dans une archive locale, sous `~/.claude/feedback-bundles/`, et rien ne quitte le poste tant que vous ne transmettez pas ce fichier. Sur ces plateformes et sur Microsoft Foundry, la réponse positive à l’enquête s’écrit dans la même archive [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage).
+
 Une partie reste sur le poste : les transcriptions de session, en clair, sous `~/.claude/projects/`, 30 jours par défaut (`cleanupPeriodDays`), et plus longtemps pour les dernières sessions de l’application de bureau ou de [Cowork](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-cowork) [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage).
 
 Ce qui circule entre sessions suit la même règle. Ce guide propose qu’un message entre sessions, ou le rapport d’un agent, porte des identifiants et des chemins, pas le contenu d’un dossier : la session qui en a besoin lit le fichier elle-même, avec ses propres droits.
@@ -55,6 +57,8 @@ Ce qui circule entre sessions suit la même règle. Ce guide propose qu’un mes
 > **⚠️ Attention**
 >
 > Coller dans un compte personnel le vrai courrier d’une personne, pour « voir ce que ça donne », l’envoie vers le modèle, et peut l’y faire conserver des années selon vos réglages. Gardez les vrais documents hors du dossier du projet, travaillez sur des données inventées et marquées comme telles, et faites trancher par la personne responsable toute exception.
+
+**Dans une organisation, le droit de la protection des données s’ajoute à cette règle.** Le règlement général sur la protection des données (RGPD) demande qu’un contrat encadre le traitement de données personnelles confié à un prestataire (article 28, paragraphe 3). Il demande aussi qu’une analyse d’impact précède un traitement susceptible d’engendrer un risque élevé pour les personnes, en particulier quand il recourt à de nouvelles technologies (article 35, paragraphe 1) [\[191\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-rgpd-chapitre-4). Ce guide ne dit pas si votre usage en relève. Posez la question à la personne déléguée à la protection des données de l’organisation, ou à sa direction, avant le premier vrai document.
 
 Chez Passerelle, Samia a écrit la règle dans les mots de l’association : aucune donnée d’usager dans un outil personnel. Josiane a apporté son vrai courrier à la permanence. Inès l’a lu avec elle, sur papier. Puis, avec l’accord de Josiane, elle a écrit dans le dossier un courrier fictif du même type, `PASS-C-091`, avec d’autres dates, d’autres montants et aucun nom. C’est ce courrier fictif que l’outil a reçu, et Josiane a gardé le sien.
 

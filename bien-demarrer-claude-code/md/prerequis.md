@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Prérequis ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « Prérequis ».
 >
 > - Précédent : [Apprendre avec ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/md/apprendre-avec-ce-guide.md)
 > - Suivant : [1. Ce qu’est Claude Code](https://gmag-dev.github.io/bien-demarrer-claude-code/md/1-ce-qu-est-claude-code.md)
@@ -12,7 +12,7 @@
 
 Ce guide sert dans deux situations. Repérez la vôtre : elle dit ce que vous lisez sur cette page.
 
-- **Chez vous, sur votre propre ordinateur, avec votre propre compte.** C’est vous qui décidez : il n’y a personne à qui demander, et les deux encadrés qui suivent ne vous concernent pas. Il vous faut un abonnement qui donne accès à Claude Code : la liste plus bas les nomme, et l’offre gratuite n’en fait pas partie [\[7\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-setup). Deux précautions suffisent. Lisez le réglage d’amélioration des modèles avant votre première session : la même liste dit où le trouver. Et ne confiez à ce compte que ce qui est à vous : jamais un document de votre employeur, d’un client ou d’une autre personne ([section 23.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s23-1)). Allez ensuite à cette liste, après les deux encadrés.
+- **Chez vous, sur votre propre ordinateur, avec votre propre compte.** C’est vous qui décidez : il n’y a personne à qui demander, et les deux encadrés qui suivent ne vous concernent pas. Il vous faut un abonnement qui donne accès à Claude Code : la liste plus bas les nomme, et l’offre gratuite n’en fait pas partie [\[7\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-setup). Deux précautions sont un minimum. Lisez le réglage d’amélioration des modèles avant votre première session : la même liste dit où le trouver. Et ne confiez à ce compte que ce qui est à vous : jamais un document de votre employeur, d’un client ou d’une autre personne ([section 23.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s23-1)). Si ce compte doit servir à une activité professionnelle, lisez d’abord ses conditions d’utilisation, car celles des consommateurs de l’Espace économique européen et de la Suisse prévoient un usage non commercial [\[190\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-consumer-terms). Allez ensuite à cette liste, après les deux encadrés.
 - **Sur un ordinateur fourni par votre employeur ou par une autre organisation.** Lisez les deux encadrés qui suivent avant toute installation : ils passent avant le reste de la page.
 
 > **⚠️ Attention**

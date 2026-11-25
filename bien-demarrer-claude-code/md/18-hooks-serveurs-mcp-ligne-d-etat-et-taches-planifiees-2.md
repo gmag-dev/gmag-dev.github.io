@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 18. Hooks, serveurs MCP, ligne d’état et tâches planifiées », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.2 : « 18. Hooks, serveurs MCP, ligne d’état et tâches planifiées », partie 2 sur 2.
 >
 > - Précédent : [18. Hooks, serveurs MCP, ligne d’état et tâches planifiées (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/18-hooks-serveurs-mcp-ligne-d-etat-et-taches-planifiees-1.md)
 > - Suivant : [19. Plusieurs sessions en parallèle](https://gmag-dev.github.io/bien-demarrer-claude-code/md/19-plusieurs-sessions-en-parallele.md)
@@ -169,7 +169,7 @@ Après tout redémarrage, une règle suffit : lister d’abord les tâches plani
 | toutes les 30 minutes | de 0 à 15 minutes |
 | toutes les heures, ou moins souvent | de 0 à 30 minutes |
 
-**L’expiration à 7 jours.** Une tâche récurrente expire 7 jours après sa création, après un dernier lancement [\[126\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-scheduled-tasks). Une surveillance qui doit durer plus longtemps se recrée, ou passe à une tâche de l’application de bureau ou du cloud.
+**L’expiration à 30 jours.** Depuis la version 2.1.330 du 20 novembre 2026, une tâche récurrente expire 30 jours après sa création, après un dernier lancement [\[126\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-scheduled-tasks) [\[1\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-changelog). Avant cette version, la limite était de 7 jours, et une tâche créée sous une version antérieure la garde. Une surveillance qui doit durer plus longtemps s’annule puis se recrée avant l’échéance, pour ne pas tourner en double, ou passe à une tâche de l’application de bureau ou du cloud.
 
 **La reprise, sans rattrapage.** Une exécution manquée pendant une longue requête part une seule fois, quand Claude redevient inactif. À la reprise d’une session, Claude Code restaure les tâches créées par `CronCreate`, sauf les récurrentes expirées et les ponctuelles dont l’heure est passée. Une boucle `/loop` dont Claude choisit lui-même le rythme n’est pas restaurée. Une tâche restaurée ne rattrape pas les exécutions manquées pendant que la session était fermée : sa prochaine exécution est la première due après la reprise, décalage compris [\[126\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-scheduled-tasks).
 
@@ -231,7 +231,7 @@ Chez Passerelle, Bernard vérifie l’accessibilité de la page locale qui affic
 > - Aucun contrôle indispensable ne repose sur un hook de Claude Code seul : il a une dernière porte hors de la session.
 > - Un serveur MCP local tourne avec vos droits : stdio ou `127.0.0.1`, le moins d’outils possible, une autorisation par nom exact, et la révision du protocole vérifiée.
 > - Les champs `rate_limits` de la ligne d’état sont facultatifs : la ligne dit « non lu » au lieu de planter.
-> - Une tâche récurrente part en retard d’au plus la moitié de sa période, plafonné à 30 minutes, expire à 7 jours et ne rattrape rien. Après un redémarrage : lister, puis recréer ce qui manque, une tâche par objet.
+> - Une tâche récurrente part en retard d’au plus la moitié de sa période, plafonné à 30 minutes, expire à 30 jours (7 si elle a été créée avant la version 2.1.330) et ne rattrape rien. Après un redémarrage : lister, puis recréer ce qui manque, une tâche par objet.
 > - Un navigateur piloté a son propre profil, vide de vos comptes, et une page de connexion se rend à la personne.
 
 > **✏️ Exercice**
