@@ -1,12 +1,30 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 2 sur 2.
 >
 > - Précédent : [23. Sécurité et propriété intellectuelle en entreprise (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/23-securite-et-propriete-intellectuelle-en-entreprise-1.md)
 > - Suivant : [Annexe A. Ma première semaine](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-a-ma-premiere-semaine.md)
 > - Sommaire : [llms.txt](https://gmag-dev.github.io/bien-demarrer-claude-code/llms.txt), tous les morceaux dans l'ordre de lecture
-> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-s23-7>
+> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-s23-6>
 > - Licence du texte : <https://creativecommons.org/licenses/by-nc-nd/4.0/>
 
 ---
+
+### 23.6 Moindre privilège, hors ligne, pas de CDN à l’exécution
+
+Trois règles ouvrent cette section : donner le moins d’accès possible, ne laisser sortir que le trafic indispensable, et ne charger aucune ressource en ligne au moment de l’exécution.
+
+**Moindre privilège.** Le [chapitre 10](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch10) en donne les règles. Un serveur MCP local est un programme qui s’exécute avec vos privilèges. Les bonnes pratiques du protocole exigent, d’un client qui installe un serveur local en un clic, un consentement explicite avec la commande complète affichée. Elles demandent aussi des privilèges minimaux, le transport `stdio` pour limiter l’accès au seul client, ou en HTTP un jeton d’autorisation, et des portées minimales élevées progressivement [\[129\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-mcp-security-best-practices). Ce guide en tire une règle : un serveur local écoute sur `127.0.0.1` ou en `stdio`, et n’expose que les outils dont la tâche a besoin. Le serveur du lexique de Passerelle est de ce type : en `stdio`, en lecture seule, un seul outil. Il hérite pourtant de l’environnement du terminal qui lance Claude Code, sauf si ce terminal exporte `CLAUDE_CODE_MCP_ALLOWLIST_ENV=1` ([section 18.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s18-3)) [\[184\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-env-vars).
+
+**Hors ligne.** Plusieurs variables coupent le trafic non indispensable : `DISABLE_TELEMETRY=1` pour les métriques, `DISABLE_ERROR_REPORTING=1` pour les rapports d’erreur, `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` pour tout le trafic non essentiel [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage). `DISABLE_TELEMETRY` et `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` ont un effet de bord documenté : elles coupent aussi l’évaluation des drapeaux de fonctions, ce qui peut rendre [Remote Control](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-remote-control) indisponible [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage).
+
+**Ce qui sort quand même.** Avant un `WebFetch` vers un hôte qui n’a pas été vérifié dans les cinq dernières minutes, le nom d’hôte demandé, et lui seul, part vers `api.anthropic.com` pour un contrôle de liste de blocage, quel que soit le fournisseur et même avec le trafic non essentiel coupé. La clé `skipWebFetchPreflight` le désactive [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage). Un poste qui veut ne laisser sortir que le trafic indispensable doit le savoir.
+
+**Pas de [CDN](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-cdn) à l’exécution.** Ce guide propose qu’un outil local (une page de pilotage, une vue, une figure) n’appelle aucune ressource en ligne quand il s’affiche : tout ce qu’il montre est embarqué. Une page qui charge une bibliothèque depuis un CDN révèle votre usage à un tiers, et casse dès que le réseau manque. Chez Passerelle, la page locale qui montre le brouillon à Odile, à côté du courrier, ne charge rien en ligne : ses polices et ses styles sont dans le fichier.
+
+> **🔀 Quand la règle cède**
+>
+> - La règle « hors ligne » cède dès qu’une session emploie WebFetch, dont le contrôle préalable fait sortir le nom d’hôte demandé (cette section).
+> - Ce qui tient : la liste exacte de ce qui sort, écrite, et la règle de deux, qui dit quelle session a le droit de sortir ([section 23.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s23-4)).
+> - Pour aller plus loin : [chapitre 17](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch17), sur le bac à sable et ses modes.
 
 ### 23.7 Le contrôle avant envoi, pour tout message
 
@@ -49,7 +67,7 @@ Les outils nommés sont des logiciels libres, cités en exemple, et la liste n�
 >
 > Sur un poste fourni par une organisation, sa politique peut déjà fixer la liste des outils permis ([section 17.6](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-6)) : demandez-la avant d’installer, et proposez un outil de la liste quand il fait le même contrôle.
 
-Chez Passerelle, Bernard branche le scanner de secrets à la porte de commit, et l’audit des dépendances de son contrôle des dates avant chaque nouvelle version. Il a demandé à Samia avant d’installer quoi que ce soit, et essayé le scanner sur un faux jeton, `PASS-JETON-0000-0000`, qui doit le faire échouer.
+Chez Passerelle, Bernard branche le scanner de secrets à la porte de commit, et l’audit des dépendances de son contrôle des dates avant chaque nouvelle version. Il a demandé à Samia avant d’installer quoi que ce soit, et essayé le scanner sur un faux jeton, `PASS-JETON-0000-0000`, qui doit le faire échouer. Les règles par défaut de gitleaks ne reconnaissent pas ce jeton fait de zéros. Bernard lui ajoute donc une règle, dans un fichier `.gitleaks.toml` qui garde les règles par défaut (`useDefault = true`) [\[83\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-gitleaks), puis vérifie que le commit du témoin échoue.
 
 **Un cadre de référence.** Le [SSDF](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-ssdf) (*Secure Software Development Framework*) du [NIST](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-nist), SP 800-218 version 1.1 de février 2022, regroupe les pratiques de développement sécurisé en quatre familles : préparer l’organisation (PO), protéger le logiciel (PS), produire un logiciel bien sécurisé (PW), répondre aux vulnérabilités (RV) [\[163\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-nist-sp-800-218) [\[164\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-nist-ssdf). Un projet de version 1.2 a été publié le 17 décembre 2025, sans version finale à la date de consultation [\[165\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-nist-sp-800-218r1). Le profil 800-218A, de juillet 2024, ajoute des pratiques propres au développement de modèles d’IA générative [\[166\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-nist-sp-800-218a). Il ne traite pas directement du développement assisté par un agent. 💡 Conseil : servez-vous de ce cadre pour montrer, famille par famille, que vos pratiques couvrent ce que demande un développement sécurisé.
 

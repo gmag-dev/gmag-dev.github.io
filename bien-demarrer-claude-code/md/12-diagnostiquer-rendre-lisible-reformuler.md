@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 12. Diagnostiquer, rendre lisible, reformuler ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 12. Diagnostiquer, rendre lisible, reformuler ».
 >
 > - Précédent : [11. Commits et collaboration](https://gmag-dev.github.io/bien-demarrer-claude-code/md/11-commits-et-collaboration.md)
 > - Suivant : [13. Les pièges fréquents](https://gmag-dev.github.io/bien-demarrer-claude-code/md/13-les-pieges-frequents.md)
@@ -140,7 +140,7 @@ Chez Passerelle, Inès dicte un soir dans Claude Code, seule à la permanence : 
 > **🔀 Quand la règle cède**
 >
 > - Les deux lignes du `CLAUDE.md` sont des consignes : Claude les suit presque toujours, sans garantie.
-> - Ce qui tient : pour un geste qu’on ne défait pas, le mode Manual, où vous validez chaque commande. Pour que l’arrêt avant d’agir ne dépende pas d’une consigne, le mode plan.
+> - Ce qui tient : pour un geste qu’on ne défait pas, le mode Manual, où vous validez chaque modification et les commandes qui ne font pas que lire. Pour que l’arrêt avant d’agir ne dépende pas d’une consigne, le mode plan.
 > - Pour `/voice`, il faut un compte Claude.ai : la dictée n’est pas disponible quand Claude Code passe par une clé d’API d’Anthropic, Amazon Bedrock, l’Agent Platform de Google Cloud ou Microsoft Foundry [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation). Il faut aussi un micro sur le poste : elle ne marche ni dans une session cloud ni par SSH [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation).
 > - Pour aller plus loin : sections [1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s1-4) et [4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-2).
 

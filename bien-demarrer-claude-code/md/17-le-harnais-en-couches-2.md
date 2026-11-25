@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 17. Le harnais en couches », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 17. Le harnais en couches », partie 2 sur 2.
 >
 > - Précédent : [17. Le harnais en couches (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/17-le-harnais-en-couches-1.md)
 > - Suivant : [18. Hooks, serveurs MCP, ligne d’état et tâches planifiées (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/18-hooks-serveurs-mcp-ligne-d-etat-et-taches-planifiees-1.md)
@@ -43,6 +43,7 @@ Voici le bac à sable que Bernard ajoute au `.claude/settings.local.json` du pos
 {
   "sandbox": {
     "enabled": true,
+    "failIfUnavailable": true,
     "autoAllowBashIfSandboxed": false,
     "allowUnsandboxedCommands": false,
     "network": {
@@ -54,6 +55,8 @@ Voici le bac à sable que Bernard ajoute au `.claude/settings.local.json` du pos
   }
 }
 ```
+
+Avec `failIfUnavailable` à `true`, Claude Code refuse de démarrer si le bac à sable ne peut pas démarrer : sans cette clé, les commandes tourneraient hors du bac à sable ([section 17.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-5)) [\[18\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-sandboxing). Avant de compter sur lui pour `pieces/`, vérifiez aussi par `/sandbox` qu’il est actif [\[18\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-sandboxing).
 
 Nouveau · 21 nov. 2026 Depuis la version 2.1.325, une commande confinée par le bac à sable suit par défaut le circuit normal des permissions [\[1\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-changelog). La clé `autoAllowBashIfSandboxed` à `true` choisit l’autre mode : la commande confinée passe alors sans demande, même en mode Manual [\[18\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-sandboxing). Bernard l’écrit à `false`, ce qui vaut aussi sur une version plus ancienne, pour que le shell reste sous la garde d’une personne. Les règles `deny` et les règles `ask` à motif, comme `Bash(git push *)`, restent appliquées, mais une règle `ask` nue sur `Bash` est sautée pour une commande confinée [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permissions).
 

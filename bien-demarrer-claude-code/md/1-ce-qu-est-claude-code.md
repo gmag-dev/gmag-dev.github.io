@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 1. Ce qu’est Claude Code ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 1. Ce qu’est Claude Code ».
 >
 > - Précédent : [Prérequis](https://gmag-dev.github.io/bien-demarrer-claude-code/md/prerequis.md)
 > - Suivant : [2. Bien démarrer (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/2-bien-demarrer-1.md)
@@ -215,10 +215,10 @@ Le même choix, en texte :
 > 1. Glob     courriers/PASS-C-*.txt
 > 2. Read     courriers/PASS-C-001.txt … courriers/PASS-C-010.txt
 > 3. Write    montants.md
-> 4. Grep     "euros" dans courriers/
+> 4. Grep     chaque montant lu à la ligne 2, un par un, dans montants.md
 > 5. Edit     montants.md (ajout du montant de PASS-C-007)
 > 6. Edit     montants.md (correction du montant de PASS-C-002)
-> 7. Grep     "euros" dans courriers/
+> 7. Grep     chaque montant lu à la ligne 2, un par un, dans montants.md
 > ```
 >
 > Reconnaissez la phase de chaque ligne, rangez-la, et dites pourquoi « agir » revient deux fois de suite. Puis une question de plus : Samia écrit dans `CLAUDE.md` « N’envoie jamais rien ». Distinguez : est-ce une consigne ou une règle imposée, et que faudrait-il pour qu’elle tienne quoi que décide le modèle ?
@@ -235,7 +235,7 @@ Le même choix, en texte :
 >
 > **②** Lignes 1 et 2 : le contexte. Ligne 3 : agir. Ligne 4 : vérifier, et la recherche trouve deux écarts. Lignes 5 et 6 : agir deux fois, pour deux défauts distincts, un montant manquant et un montant faux. Ligne 7 : vérifier les deux corrections. Erreur fréquente : ranger la ligne 4 dans le contexte, alors qu’elle contrôle l’action qui la précède. La phrase de Samia dans `CLAUDE.md` est une consigne. Pour tenir quoi que décide le modèle, elle doit devenir une règle imposée ([chapitre 10](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch10)). Et un brouillon ne sort que si Odile le décide.
 >
-> **③** Votre liste montre au moins une modification suivie d’un lancement des tests, et la sortie du dernier lancement, qui passe. Si Claude a modifié sans relancer les tests, demandez-lui de le faire et de vous montrer la sortie. En mode Manual, c’est vous qui avez validé chaque commande.
+> **③** Votre liste montre au moins une modification suivie d’un lancement des tests, et la sortie du dernier lancement, qui passe. Si Claude a modifié sans relancer les tests, demandez-lui de le faire et de vous montrer la sortie. En mode Manual, c’est vous qui avez validé chaque lancement des tests.
 
 [Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
 

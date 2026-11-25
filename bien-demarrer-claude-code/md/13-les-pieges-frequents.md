@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 13. Les pièges fréquents ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 13. Les pièges fréquents ».
 >
 > - Précédent : [12. Diagnostiquer, rendre lisible, reformuler](https://gmag-dev.github.io/bien-demarrer-claude-code/md/12-diagnostiquer-rendre-lisible-reformuler.md)
 > - Suivant : [14. Le modèle propose, l’oracle vérifie, la personne tranche (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/14-le-modele-propose-l-oracle-verifie-la-personne-tranche-1.md)

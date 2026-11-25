@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « Annexe C. Installer par système », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Annexe C. Installer par système », partie 1 sur 2.
 >
 > - Précédent : [Annexe B. Glossaire (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-b-glossaire-2.md)
 > - Suivant : [Annexe C. Installer par système (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-c-installer-par-systeme-2.md)
@@ -16,7 +16,7 @@ Le [chapitre 2](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch2) suit 
 
 Sur un poste fourni par une organisation, rien de cette annexe ne s’installe avant son accord : l’encadré en tête des « Prérequis » dit les questions à poser. Il faut d’abord un abonnement Pro, Max, Ultra, Team ou Enterprise, ou un compte de la console Anthropic : l’offre gratuite de claude.ai ne donne pas accès à Claude Code [\[7\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-setup). La machine demande au moins 4 Go de mémoire vive, un processeur x64 ou ARM64 et une connexion à internet. Les systèmes pris en charge sont macOS 13.0 ou plus récent, Windows 10 version 1809 ou plus récent, Windows Server 2019 ou plus récent, Ubuntu 20.04 ou plus récent, Debian 10 ou plus récent et Alpine Linux 3.19 ou plus récent [\[7\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-setup).
 
-Toutes les [surfaces](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-surface), le terminal, l’extension d’un éditeur, l’application de bureau ou le web, reposent sur le même moteur : les fichiers `CLAUDE.md`, les réglages et les serveurs [MCP](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-mcp) d’un dépôt fonctionnent partout [\[26\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-overview). Choisir son système ne vous enferme donc pas. La figure suivante part de votre poste.
+Toutes les [surfaces](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-surface), le terminal, l’extension d’un éditeur, l’application de bureau ou le web, reposent sur le même moteur : les fichiers `CLAUDE.md`, les réglages et les serveurs [MCP](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-mcp) d’un dépôt fonctionnent partout [\[26\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-overview). Le mode de départ fait exception. Une session cloud ignore, sans le dire, un `defaultMode` à `dontAsk` ou à `bypassPermissions` venu des fichiers de réglages, et démarre dans le mode choisi dans son sélecteur. L’extension VS Code ne lit pas les réglages du projet pour son mode de départ [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes). Avant d’y reprendre une procédure écrite pour le terminal, vérifiez le mode de la session. Choisir son système ne vous enferme donc pas. La figure suivante part de votre poste.
 
 *Dessin : Quel chemin pour installer Claude Code. Schéma : la description suit.*
 
@@ -161,7 +161,7 @@ Vos identifiants sont ensuite enregistrés dans `~/.claude/.credentials.json`, a
 
 > **⚠️ Attention**
 >
-> Sur le serveur, Claude agit avec les droits de votre compte. Gardez le mode Manual les premiers jours. N’employez pas `bypassPermissions`, le mode où tout passe sans demande, ni sur ce serveur ni sur votre poste : il n’a de sens que dans un conteneur ou une machine virtuelle isolés ([section 10.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-4)).
+> Sur le serveur, Claude agit avec les droits de votre compte. Gardez le mode Manual les premiers jours. N’employez pas `bypassPermissions`, le mode où tout passe sans demande, ni sur ce serveur ni sur votre poste : il n’a de sens que dans un conteneur ou une machine virtuelle sans vos secrets, au réseau limité, pour un dépôt de confiance ([section 10.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-4)).
 
 > **⚠️ Attention**
 >

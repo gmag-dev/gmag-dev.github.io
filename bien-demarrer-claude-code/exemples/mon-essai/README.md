@@ -45,13 +45,13 @@ Puis, dans le terminal, `cd ~/mon-essai`, et la suite de la section 2.1 : l'iden
    - **Sans code** : pour `ESSAI-C-001`, écrivez d'abord vous-même, sans Claude, la liste de ses dates et de ses montants, un par ligne, tels que le document les écrit, dans `liste-ESSAI-C-001.txt`. Puis lancez vous-même la comparaison, qui cherche chaque ligne de la liste dans l'explication, sans demander l'avis du modèle (annexe A, section A.2). Elle nomme chaque ligne absente de l'explication, et n'affiche rien si toutes y sont. Sous macOS et Linux :
 
      ```bash
-     while IFS= read -r l || [ -n "$l" ]; do l=${l%$'\r'}; grep -qF -- "$l" explications/ESSAI-E-001.md || echo "absent de l'explication : $l"; done < liste-ESSAI-C-001.txt
+     while IFS= read -r l || [ -n "$l" ]; do l=${l%$'\r'}; grep -qwF -- "$l" explications/ESSAI-E-001.md || echo "absent de l'explication : $l"; done < liste-ESSAI-C-001.txt
      ```
 
      Sous Windows, dans PowerShell :
 
      ```powershell
-     Get-Content -Encoding UTF8 liste-ESSAI-C-001.txt | Where-Object { $_ -and -not (Select-String -Quiet -SimpleMatch -Encoding UTF8 -Pattern $_ -Path explications\ESSAI-E-001.md) } | ForEach-Object { "absent de l'explication : $_" }
+     Get-Content -Encoding UTF8 liste-ESSAI-C-001.txt | Where-Object { $_ -and -not (Select-String -Quiet -Encoding UTF8 -Pattern ('(?<!w)' + [regex]::Escape($_) + '(?!w)') -Path explications\ESSAI-E-001.md) } | ForEach-Object { "absent de l'explication : $_" }
      ```
 
    - **Avec code** : lancez vous-même le contrôle de référence, ou laissez Claude le lancer après votre accord :

@@ -1,0 +1,16 @@
+/* Soutien au guide (Tipeee), conception du 2026-11-25 : un encart fixe, à sa place dans la page, sans animation ni transition,
+   sans logo ni couleur de Tipeee (cœur générique du jeu Tabler, MIT, décoratif). Jetons du thème seulement : clair, sombre,
+   Cyberpunk et Classique sans autre règle. Le lien garde son soulignement : c'est un lien, pas un bouton. Cible de 44 px. */
+.soutien-encart{box-sizing:border-box;max-width:44rem;margin:4rem auto 0;padding:1rem clamp(1rem,3vw,1.4rem);border:1px solid var(--rule);
+  border-radius:10px;background:var(--nav-bg);color:var(--text);font-size:.95rem;line-height:1.55;text-align:left;-webkit-hyphens:manual;hyphens:manual}
+.soutien-encart p{margin:0 0 .55rem}
+.soutien-encart p:last-child{margin-bottom:0}
+.soutien-titre{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:1.05rem}
+.soutien-action{padding-top:.2rem}
+.soutien-lien{display:inline-block;box-sizing:border-box;min-height:44px;padding:.7em 1em;border:1px solid var(--link);border-radius:6px;
+  background:var(--bg);color:var(--link);font-weight:700;line-height:1.35;text-decoration:underline;text-underline-offset:.15em;overflow-wrap:anywhere}
+.soutien-lien:hover{text-decoration-thickness:2px}
+.soutien-fin+.transparence-fin{margin-top:1.5rem}
+/* Page de titre (variante B) : sous le cartouche, à la largeur du cadrage ; il reprend l'entrée « Soutenir » du cartouche. */
+.titlepage .soutien-accueil{width:100%;margin:clamp(1.2rem,3vh,1.8rem) auto 0}
+@media print{ .soutien-encart{display:none!important} }

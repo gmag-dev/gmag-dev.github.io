@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « Sources », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Sources », partie 2 sur 2.
 >
 > - Reprise : ce morceau poursuit une liste du morceau précédent, coupée entre deux entrées
 > - Précédent : [Sources (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-1.md)
@@ -32,8 +32,21 @@
 182. \[182\] Projet Git. *git-rm*. [https://git-scm.com/docs/git-rm](https://git-scm.com/docs/git-rm). Consultée le 2026-11-09.
 183. \[183\] Anthropic. *Code Mode*. [https://code.claude.com/docs/en/code-mode](https://code.claude.com/docs/en/code-mode). Consultée le 2026-11-18.
 184. \[184\] Anthropic. *Environment variables*. [https://code.claude.com/docs/en/env-vars](https://code.claude.com/docs/en/env-vars). Consultée le 2026-11-08.
+185. \[185\] Anthropic. *Claude Fable models on your plan*. [https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan](https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan). Consultée le 2026-11-25.
+186. \[186\] Anthropic. *How long do you store my organization’s data?*. [https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data](https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data). Consultée le 2026-11-25.
+187. \[187\] Amazon Web Services. *Data retention, Amazon Bedrock*. [https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html](https://docs.aws.amazon.com/bedrock/latest/userguide/data-retention.html). Consultée le 2026-11-25.
+188. \[188\] Projet Git. *git-stash*. [https://git-scm.com/docs/git-stash](https://git-scm.com/docs/git-stash). Consultée le 2026-11-25.
+189. \[189\] La Plateforme de l’inclusion. *Calcul de clé NIR*. [https://cle-nir.inclusion.gouv.fr/](https://cle-nir.inclusion.gouv.fr/). Consultée le 2026-11-25.
 
 [Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
+
+Soutenir ce guide
+
+Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
+
+Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
+
+[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 Mention de transparence
 
@@ -55,7 +68,7 @@ Bien démarrer avec Claude Code
 
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
 
-Autrice : Gabrielle Magnan · Version : 3.2.0+publique.web · 21 novembre 2026 · Édition publique
+Autrice : Gabrielle Magnan · Version : 3.2.1+publique.web · 25 novembre 2026 · Édition publique
 
 [Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 

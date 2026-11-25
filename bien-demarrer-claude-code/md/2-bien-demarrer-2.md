@@ -1,12 +1,81 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 2. Bien démarrer », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 2. Bien démarrer », partie 2 sur 2.
 >
 > - Précédent : [2. Bien démarrer (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/2-bien-demarrer-1.md)
 > - Suivant : [3. La fenêtre de contexte](https://gmag-dev.github.io/bien-demarrer-claude-code/md/3-la-fenetre-de-contexte.md)
 > - Sommaire : [llms.txt](https://gmag-dev.github.io/bien-demarrer-claude-code/llms.txt), tous les morceaux dans l'ordre de lecture
-> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-s2-4>
+> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-s2-3>
 > - Licence du texte : <https://creativecommons.org/licenses/by-nc-nd/4.0/>
 
 ---
+
+### 2.3 Les modes de permission
+
+Une commande passée sans votre accord ne se voit pas toujours tout de suite, et certaines ne se défont pas. Débutez donc en mode Manual. Le mode de permission répond à une question : Claude doit-il vous demander avant d’agir ? Le mode de départ d’une session lancée sans option change d’une version à l’autre (encadré ci-dessous) : lisez-le au lancement dans la barre d’état, sous la saisie, qui affiche le mode actif, comme `⏸ manual mode on` pour Manual [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes). En [mode auto](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-mode-auto), un second modèle, le [classificateur](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-classificateur), examine la plupart des actions en arrière-plan et décide si elles passent. `Maj+Tab` fait défiler les modes pendant la session, et l’option `--permission-mode` en choisit un au lancement [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes).
+
+Deux sortes de règles s’appliquent avant le classificateur, dans tous les modes [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-best-practices) : les [règles deny](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-regle-deny) et ask, des refus et des demandes écrits dans vos réglages ([section 10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-1)), et les [hooks](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-hook) d’avant outil, des commandes que Claude Code lance lui-même avant un outil ([section 7.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s7-2)).
+
+> **🔀 Quand la règle cède**
+>
+> - À la version 2.1.319, une session interactive dans le terminal ou VS Code démarre en mode auto 🕘 depuis la version 2.1.283, s’il est disponible pour votre modèle et votre compte. Sinon, ou si un réglage le désactive, elle démarre en Manual [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes). Les règles deny et ask et les hooks d’avant outil s’appliquent dans tous les modes, sauf ce qu’approuve un [mod](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-mod), un plugin qui contrôle lui-même les appels d’outils ([section 10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-1)) [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-best-practices), et les hooks, dans les limites de la [section 17.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-3). Une règle deny porte sur l’appel d’outil : un script lancé par Claude peut encore lire le fichier qu’elle protège [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permissions).
+> - Ce qui tient : la barre d’état, qui affiche le mode actif, et l’option `--permission-mode`, qui en choisit un au lancement.
+> - Pour aller plus loin : sections [10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-1) et [17.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-3).
+
+**Tableau 2.2 :** Les modes de permission, d’après [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes).
+
+| Mode | Ce qui passe sans vous demander | Pour quoi |
+| --- | --- | --- |
+| `manual` (Manual), écrit `default` dans les réglages | les lectures seulement | débuter, un travail sensible |
+| `acceptEdits` | les lectures, les modifications de fichiers, les commandes de fichiers courantes | itérer sur un travail que vous relisez |
+| `auto` | tout, sous le contrôle du classificateur | les tâches longues |
+| `plan` | les lectures, et les commandes que le classificateur approuve quand le mode auto existe, sans modifier vos sources, sauf si `bypassPermissions` est disponible ([section 4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-2)) | explorer avant de modifier ([chapitre 4](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch4)) |
+| `dontAsk` | les lectures dans vos dossiers de travail et les outils approuvés d’avance, ce qui demanderait est refusé, sauf ce qu’approuve un mod ([section 10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-1)) | les scripts verrouillés |
+| `bypassPermissions` | tout, sauf vos règles deny et ask et les actions qu’aucun mode n’approuve d’office | un conteneur sans vos secrets, au réseau limité, seulement ([section 10.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-4)) |
+
+Manual porte deux noms. `default` est sa valeur de configuration, celle qu’écrivent les réglages et que lisent les hooks et le SDK. `manual` en est l’alias, accepté partout où l’on tape un mode, comme dans `--permission-mode manual` 🕘 [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes). Ce guide écrit `manual` dans les commandes et `default` dans les fichiers de réglages : c’est le même mode.
+
+**Le mode Manual sans retaper l’option.** L’option `--permission-mode manual` ne vaut que pour la session qu’elle lance : un jour où vous l’oubliez, la session peut partir en mode auto (encadré ci-dessus) [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes). Pour que Manual soit votre mode de départ dans toutes les sessions du terminal, écrivez-le dans vos réglages utilisateur, le fichier `~/.claude/settings.json` (créez-le s’il n’existe pas, par le geste du paragraphe « Créer un fichier dont le nom commence par un point », plus bas) [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes) :
+
+```json
+{
+  "permissions": {
+    "defaultMode": "default"
+  },
+  "useAutoModeDuringPlan": false
+}
+```
+
+La seconde clé sert au mode plan du [chapitre 4](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch4) : elle vous fait demander ses commandes au lieu de les confier au classificateur [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes), et elle ne compte pas dans les réglages d’un dépôt ([section 4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-2)) [\[32\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-settings-reference). C’est le même fichier que celui du jour 1 de l’[annexe A](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-a).
+
+À la session suivante, la barre d’état affiche en gris `⏸ manual mode on` 🕘 [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes). Lisez-la à chaque démarrage : un réglage du projet passe avant le vôtre, et les réglages gérés par votre organisation passent avant tous, l’option `--settings` comprise [\[33\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-settings). L’option `--permission-mode` choisit le mode de départ avant tout `defaultMode`, parmi les modes que l’organisation laisse ouverts [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes).
+
+**Créer un fichier dont le nom commence par un point.** Les réglages vivent dans des dossiers dont le nom commence par un point, `.claude` dans le projet et `~/.claude` dans votre dossier personnel, et le faux secret du jour 2 de l’[annexe A](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-a) s’appelle `.env`. Le Finder refuse un nom qui commence par un point [\[34\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-apple-renommer). Créez le dossier et le fichier depuis le terminal, en commençant par vos réglages utilisateur, ceux de votre dossier personnel :
+
+- sous macOS et Linux, `mkdir -p ~/.claude`, puis `nano ~/.claude/settings.json`,
+- sous Windows, dans PowerShell, `New-Item -ItemType Directory -Force $HOME\.claude`, puis `notepad $HOME\.claude\settings.json`.
+
+Si le dossier `~/.claude` existe déjà, ces deux commandes passent sans erreur.
+
+Pour les réglages du projet, depuis le dossier du projet : `mkdir .claude`, puis `nano .claude/settings.json` sous macOS et Linux, `notepad .claude\settings.json` sous PowerShell. Si le dossier existe déjà, `mkdir` le signale : passez à la commande suivante. Dans `nano`, `Ctrl+O` puis Entrée enregistre le fichier, et `Ctrl+X` quitte [\[35\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-nano-cheatsheet). Ne confondez pas les deux fichiers : `~/.claude/settings.json` vaut pour tous vos projets, `.claude/settings.json` pour ce seul projet. Sans terminal, demandez le fichier à Claude en mode Manual, et lisez ce qu’il propose avant d’accepter. Si le fichier existe déjà, ajoutez seulement la clé, à sa place dans l’objet : un fichier de réglages au JSON invalide est ignoré en bloc ([annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-l), [section L.8](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-l-8)). Vérifiez enfin que Claude Code le lit, par la barre d’état pour le mode et par `/permissions` pour une règle.
+
+Le mode auto bloque notamment `curl | bash`, les déploiements de production, l’envoi de données sensibles vers l’extérieur, et les actions qui semblent dictées par un contenu lu plutôt que par vous [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-best-practices). Mais le classificateur est un contrôle automatique, pas l’accord d’une personne, et il peut se tromper : le mode auto n’est pas une session supervisée ([section 23.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s23-4)).
+
+Chez Passerelle, Inès fait défiler les modes sur le dossier des courriers, puis reste en Manual : elle veut voir chaque modification, et chaque commande qui ne fait pas que lire, avant qu’elle passe.
+
+> **⚠️ Attention**
+>
+> Passer en mode auto ou en `bypassPermissions` « pour aller plus vite » retire la personne de la boucle. En `bypassPermissions`, Claude ne vous demande plus rien, sauf ce que vos règles ask lui font demander. Entre une erreur et vos fichiers restent vos règles deny, vos hooks d’avant outil, et le bac à sable s’il est activé ([section 17.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-5)). Gardez Manual les premiers jours. Réservez `bypassPermissions` à un conteneur jetable, sans vos secrets, au réseau limité, pour un dépôt de confiance ([section 10.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-4)), et repassez en Manual pour tout travail qui lit un contenu venu d’ailleurs.
+
+**Tableau 2.3 :** Travailler sans être interrompu sans cesse, à trois niveaux, d’après [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes) et [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-best-practices).
+
+| Si vous… | Le mode | Ce qu’il vous apporte |
+| --- | --- | --- |
+| débutez | Manual, en lisant chaque demande | vous apprenez ce que Claude veut faire |
+| savez ce que vous approuveriez | `auto`, avec des règles deny sur vos secrets ([section 10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-1)) | moins d’interruptions, et la lecture directe de vos secrets refusée, dans la limite de la [section 10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-1) |
+| automatisez un script | `dontAsk` et des outils approuvés d’avance ([section 15.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s15-4)) | aucune question : ce qui demanderait est refusé |
+
+> **📏 La limite**
+>
+> Aucun mode ne remplace la lecture. En Manual, au dixième message de confirmation, on finit par approuver sans lire [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-best-practices). Et le mode auto décide à votre place, sans vous ([section 23.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s23-4)).
 
 ### 2.4 Garder la main
 

@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 15. Déléguer », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 15. Déléguer », partie 2 sur 2.
 >
 > - Précédent : [15. Déléguer (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/15-deleguer-1.md)
 > - Suivant : [16. Relire pour réfuter, corriger l’instance et la classe, capitaliser](https://gmag-dev.github.io/bien-demarrer-claude-code/md/16-relire-pour-refuter-corriger-l-instance-et-la-classe.md)
@@ -150,8 +150,9 @@ Avant la synthèse, fais relire les conclusions par un contexte neuf qui cherche
 > for n in 031 032 033; do
 >   claude -p "Vérifie que chaque date de courriers/PASS-C-$n.txt se retrouve dans brouillons/PASS-B-$n.md. Ne modifie rien. Pour chaque date, donne la ligne du brouillon, ou « absente ». Termine par l'un des mots d'issue de docs/definition-du-fini.md." \
 >     --permission-mode dontAsk \
+>     --tools "Read,Grep,Glob" \
 >     --allowedTools "Read,Grep,Glob" \
->     --disallowedTools "Bash" \
+>     --disallowedTools "mcp__*" \
 >     --max-turns 10 \
 >     > "rapports/PASS-C-$n.txt"
 > done
@@ -165,7 +166,7 @@ Avant la synthèse, fais relire les conclusions par un contexte neuf qui cherche
 >
 > **Voir le corrigé expliqué (après votre essai)**
 >
-> **Les outils permis.** `Read`, `Grep` et `Glob` : la tâche ne fait que lire. Avec `--permission-mode dontAsk`, un outil qui n’est pas approuvé d’avance est refusé sans demande [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes). Dans votre copie de Passerelle, un dossier que vous avez approuvé, les règles `allow` des réglages du projet s’appliquent aussi en `claude -p`, et ouvriraient encore le shell, pour les tests et la lecture de git (sections [17.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-1) et [17.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-2)) [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permissions) : `--disallowedTools "Bash"` le retire, puisqu’un refus l’emporte sur une permission [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permissions). Sans shell ni outil web, la session n’a plus de sortie ([section 10.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-3)). Le rapport revient par la sortie du script, pas par un fichier que Claude écrirait.
+> **Les outils permis.** `Read`, `Grep` et `Glob` : la tâche ne fait que lire. `--tools "Read,Grep,Glob"` ne laisse à la session que ces trois outils intégrés, sans shell ni outil web. `--allowedTools` les laisse passer sans demande, mais ne retire aucun outil à lui seul [\[115\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-cli-reference). Avec `--permission-mode dontAsk`, un outil qui n’est pas approuvé d’avance est refusé sans demande [\[19\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permission-modes). Dans votre copie de Passerelle, un dossier que vous avez approuvé, les règles `allow` des réglages du projet s’appliquent aussi en `claude -p`, celle du shell, pour `git status`, comme celle de l’outil du lexique (sections [17.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-1) et [17.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-2)) [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permissions). `--tools` ne touche pas aux outils MCP : `--disallowedTools "mcp__*"` les retire tous [\[115\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-cli-reference). Sans shell, ni outil web, ni outil MCP, la session n’a plus que des outils de lecture ([section 10.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-3)). Les hooks du dépôt, eux, ne sont pas des outils que Claude appelle : Claude Code les lance de lui-même, et ils tournent quand même, d’où un dépôt inspecté. Le rapport revient par la sortie du script, pas par un fichier que Claude écrirait.
 >
 > **Le plafond.** Une dizaine de tours suffit pour lire deux fichiers et les comparer. Une session qui atteint le plafond s’arrête avant d’avoir fini : son issue est « incomplet », pas « vérifié » ([section 14.10](https://gmag-dev.github.io/bien-demarrer-claude-code/#s14-10)).
 >

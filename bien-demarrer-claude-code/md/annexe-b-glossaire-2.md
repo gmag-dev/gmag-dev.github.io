@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « Annexe B. Glossaire », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Annexe B. Glossaire », partie 2 sur 2.
 >
 > - Reprise : ce morceau poursuit une liste du morceau précédent, coupée entre deux entrées
 > - Précédent : [Annexe B. Glossaire (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-b-glossaire-1.md)
@@ -9,6 +9,7 @@
 
 ---
 
+- **Monte-Carlo** : Une méthode qui rejoue un calcul un grand nombre de fois avec des valeurs tirées au hasard, pour obtenir la répartition des résultats, par exemple un P50 et un P80. Voir : [section 20.11](https://gmag-dev.github.io/bien-demarrer-claude-code/#s20-11).
 - **mots d’issue** : Les mots qui nomment la fin d’une tâche, fixés d’avance. « Fini » n’en fait pas partie : il est réservé à la [recette](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-recette). Voir : [section 14.10](https://gmag-dev.github.io/bien-demarrer-claude-code/#s14-10).
 - **NIST** : National Institute of Standards and Technology, l’institut américain des normes et de la technologie, qui publie le cadre du développement logiciel sécurisé. Voir : [section 23.8](https://gmag-dev.github.io/bien-demarrer-claude-code/#s23-8).
 - **niveau d’effort** : Le réglage qui dit combien Claude réfléchit et vérifie avant de répondre : `low`, `medium`, `high`, `xhigh` ou `max`. La réflexion se paie comme des [jetons](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-jeton) de sortie. Voir : [section 4.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-4), [section 9.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s9-4), [section 15.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s15-4).

@@ -677,6 +677,14 @@ html[data-style="classic"] nav.toc li.toc-part>a{font-family:inherit;color:var(-
   width:min(100%,44rem);margin:clamp(1.4rem,3.5vh,2.2rem) auto 0;padding:.9rem 0 0;border-top:1px solid var(--rule)}
 .titlepage dl.title-meta dt{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
 .titlepage dl.title-meta dd{margin:0}
+/* Cartouche (demande de l'autrice du 2026-11-25) : son nom en jaune, le lien Tipeee en rose, aux jetons de la charte de la page.
+   Jaune : --heading, #ffe14d en sombre ; en clair, sa teinte foncée #7a5200, car le jaune néon n'y tient que 1,22:1 (mesuré le
+   2026-11-25 sur le fond réel). Rose : --rc-n-view, #ff4fd8 en sombre, #b0138a en clair (#ff5ad1 et #c0177f en Classique).
+   Soulignement et flèche restent ; le cœur suit son lien ; le [in] garde les couleurs de LinkedIn (règle .ico-li).
+   Sélecteurs par adresse : le balisage du cartouche ne change pas. */
+.titlepage dl.title-meta a[href*="linkedin.com/in/"],.titlepage dl.title-meta a[href*="linkedin.com/in/"]:visited{color:var(--heading)}
+.titlepage dl.title-meta a[href*="tipeee.com/"],.titlepage dl.title-meta a[href*="tipeee.com/"]:visited{color:var(--rc-n-view)}
+@media print{ .titlepage dl.title-meta a{color:#000!important} }
 .titlepage .cadrage,.titlepage .copy{box-sizing:border-box;width:100%;max-width:44rem;margin-left:auto;margin-right:auto;
   text-align:justify;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word;line-height:1.65}
 .titlepage .cadrage{margin-top:clamp(1.8rem,4.5vh,2.8rem);margin-bottom:0;font-size:.97rem;border:1px solid var(--rule);

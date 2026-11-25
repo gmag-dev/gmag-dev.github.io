@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « Annexe E. Gabarits ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Annexe E. Gabarits ».
 >
 > - Précédent : [Annexe D. La version web](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-d-la-version-web.md)
 > - Suivant : [Annexe F. Grille de relecture experte](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-f-grille-de-relecture-experte.md)
@@ -108,7 +108,7 @@ set -eu
 just check
 ```
 
-Git ne lit ce dossier qu’une fois désigné, par `git config core.hooksPath .githooks` [\[139\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-githooks). Sans gestionnaire de tâches, la porte appelle directement les deux commandes, une par ligne.
+Git ne lit ce dossier qu’une fois désigné, par `git config core.hooksPath .githooks` [\[139\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-githooks). Il ignore aussi un hook qui n’est pas exécutable : sous Linux, le commit passe alors, avec un simple avertissement [\[139\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-githooks). Sous macOS et Linux, rendez donc la porte exécutable, par `chmod +x .githooks/pre-commit`. Puis éprouvez-la une fois, sur tout système : faites échouer un contrôle exprès, et constatez que le commit est refusé. Sans gestionnaire de tâches, la porte appelle directement les deux commandes, une par ligne.
 
 > **⚠️ Attention**
 >

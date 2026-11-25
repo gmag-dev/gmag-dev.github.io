@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques », partie 5 sur 5.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques », partie 5 sur 5.
 >
 > - Précédent : [Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques (partie 4 sur 5)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-l-fiches-des-composants-4.md)
 > - Suivant : [Sources (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-1.md)
@@ -124,7 +124,7 @@ Le même choix, en texte, où l’on s’arrête au premier « oui » :
 
 **Ce que disent les pages.**
 
-- **Les alias.** Sur l’API d’Anthropic, `opus` donne Opus 5.5, `sonnet` Sonnet 5.5, `haiku` Haiku 5.5 et `fable` Fable 5.1. `best` donne Fable où il est disponible, sinon Opus. Chez d’autres fournisseurs, les alias donnent d’autres versions, et `default` revient au modèle par défaut du compte [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-model-config).
+- **Les alias.** À la version 2.1.319 que décrit ce guide, sur l’API d’Anthropic, `opus` donne Opus 5.5, `sonnet` Sonnet 5.5, `haiku` Haiku 5.5 et `fable` Fable 5.1. `best` donne Fable où il est disponible, sinon Opus. Nouveau · 25 nov. 2026 Depuis la version 2.1.321, `best` donne le même modèle que `opus`, et `fable` donne Fable 5.2, sauf dans les sessions qui passent par la passerelle des applications Claude. Pour refaire un exercice avec Fable 5.1, choisissez son identifiant, `claude-fable-5-1` [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-model-config). Chez d’autres fournisseurs, les alias donnent d’autres versions, et `default` revient au modèle par défaut du compte [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-model-config).
 - **Le contexte.** Fable 5.1, Fable 5, Sonnet 5 et suivants, Haiku 5.5, Opus 4.7 et suivants ont une fenêtre d’un million de jetons par défaut. `CLAUDE_CODE_DISABLE_1M_CONTEXT=1` revient à 200 000 [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-model-config).
 - **L’effort.** Cinq niveaux, `low` à `max`, quatre sur Opus 4.6 et Sonnet 4.6, qui n’ont pas `xhigh`. Le défaut est `medium` sur Opus 5.5, Sonnet 5.5 et Haiku 5.5, `xhigh` sur Opus 4.7, `high` sur les autres modèles qui le prennent [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-model-config) ([section 15.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s15-4)).
 - **La réflexion.** Elle ne se coupe pas sur Opus 5.5, Sonnet 5.5, Haiku 5.5 et les modèles Fable, et le raisonnement adaptatif y est toujours actif. `ultrathink`, tapé dans le terminal, peut monter un tour à `xhigh` (2.1.311) [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-model-config).
@@ -155,6 +155,6 @@ Ces fiches préparent le dernier jalon du guide. Le jalon Expert couvre les chap
 
 > **⚠️ Attention**
 >
-> Plusieurs fonctions de ces fiches élargissent ce que Claude peut faire sans vous : les hooks, les serveurs MCP locaux, les plugins, `claude -p` hors du mode `--bare`, `bypassPermissions`. Avant d’en activer une, lisez ce qu’elle exécute, essayez-la dans un dossier jetable, et n’y faites entrer aucune donnée de client, d’employeur ou d’usager (sections [10.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-3) et [23.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s23-1)).
+> Plusieurs fonctions de ces fiches élargissent ce que Claude peut faire sans vous : les hooks, les serveurs MCP locaux, les plugins, `claude -p` hors du mode `--bare`, `bypassPermissions`. Avant d’en activer une, lisez ce qu’elle exécute, essayez-la dans un dossier jetable, et n’y faites entrer aucune donnée de client, d’employeur ou d’usager (sections [10.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-3) et [23.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s23-1)). Un dossier jetable ne suffit pas à `bypassPermissions` : ce mode demande un conteneur ou une machine virtuelle sans vos secrets, au réseau limité, pour un dépôt de confiance ([section 10.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-4)).
 
 [Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)

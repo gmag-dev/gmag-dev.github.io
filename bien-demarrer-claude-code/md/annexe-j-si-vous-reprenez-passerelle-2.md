@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « Annexe J. Si vous reprenez Passerelle », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Annexe J. Si vous reprenez Passerelle », partie 2 sur 2.
 >
 > - Précédent : [Annexe J. Si vous reprenez Passerelle (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-j-si-vous-reprenez-passerelle-1.md)
 > - Suivant : [Annexe K. Listes des figures et des tableaux (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-k-listes-des-figures-et-des-tableaux-1.md)
@@ -46,7 +46,7 @@ Madame, ou Monsieur,
 | `PASS-C-032` | Bureau des aides de Rivelune | pièce à fournir : le dernier avis d’imposition | avant le 27 novembre 2026, sans quoi le réexamen est suspendu | aucun |
 | `PASS-C-033` | Service logement de la mairie de Rivelune | rendez-vous pour le réexamen d’un dossier | le 1er décembre 2026 à 14 h | aucun |
 
-**Les autres identifiants.** Le brouillon d’un courrier porte son numéro : `PASS-B-003` est le brouillon de `PASS-C-003`. Un numéro qui ressemblerait à un vrai s’écrit visiblement faux, comme `PASS-NIR-0000-0000` pour un numéro de sécurité sociale. Le guide emploie aussi `PASS-DEM-` pour une demande, `PASS-EX-` pour une exigence et `PASS-DEC-` pour une décision. Les chapitres emploient encore `PASS-ADR-` pour une décision d’architecture ([chapitre 21](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch21)), et `PASS-JETON-0000-0000` pour le faux jeton qui doit faire échouer le scanner de secrets ([chapitre 23](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch23)).
+**Les autres identifiants.** Le brouillon d’un courrier porte son numéro : `PASS-B-003` est le brouillon de `PASS-C-003`. Un numéro qui ressemblerait à un vrai s’écrit visiblement faux, comme `PASS-NIR-0000-0000` pour un numéro de sécurité sociale. Le guide emploie aussi `PASS-DEM-` pour une demande, `PASS-EX-` pour une exigence et `PASS-DEC-` pour une décision. Les chapitres emploient encore `PASS-ADR-` pour une décision d’architecture ([chapitre 21](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch21)), et `PASS-JETON-0000-0000` pour le faux jeton qui doit faire échouer le scanner de secrets, par une règle ajoutée pour lui ([chapitre 23](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch23)).
 
 **Tableau :** Les fichiers et les courriers que les chapitres nomment, et le chapitre qui les introduit.
 

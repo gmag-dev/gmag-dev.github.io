@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 9. Usage et coût sans crédits d’usage ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 9. Usage et coût sans crédits d’usage ».
 >
 > - Précédent : [8. Le travail en parallèle (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/8-le-travail-en-parallele-2.md)
 > - Suivant : [10. Sécurité (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/10-securite-1.md)
@@ -32,7 +32,7 @@ Sur un abonnement, Claude Code ne se paie pas à la requête : il consomme un qu
 >
 > **Voir la réponse attendue**
 >
-> Comparer au rythme lissé, environ un septième de la semaine par jour : à un jour et demi, environ 21 % étaient attendus, vous êtes très au-dessus. Puis chercher ce qui consomme, dans la répartition et les recommandations de `/usage`, et appliquer les habitudes qui économisent : `/clear` entre deux tâches, des sessions courtes, des prompts précis, les boucles arrêtées. Une réponse d’experte sait aussi que changer de modèle ne rétablit pas l’accès une fois la limite atteinte, et que monter l’effort n’est pas une parade.
+> Comparer au rythme lissé, environ un septième de la semaine par jour : à un jour et demi, environ 21 % étaient attendus, vous êtes très au-dessus. Puis chercher ce qui consomme, dans la répartition et les recommandations de `/usage`, et appliquer les habitudes qui économisent : `/clear` entre deux tâches, des sessions courtes, des prompts précis, les boucles arrêtées. Une réponse d’experte sait aussi que changer de modèle ne rétablit pas l’accès une fois une limite commune atteinte, mais le rétablit quand seule la limite des modèles Fable l’est, et que monter l’effort n’est pas une parade.
 >
 > Vous avez ces éléments ? Lisez seulement les encadrés « Quand la règle cède » et faites le barreau ③ de l’exercice. Sinon, lisez le chapitre dans l’ordre : il est écrit pour vous.
 
@@ -111,7 +111,7 @@ La même décision, en texte :
 1. Notez la barre hebdomadaire avec le jour et l’heure, puis comparez-la au rythme lissé.
 2. Sous le rythme ou juste au-dessus : continuez, et relisez le soir.
 3. Nettement au-dessus : lisez la répartition et les recommandations, appliquez les habitudes de la [section 9.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s9-4), reportez ce qui peut attendre.
-4. Limite atteinte : attendez la réinitialisation. Changer de modèle ne rétablit pas l’accès.
+4. Limite atteinte : regardez d’abord quel compteur est épuisé. Si c’est la seule limite des modèles Fable, passez à un autre modèle, qui reste dans le forfait, ou continuez avec des crédits d’usage [\[185\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-fable-plan). Si c’est une limite commune, attendez la réinitialisation : changer de modèle ne rétablit pas l’accès.
 5. Dans tous les cas, c’est vous qui décidez de la suite.
 
 Chez Passerelle, le mercredi soir, la barre de Bernard est à 55 %, pour 43 % attendus. Sur les 7 derniers jours, `/usage` montre que les sous-agents de la vague pèsent plus de la moitié de son usage, et signale des contextes longs. 🏛️ Mei fait la même lecture : son éventail de cinq sous-agents sur 40 contributions a pris environ 4 % de sa semaine, relevé fictif. Pour les 400, elle décide d’avancer thème par thème, sur plusieurs jours.
@@ -153,7 +153,7 @@ Chez Passerelle, Bernard a appliqué deux habitudes dès le jeudi : `/clear` ent
 > **📌 À retenir**
 >
 > - Pro et Max ont deux compteurs simultanés, la fenêtre de cinq heures et la semaine. Ultra n’a que la semaine. Max et Ultra ont en plus la semaine des modèles Fable.
-> - Sans crédits d’usage, une limite atteinte veut dire attendre : lissez, environ un septième par jour.
+> - Sans crédits d’usage, une limite commune atteinte veut dire attendre : lissez, environ un septième par jour. À la seule limite des modèles Fable, un autre modèle reste dans le forfait.
 > - Relisez `/usage` chaque jour contre le rythme lissé. Sa répartition et ses recommandations servent ensuite, pour trouver ce qui consomme.
 > - Un contexte court, des prompts précis, un modèle adapté, des boucles arrêtées.
 > - Le niveau d’effort par défaut convient à la plupart des tâches. Le rayon d’impact d’une erreur se borne par les tests, git et la relecture, pas par la réflexion.
@@ -188,7 +188,7 @@ Chez Passerelle, Bernard a appliqué deux habitudes dès le jeudi : `/clear` ent
 >
 > **①** Le total restant rassure à tort : le jour 3, il reste 45 %, ce qui semble beaucoup. Mais au rythme du jour 3, 28 points en un jour, la limite tombait le jour 5. Le rythme du jour dit tout de suite si la limite tiendra jusqu’à la réinitialisation. Lisser ne change rien au circuit des courriers : chaque brouillon de la vague attend la relecture d’Odile, qui décide s’il sert.
 >
-> **②** Le rythme est d’environ 20 points par jour : la limite tomberait vers la fin du jour 5, deux jours avant la réinitialisation. Le jour 4, lisez d’abord la répartition et les recommandations de `/usage`, puis appliquez les habitudes qui visent ce qui pèse, comme `/clear` entre deux tâches ou les boucles arrêtées, et reportez ce qui peut attendre. Erreur fréquente : changer de modèle avec `/model`, qui ne rétablit pas l’accès une fois la limite atteinte, ou monter l’effort par prudence, qui consomme davantage.
+> **②** Le rythme est d’environ 20 points par jour : la limite tomberait vers la fin du jour 5, deux jours avant la réinitialisation. Le jour 4, lisez d’abord la répartition et les recommandations de `/usage`, puis appliquez les habitudes qui visent ce qui pèse, comme `/clear` entre deux tâches ou les boucles arrêtées, et reportez ce qui peut attendre. Erreur fréquente : changer de modèle avec `/model`, qui ne rétablit pas l’accès une fois une limite commune atteinte, ou monter l’effort par prudence, qui consomme davantage.
 >
 > **③** Chaque relevé porte un jour et une heure. Si votre courbe dépasse le rythme lissé deux jours de suite, la recommandation la plus lourde est votre première piste. Pour l’effort, comparez les défauts comptés, pas votre impression : si le niveau plus haut ne les réduit pas, gardez le défaut. Un seul essai reste une indication.
 

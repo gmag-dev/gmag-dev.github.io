@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « Comment lire ce guide ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Comment lire ce guide ».
 >
 > - Précédent : [Avant-propos](https://gmag-dev.github.io/bien-demarrer-claude-code/md/avant-propos.md)
 > - Suivant : [Apprendre avec ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/md/apprendre-avec-ce-guide.md)
@@ -75,10 +75,13 @@ Dans la version web, la ligne « Exercices » du panneau Options propose « Affi
 
 Claude Code publie plusieurs versions par semaine : dix entre le 31 octobre et le 17 novembre 2026, d’après son journal des versions [\[1\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-changelog). Un guide déjà lu se relit donc mal à la version suivante. Une fonction de Claude Code, ou un fait nouveau, entrés dans le guide depuis soixante jours au plus portent le badge 🆕 Nouveau, avec leur date. La refonte de la version 3 elle-même n’est pas marquée. Le tableau ci-dessous rassemble les nouveautés, de la plus récente à la plus ancienne. Pour chacune, il donne la version de Claude Code où la fonction ou le modèle est apparu, ou, pour un ajout du guide, la dernière version publiée le jour de son entrée, et l’endroit qui en parle. Il est reconstruit à chaque version du guide : un badge y reste soixante jours après sa date, comptés jusqu’à la date de la version du guide, écrite sur la page de titre, puis s’efface à la version suivante.
 
+La version 3.2.1, du 25 novembre 2026, corrige après une relecture critique des passages sur la sécurité et les permissions : aux chapitres 1, 2, 7, 9, 10, 12, 15, 17, 18, 21 et 23, et aux annexes A, C, E, J et L. Cinq sources s’ajoutent, de \[185\] à \[189\].
+
 **Tableau :** Les nouveautés des soixante derniers jours, la plus récente d’abord, rassemblées depuis les badges 🆕 du texte. Une ligne reste soixante jours après sa date, puis disparaît à la version suivante du guide.
 
 | Entrée dans le guide | Claude Code | Nouveauté | Où la lire |
 | --- | --- | --- | --- |
+| 2026-11-25 | 2.1.321 | Les alias best et fable depuis la version 2.1.321 | [section L.18](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-l-18) |
 | 2026-11-21 | 2.1.325 | Le bac à sable : une commande confinée suit par défaut le circuit normal des permissions | [section 17.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-4) |
 | 2026-11-20 | 2.1.329 | La mémoire vive du travail multi-agent : mesurer son poste, et les programmes à fermer | [section 8.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s8-3) |
 | 2026-11-18 | 2.1.327 | La scène d’ouverture : la brigade | « Apprendre avec ce guide » |

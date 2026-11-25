@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 22. Une architecture de référence du harnais ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 22. Une architecture de référence du harnais ».
 >
 > - Précédent : [21. Écrire des skills, des agents et des artefacts (partie 3 sur 3)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/21-ecrire-des-skills-des-agents-et-des-artefacts-3.md)
 > - Suivant : [23. Sécurité et propriété intellectuelle en entreprise (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/23-securite-et-propriete-intellectuelle-en-entreprise-1.md)

@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 1 sur 2.
 >
 > - Précédent : [22. Une architecture de référence du harnais](https://gmag-dev.github.io/bien-demarrer-claude-code/md/22-une-architecture-de-reference-du-harnais.md)
 > - Suivant : [23. Sécurité et propriété intellectuelle en entreprise (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/23-securite-et-propriete-intellectuelle-en-entreprise-2.md)
@@ -39,12 +39,12 @@ Ce guide en tire quatre conséquences pratiques :
 
 Pourquoi cette règle : les conditions d’utilisation distinguent deux familles de comptes, les comptes grand public (Free, Pro, Max, Ultra) et les comptes commerciaux (Team, Enterprise, API, plateformes tierces), et leurs régimes diffèrent sur l’entraînement des modèles et sur la conservation côté serveur [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage).
 
-**Tableau 23.1 :** Les régimes des comptes grand public et commerciaux, d’après [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage).
+**Tableau 23.1 :** Les régimes des comptes grand public et commerciaux, d’après [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage), [\[186\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-privacy-org-retention) et [\[187\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-bedrock-retention).
 
-| Sujet | Compte grand public (Free, Pro, Max, Ultra) | Compte commercial (Team, Enterprise, API, plateformes tierces) |
+| Sujet | Compte grand public (Free, Pro, Max, Ultra) | Compte commercial (Team, Enterprise, API) |
 | --- | --- | --- |
-| entraînement | possible si le réglage d’amélioration des modèles est activé, y compris pour l’usage de Claude Code depuis ce compte | pas d’entraînement sur le code ni sur les prompts, sauf adhésion explicite de l’organisation |
-| conservation côté serveur | cinq ans si ce réglage est activé, 30 jours sinon | 30 jours. Rétention zéro possible pour des comptes Enterprise éligibles, organisation par organisation |
+| entraînement | possible si le réglage d’amélioration des modèles est activé, y compris pour l’usage de Claude Code depuis ce compte | pas d’entraînement sur le code ni sur les prompts, sauf adhésion explicite de l’organisation. La même règle vaut sur les plateformes tierces, comme Amazon Bedrock |
+| conservation côté serveur | cinq ans si ce réglage est activé, 30 jours sinon | 30 jours par défaut, sauf accord contraire avec Anthropic [\[186\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-privacy-org-retention). Rétention zéro possible pour des comptes Enterprise éligibles, organisation par organisation. Les conversations et sessions de code qu’un produit garde pour que vous les repreniez restent conservées jusqu’à ce que vous les supprimiez, puis sont effacées sous 30 jours [\[186\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-privacy-org-retention). Sur une plateforme tierce, la conservation suit les conditions du fournisseur : sur Amazon Bedrock, elle dépend du modèle [\[187\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-bedrock-retention) |
 | `/feedback`, `/bug`, `/share` | la transcription envoyée est conservée cinq ans | idem |
 | enquête « Can Anthropic look at your session transcript? », réponse « Yes » | transcription, transcriptions des sous-agents et journal brut envoyés, code compris, motifs de clés et de jetons masqués, conservés jusqu’à six mois | idem. La question n’apparaît pas avec la rétention zéro, ni quand une politique coupe le retour produit ou le trafic non essentiel |
 
@@ -180,21 +180,3 @@ L’[OWASP](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-owasp) a pub
 Pour les deux premières lignes, ce guide propose de tenir une ligne par serveur MCP déclaré : sa source, sa version, ses outils, et, pour chaque règle d’autorisation large, la raison qui la justifie. Une règle large sans raison écrite se retire.
 
 Chez Passerelle, la liste tient en deux lignes : le serveur du lexique, en lecture seule, avec sa source et sa version, et la mention « aucune règle d’autorisation large ». Bernard la relit à chaque nouveau serveur.
-
-### 23.6 Moindre privilège, hors ligne, pas de CDN à l’exécution
-
-Trois règles ouvrent cette section : donner le moins d’accès possible, ne laisser sortir que le trafic indispensable, et ne charger aucune ressource en ligne au moment de l’exécution.
-
-**Moindre privilège.** Le [chapitre 10](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch10) en donne les règles. Un serveur MCP local est un programme qui s’exécute avec vos privilèges. Les bonnes pratiques du protocole exigent, d’un client qui installe un serveur local en un clic, un consentement explicite avec la commande complète affichée. Elles demandent aussi des privilèges minimaux, le transport `stdio` pour limiter l’accès au seul client, ou en HTTP un jeton d’autorisation, et des portées minimales élevées progressivement [\[129\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-mcp-security-best-practices). Ce guide en tire une règle : un serveur local écoute sur `127.0.0.1` ou en `stdio`, et n’expose que les outils dont la tâche a besoin. Le serveur du lexique de Passerelle est de ce type : en `stdio`, en lecture seule, un seul outil.
-
-**Hors ligne.** Plusieurs variables coupent le trafic non indispensable : `DISABLE_TELEMETRY=1` pour les métriques, `DISABLE_ERROR_REPORTING=1` pour les rapports d’erreur, `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` pour tout le trafic non essentiel [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage). `DISABLE_TELEMETRY` et `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` ont un effet de bord documenté : elles coupent aussi l’évaluation des drapeaux de fonctions, ce qui peut rendre [Remote Control](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-remote-control) indisponible [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage).
-
-**Ce qui sort quand même.** Avant un `WebFetch` vers un hôte qui n’a pas été vérifié dans les cinq dernières minutes, le nom d’hôte demandé, et lui seul, part vers `api.anthropic.com` pour un contrôle de liste de blocage, quel que soit le fournisseur et même avec le trafic non essentiel coupé. La clé `skipWebFetchPreflight` le désactive [\[8\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-data-usage). Un poste qui veut ne laisser sortir que le trafic indispensable doit le savoir.
-
-**Pas de [CDN](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-cdn) à l’exécution.** Ce guide propose qu’un outil local (une page de pilotage, une vue, une figure) n’appelle aucune ressource en ligne quand il s’affiche : tout ce qu’il montre est embarqué. Une page qui charge une bibliothèque depuis un CDN révèle votre usage à un tiers, et casse dès que le réseau manque. Chez Passerelle, la page locale qui montre le brouillon à Odile, à côté du courrier, ne charge rien en ligne : ses polices et ses styles sont dans le fichier.
-
-> **🔀 Quand la règle cède**
->
-> - La règle « hors ligne » cède dès qu’une session emploie WebFetch, dont le contrôle préalable fait sortir le nom d’hôte demandé (cette section).
-> - Ce qui tient : la liste exacte de ce qui sort, écrite, et la règle de deux, qui dit quelle session a le droit de sortir ([section 23.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s23-4)).
-> - Pour aller plus loin : [chapitre 17](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch17), sur le bac à sable et ses modes.

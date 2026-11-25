@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « Annexe H. Les exemples de code, pièces de Passerelle ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.1 : « Annexe H. Les exemples de code, pièces de Passerelle ».
 >
 > - Précédent : [Annexe G. Grille d’auto-évaluation](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-g-grille-d-auto-evaluation.md)
 > - Suivant : [Annexe I. Réponses et corrigés](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-i-reponses-et-corriges.md)
