@@ -9441,7 +9441,7 @@ Bien démarrer avec Claude Code
 
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
 
-Autrice : Gabrielle MagnanVersion : 3.2.0+publique.web · 21 novembre 2026Édition publique
+Autrice : Gabrielle Magnan · Version : 3.2.0+publique.web · 21 novembre 2026 · Édition publique
 
 [Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 

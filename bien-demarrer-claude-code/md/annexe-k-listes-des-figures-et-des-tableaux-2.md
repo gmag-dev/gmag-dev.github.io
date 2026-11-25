@@ -1,0 +1,127 @@
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.0 : « Annexe K. Listes des figures et des tableaux », partie 2 sur 2.
+>
+> - Précédent : [Annexe K. Listes des figures et des tableaux (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-k-listes-des-figures-et-des-tableaux-1.md)
+> - Suivant : [Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques (partie 1 sur 5)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-l-fiches-des-composants-1.md)
+> - Sommaire : [llms.txt](https://gmag-dev.github.io/bien-demarrer-claude-code/llms.txt), tous les morceaux dans l'ordre de lecture
+> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-s-k-2>
+> - Licence du texte : <https://creativecommons.org/licenses/by-nc-nd/4.0/>
+
+---
+
+### K.2 Les tableaux
+
+- [Tableau, « Comment lire ce guide »](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-lire-1) : Les marques du texte. Proposé par ce guide.
+- [Tableau, « Comment lire ce guide »](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-lire-2) : Les nouveautés des soixante derniers jours, la plus récente d’abord, rassemblées depuis les badges 🆕 du texte. Une ligne reste soixante jours après sa date, puis disparaît à la version suivante du guide.
+- [Tableau, « Apprendre avec ce guide »](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-apprendre-1) : Quatre jalons, le stade de Dreyfus que chacun vise à terme, et leur exercice de passage, d’après \[2\] . Le regroupement, la correspondance avec les stades et la répartition des chapitres sont proposés par ce guide.
+- [Tableau, « Apprendre avec ce guide »](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-apprendre-2) : Les personnages du fil rouge. Tous sont fictifs.
+- [Tableau 1.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-1-1) : Les cinq catégories d’outils intégrés, d’après \[13\] .
+- [Tableau 1.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-1-2) : Consignes et règles imposées, d’après \[16\] .
+- [Tableau 2.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-2-1) : Où placer les fichiers CLAUDE.md, d’après \[17\] .
+- [Tableau 2.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-2-2) : Les modes de permission, d’après \[19\] .
+- [Tableau 2.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-2-3) : Travailler sans être interrompu sans cesse, à trois niveaux, d’après \[19\] et \[16\] .
+- [Tableau 4.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-4-1) : Reprendre un code inconnu, à trois niveaux, proposé par ce guide.
+- [Tableau 4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-4-2) : L’entretien de besoin, à trois niveaux, proposé par ce guide, d’après \[45\] .
+- [Tableau 4.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-4-3) : Du prompt vague au prompt précis, d’après \[16\] .
+- [Tableau 5.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-5-1) : Le même défaut, une date en chiffres que le contrôle ne voit pas, à trois niveaux. Proposé par ce guide.
+- [Tableau 5.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-5-2) : Le même besoin, avancer sans la lecture des courriers scannés, à trois niveaux. Proposé par ce guide.
+- [Tableau 6.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-6-1) : Le déclencheur de chaque extension, d’après \[15\] . La colonne Passerelle est proposée par ce guide.
+- [Tableau 6.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-6-2) : La carte courte des composants de Claude Code. Le niveau est proposé par ce guide, d’après « Apprendre avec ce guide » et l’[annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-l).
+- [Tableau 6.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-6-3) : Le même besoin, choisir une extension, à trois niveaux. Proposé par ce guide, d’après \[15\] .
+- [Tableau 6.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-6-4) : Les composants à adopter, niveau par niveau. Le parcours est proposé par ce guide, d’après « Apprendre avec ce guide » et l’[annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-l).
+- [Tableau 6.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-6-5) : Ce qu’on active et ce qu’on évite, selon le projet. Les choix sont proposés par ce guide, les faits cités viennent de l’[annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-l) et de ses sources.
+- [Tableau 7.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-7-1) : Le même besoin, faire d’un prompt un skill, à trois niveaux. Proposé par ce guide, d’après \[16\] .
+- [Tableau 9.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-9-1) : Les compteurs d’un forfait Pro, Max ou Ultra, d’après \[70\] , \[69\] et \[40\] .
+- [Tableau 9.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-9-2) : Deux rythmes sur une semaine, en part cumulée de la limite hebdomadaire. Valeurs illustratives. Le fonctionnement de la limite vient de \[70\] , le rythme lissé est un conseil de ce guide.
+- [Tableau 9.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-9-3) : Les habitudes qui économisent l’usage, d’après \[40\] , \[16\] et \[39\] .
+- [Tableau 10.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-10-1) : Quel isolement choisir, d’après \[79\] et \[80\] .
+- [Tableau 10.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-10-2) : Les contrôles automatisés, à trois niveaux. Proposé par ce guide.
+- [Tableau 11.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-11-1) : Avant le premier envoi, à trois niveaux. Proposé par ce guide, détail au [chapitre 23](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch23).
+- [Tableau 12.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-12-1) : Le même problème, à trois niveaux. Proposé par ce guide, d’après \[16\] .
+- [Tableau 12.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-12-2) : La même demande, à trois niveaux. Proposé par ce guide.
+- [Tableau 13.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-13-1) : Quatre symptômes, leur cause et leur parade, d’après \[16\] .
+- [Tableau 13.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-13-2) : Dix pièges fréquents, leur symptôme et le geste qui les règle. Proposé par ce guide, avec les sources de chaque ligne.
+- [Tableau 13.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-13-3) : Les conseils devenus inutiles, d’après \[16\] .
+- [Tableau 14.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-14-1) : Les trois sortes d’évaluateurs, d’après \[95\] . Les deux dernières colonnes sont une proposition de ce guide.
+- [Tableau 14.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-14-2) : Les gabarits EARS, d’après \[102\] . Les exemples, pour le contrôle et l’outil de Passerelle, sont de ce guide.
+- [Tableau 14.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-14-3) : Les mauvais moments pour compacter. Pratique du guide, déduite des sources citées dans chaque ligne.
+- [Tableau 14.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-14-4) : Chaque étape de la boucle et la trace qu’elle laisse. Proposé par ce guide.
+- [Tableau 15.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-15-2) : Le même brief, à trois niveaux. Proposé par ce guide.
+- [Tableau 15.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-15-3) : Vérifier un rapport avant de s’en servir. Proposé par ce guide.
+- [Tableau 15.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-15-4) : Doser l’effort, d’après le système de recherche d’Anthropic \[103\] .
+- [Tableau 15.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-15-5) : Le même dosage de l’effort, à trois niveaux, d’après \[39\] .
+- [Tableau 15.6](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-15-6) : Sous-agents et équipe d’agents, d’après \[44\] et \[111\] .
+- [Tableau 15.7](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-15-7) : La même étude, à trois niveaux. Proposé par ce guide.
+- [Tableau 16.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-16-1) : Les niveaux de gravité d’un constat, d’après le relecteur de l’[annexe H](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-h). Les deux dernières colonnes sont une proposition de ce guide.
+- [Tableau 16.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-16-2) : Corriger l’instance et la classe. Proposé par ce guide, d’après \[120\] et \[95\] .
+- [Tableau 16.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-16-3) : Le même défaut, un délai perdu, à trois niveaux. Proposé par ce guide.
+- [Tableau 17.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-17-1) : Les cinq couches de réglages, de la plus forte à la plus faible, d’après \[33\] et \[82\] .
+- [Tableau 17.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-17-2) : Les permissions de chaque outil de Passerelle, et leur raison. Proposé par ce guide.
+- [Tableau 17.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-17-3) : Ce qui s’exécute sans vous demander, et la règle qui le protège. Proposé par ce guide, d’après \[14\] , \[19\] , \[33\] et \[124\] .
+- [Tableau 17.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-17-4) : Ce qu’une règle deny par motif arrête, et ce qu’elle n’arrête pas, d’après \[14\] .
+- [Tableau 17.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-17-5) : Les mécanismes de la défense par la structure, ce qu’ils garantissent, et leur limite exacte.
+- [Tableau 18.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-18-1) : Les codes de sortie d’un hook, d’après \[20\] .
+- [Tableau 18.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-18-2) : Le même besoin, empêcher l’écriture hors de brouillons/ , à trois niveaux. Proposé par ce guide.
+- [Tableau 18.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-18-3) : Les champs de la ligne d’état utiles au pilotage, d’après \[124\] .
+- [Tableau 18.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-18-4) : Les trois façons de planifier, d’après \[126\] .
+- [Tableau 18.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-18-5) : Le retard possible d’une tâche récurrente selon sa période, d’après \[126\] .
+- [Tableau 18.6](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-18-6) : Trois mondes, trois profils. Proposé par ce guide.
+- [Tableau 19.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-19-1) : Les mécanismes natifs pour plusieurs sessions, d’après \[68\] , \[112\] et \[111\] .
+- [Tableau 19.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-19-4) : Ce qui disparaît et ce qui survit à un redémarrage.
+- [Tableau 20.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-20-1) : Ce qui fonctionne selon le compte, d’après \[124\] , \[40\] , \[8\] et \[140\] .
+- [Tableau 20.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-20-2) : Les sources documentées de chiffres et de métadonnées, d’après \[124\] , \[40\] , \[8\] et \[140\] .
+- [Tableau 20.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-20-3) : Deux lectures d’une fenêtre de cinq heures, de 9 h à 14 h. Valeurs d’exemple.
+- [Tableau 20.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-20-4) : Le même coup d’œil, à trois niveaux. Proposé par ce guide.
+- [Tableau 20.7](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-20-7) : Le backlog de la vague de Passerelle, estimé. Valeurs d’exemple.
+- [Tableau 20.8](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-20-8) : Le même calcul, à trois niveaux. Proposé par ce guide.
+- [Tableau 21.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-1) : Les deux étages du frontmatter d’un skill, d’après \[65\] et \[63\] .
+- [Tableau 21.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-2) : Le même skill à trois niveaux, proposé par ce guide.
+- [Tableau 21.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-3) : Les leviers et les mesures du budget de la liste, d’après \[63\] et \[32\] .
+- [Tableau 21.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-4) : Ce que vous voulez, l’objet qui le porte, et pourquoi, d’après \[17\] , \[63\] , \[44\] , \[20\] et \[37\] .
+- [Tableau 21.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-5) : La matrice déclenchement et comportement, proposée par ce guide.
+- [Tableau 21.6](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-6) : Ce qu’un sous-agent reçoit, et ce qu’il ne reçoit pas, d’après \[44\] .
+- [Tableau 21.7](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-7) : Les champs d’un agent qui comptent le plus, d’après \[44\] .
+- [Tableau 21.8](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-8) : Les sept rubriques d’un corps d’agent autonome, proposées par ce guide d’après \[44\] , \[149\] et \[66\] .
+- [Tableau 21.9](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-9) : Quel numéro changer, proposé par ce guide d’après \[153\] .
+- [Tableau 21.10](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-10) : Les contrôles fournis par l’outil et le standard, d’après \[17\] , \[63\] , \[61\] et \[65\] .
+- [Tableau 21.11](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-11) : La même évaluation à trois niveaux, proposée par ce guide d’après \[95\] .
+- [Tableau 21.12](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-21-12) : La sauvegarde à trois niveaux, proposée par ce guide.
+- [Tableau 22.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-22-1) : Les trois questions appliquées aux agents de Passerelle et du Cahier commun, proposées par ce guide.
+- [Tableau 22.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-22-3) : L’architecture à trois niveaux, proposée par ce guide.
+- [Tableau 23.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-23-1) : Les régimes des comptes grand public et commerciaux, d’après \[8\] .
+- [Tableau 23.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-23-2) : Les couches de réglages et leur propriétaire, d’après \[33\] et \[82\] .
+- [Tableau 23.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-23-3) : Les outils qui portent chaque propriété dans Claude Code, classement de ce guide d’après \[73\] , \[76\] et \[44\] .
+- [Tableau 23.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-23-4) : Les titres du Top 10 OWASP agentique, d’après \[162\] , et une correspondance proposée par ce guide.
+- [Tableau 23.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-23-5) : Le SSDF, d’après \[163\] , et les pratiques de ce guide, une correspondance proposée.
+- [Tableau, annexe A](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-a-1) : Ma première semaine, un geste par ligne. Proposé par ce guide.
+- [Tableau, annexe A](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-a-2) : Le jour 2 et les jours 4 et 5 sans code, sur l’exemple de Passerelle. Proposé par ce guide.
+- [Tableau, annexe C](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-c-1) : Le pour et le contre de chaque chemin, d’après \[7\] , \[18\] et \[167\] , et les sources citées dans chaque cellule. La mention « pratique du guide » signale un conseil de ce guide.
+- [Tableau, annexe C](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-c-2) : Ce que coûte WSL, d’après les sources citées dans chaque ligne.
+- [Tableau, annexe C](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-c-3) : Vos gestes habituels et leur forme dans Claude Code, au 6 novembre 2026. Proposé par ce guide, d’après les sections citées.
+- [Tableau, annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-d-1) : Les options de la version web, et leur réglage de départ.
+- [Tableau, annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-d-2) : Les raccourcis clavier de la version web.
+- [Tableau, annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-d-3) : Lire un Markdown avec son rendu, cinq moyens, d’après \[144\] pour l’aperçu de VS Code. Les autres lignes sont proposées par ce guide.
+- [Tableau, annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-d-4) : Quel moyen choisir, à trois niveaux. Proposé par ce guide.
+- [Tableau, annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-d-5) : Les vues et les styles, ce qu’ils montrent et leur prix, d’après \[29\] , \[37\] et \[39\] .
+- [Tableau, annexe E](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-e-3) : Le formulaire d’analyse de cause, avec l’exemple fictif du [chapitre 16](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch16).
+- [Tableau, annexe E](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-e-4) : La définition du fini d’un brouillon de Passerelle, exemple fictif.
+- [Tableau, annexe E](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-e-6) : Un constat de revue sur un brouillon de Passerelle, exemple fictif.
+- [Tableau, annexe F](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-f-1) : La grille de relecture experte. Proposée par ce guide.
+- [Tableau, annexe F](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-f-2) : La forme d’une note d’expert, avec un exemple tiré de la [section 1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s1-4). Proposée par ce guide.
+- [Tableau, annexe G](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-g-1) : La grille, partie A, la pratique agentique (chapitres [14](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch14) à [16](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch16)). Proposée par ce guide.
+- [Tableau, annexe G](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-g-2) : La grille, partie B, le harnais (chapitres [17](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch17) à [19](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch19)). Proposée par ce guide.
+- [Tableau, annexe G](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-g-3) : La grille, partie C, le pilotage ([chapitre 20](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch20)). Proposée par ce guide.
+- [Tableau, annexe G](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-g-4) : La grille, partie D, la sécurité et la propriété intellectuelle ([chapitre 23](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch23)). Proposée par ce guide.
+- [Tableau, annexe G](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-g-5) : La grille, partie E, la progression. Proposée par ce guide.
+- [Tableau, annexe G](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-g-6) : La grille, partie F, les pratiques de la Partie I (chapitres [1](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch1) à [13](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch13)). Proposée par ce guide.
+- [Tableau, annexe H](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-h-1) : Les neuf exemples de exemples/ , leurs tests, et la pièce de Passerelle que chacun annonce. D’après les README du dossier, lus le 7 novembre 2026.
+- [Tableau, annexe J](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-j-1) : L’état de Passerelle à la fin de chaque chapitre de la Partie I. Proposé par ce guide.
+- [Tableau, annexe J](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-j-2) : Ce que contient Passerelle à la fin de chaque chapitre de la Partie II. Proposé par ce guide.
+- [Tableau, annexe J](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-j-3) : Quelques chapitres où l’on retrouve chaque personnage. Proposé par ce guide.
+- [Tableau, annexe J](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-j-4) : Qui écrit quoi dans le fil rouge, et les faits qui font foi. Proposé par ce guide.
+- [Tableau, annexe J](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-j-5) : La frise de la vague, jour par jour. Les dates sont inventées pour ce guide, elles suivent celles des chapitres [9](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch9) et [19](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch19).
+- [Tableau, annexe J](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-j-6) : Les dix premiers courriers de Passerelle, tous fictifs.
+- [Tableau, annexe J](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-j-7) : Les trois premiers courriers de la vague, que l’exercice de passage du [chapitre 15](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch15) vérifie, tous fictifs.
+- [Tableau, annexe J](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-j-8) : Les fichiers et les courriers que les chapitres nomment, et le chapitre qui les introduit.
+- [Tableau, annexe J](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-j-9) : Trois contributions du Cahier commun, toutes fictives.
+
+[Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
