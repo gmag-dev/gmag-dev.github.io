@@ -30,3 +30,17 @@
 .v3-ct-t{margin:0 0 .35rem;font-weight:700}
 .v3-ct-l{display:flex;flex-direction:column;gap:.35rem;margin:0;padding:0;list-style:none}
 @media print{ .rc-bar .v3-b,.v3-compte,.v3-reset-row,.v3-ct,.v3-ct-grp{display:none!important} }
+.rc-bar .v3-inst{position:relative;display:inline-flex;flex:none}
+:root.rc-fold .rc-bar > .v3-inst > button .rc-txt{display:none}
+:root.rc-fold .rc-bar > .v3-inst > button .rc-i{margin-right:0}
+.rc-bar .v3-inst-pan{position:absolute;top:calc(100% + .45rem);right:0;z-index:8;display:flex;flex-direction:column;align-items:flex-start;gap:.5rem;
+  width:min(22rem,calc(100vw - 2rem));box-sizing:border-box;margin:0;padding:.65rem .75rem;white-space:normal;text-align:left;font-weight:400;
+  background:var(--bg,#ffffff);color:var(--text,#1b1f24);border:1px solid var(--border,#6b7380);border-radius:8px;box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.rc-bar .v3-inst-pan[hidden],.rc-bar .v3-inst-pan [hidden]{display:none}
+.v3-inst-pan p{margin:0;line-height:1.4}
+.rc-bar .v3-inst-pan .v3-inst-go{min-height:24px;font-weight:700}
+.v3-inst-autres{align-self:stretch}
+.v3-inst-autres summary{padding:.2em 0;cursor:pointer;color:var(--link,#0a4fb5);text-decoration:underline;text-underline-offset:.15em}
+.v3-inst-autres ul{margin:.35rem 0 0;padding-left:1.1rem}
+.v3-inst-autres li{margin:.3rem 0;line-height:1.35}
+@media print{ .v3-inst{display:none!important} }

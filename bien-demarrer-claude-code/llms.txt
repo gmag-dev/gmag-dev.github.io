@@ -1,0 +1,19 @@
+# Bien démarrer avec Claude Code
+
+> Guide de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.2.0.
+
+Guide de Gabrielle Magnan, en français, version 3.2.0 du 2026-11-21. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/ ; les exemples du paquet portent leur propre licence (exemples/LICENSE).
+
+## Guide
+
+- [Bien démarrer avec Claude Code](https://gmag-dev.github.io/bien-demarrer-claude-code/): le guide complet, en une page HTML (« Bien démarrer avec Claude Code : guide de bonnes pratiques »)
+- [Version Markdown](https://gmag-dev.github.io/bien-demarrer-claude-code/guide.md): le même guide en Markdown, chaque dessin remplacé par sa légende et sa description textuelle
+
+## Pages annexes
+
+- [Mentions légales](https://gmag-dev.github.io/bien-demarrer-claude-code/mentions-legales.html): Mentions légales du guide « Bien démarrer avec Claude Code » : éditrice, hébergeur, licences, marques et indépendance, données personnelles, aide de l’intelligence artificielle.
+- [Préparez votre poste](https://gmag-dev.github.io/bien-demarrer-claude-code/preparez-votre-poste.html): Avant d’installer Claude Code sur un ordinateur fourni par votre employeur ou par une autre organisation : ce qu’il faut demander, et à qui, avant de commencer le guide.
+
+## Optional
+
+- [Paquet hors ligne](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-claude-code-v3.2.0.zip): archive zip de la page autonome, de ses pages annexes et des exemples

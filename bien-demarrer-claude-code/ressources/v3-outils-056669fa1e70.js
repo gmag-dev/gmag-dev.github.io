@@ -57,6 +57,93 @@
     }
   }
 
+  // Installer le guide (décision 32.A de l'autrice, 2026-11-21 : installer seul, sans lecture hors ligne). Forme web
+  // seulement : la marque data-forme que pose l'assemblage, et une page servie en http(s). Le bouton reste toujours au
+  // même endroit, avant Contacts ; son panneau propose l'installation en un geste quand le navigateur l'offre
+  // (beforeinstallprompt), sinon dit où se trouve la commande du navigateur, ou qu'il n'y en a pas. Une fois le guide
+  // installé, le bouton n'existe plus. Aucun service worker : Chromium juge la page installable sans lui (recette F49).
+  (function () {
+    if (root.getAttribute("data-forme") !== "web" || !/^https?:$/.test(location.protocol)) { return; }
+    function mm(q) { return !!(window.matchMedia && window.matchMedia(q).matches); }
+    if (navigator.standalone === true || ["standalone", "minimal-ui", "fullscreen", "window-controls-overlay"].some(function (m) {
+      return mm("(display-mode: " + m + ")");
+    })) { return; }
+    var AIDES = [
+      ["chromium", "Chrome, Edge, Samsung Internet (ordinateur, Android)", "Ouvrez le menu du navigateur (⋮), puis « Installer la page comme application » ou « Caster, enregistrer et partager », puis « Installer »."],
+      ["ios", "iPhone et iPad", "Touchez le bouton Partager (un carré et une flèche vers le haut), puis « Sur l’écran d’accueil »."],
+      ["safari", "Safari sur Mac", "Menu Fichier, puis « Ajouter au Dock »."],
+      ["firefox-win", "Firefox sous Windows", "Cliquez sur l’icône des applications web dans la barre d’adresse, puis « Ajouter à la barre des tâches »."],
+      ["firefox", "Firefox ailleurs", "Ce navigateur n’installe pas les sites. Le guide reste lisible ici, ou dans un autre navigateur."]
+    ];
+    // Famille du navigateur, pour choisir l'aide à montrer d'abord ; la liste « Autre navigateur » les garde toutes.
+    function famille() {
+      var ua = navigator.userAgent || "";
+      if (/iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) { return "ios"; }
+      if ("onbeforeinstallprompt" in window) { return "chromium"; }
+      if (/Firefox\//.test(ua)) { return /Windows/.test(ua) ? "firefox-win" : "firefox"; }
+      if (/Safari\//.test(ua) && /Macintosh/.test(ua)) { return "safari"; }
+      return "chromium";
+    }
+    var invite = null, fam = famille();
+    var w = el("span", { "class": "v3-inst" });
+    var b = el("button", { type: "button", "class": "v3-inst-b", "aria-expanded": "false", "aria-controls": "v3-inst-pan",
+      "aria-label": "Installer le guide", title: "Installer le guide", "data-garde-menu": "" });
+    b.innerHTML = '<svg class="rc-i" aria-hidden="true" focusable="false"><use href="#ti-app-window"/></svg><span class="rc-txt" aria-hidden="true">Installer</span>';
+    var p = el("div", { id: "v3-inst-pan", "class": "v3-inst-pan", role: "group", "aria-label": "Installer le guide" });
+    p.hidden = true;
+    var note = el("p", { "class": "v3-inst-note" });
+    note.textContent = "Le guide installé s’ouvre dans sa propre fenêtre. Il lui faut une connexion à internet, comme ce site.";
+    var go = el("button", { type: "button", "class": "v3-inst-go" });
+    go.textContent = "Installer maintenant";
+    var aide = el("p", { "class": "v3-inst-aide" });
+    var autres = el("details", { "class": "v3-inst-autres" }), sm = el("summary"), ul = el("ul");
+    sm.textContent = "Autre navigateur";
+    AIDES.forEach(function (a) {
+      var li = el("li"), t = el("strong");
+      t.textContent = a[1] + " : "; li.appendChild(t); li.appendChild(document.createTextNode(a[2])); ul.appendChild(li);
+      if (a[0] === fam) { aide.textContent = a[2]; }
+    });
+    autres.appendChild(sm); autres.appendChild(ul);
+    p.appendChild(note); p.appendChild(go); p.appendChild(aide); p.appendChild(autres);
+    w.appendChild(b); w.appendChild(p);
+    bar.insertBefore(w, optsT && optsT.parentNode === bar ? optsT : null);
+    // Invite disponible : le geste unique ; sinon l'aide du navigateur. Le bouton « Installer maintenant » qui disparaît
+    // sous le focus le rend au bouton Installer, pour que le focus ne tombe jamais dans le vide.
+    function maj() {
+      var avait = document.activeElement === go;
+      go.hidden = !invite; aide.hidden = !!invite;
+      if (avait && go.hidden) { b.focus(); }
+    }
+    function ouvrir(oui) { if (oui) { maj(); } p.hidden = !oui; b.setAttribute("aria-expanded", String(oui)); }
+    maj();
+    b.addEventListener("click", function () { ouvrir(p.hidden); });
+    window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); invite = e; maj(); });
+    go.addEventListener("click", function () {
+      var ev = invite;
+      invite = null;
+      if (!ev) { maj(); return; }
+      Promise.resolve().then(function () { return ev.prompt(); }).then(function () { return ev.userChoice; }).then(function (r) {
+        if (!r || r.outcome !== "accepted") { say("Installation annulée. Le bouton reste là si vous changez d’avis."); }
+        maj();
+      }, function () { say("Le navigateur n’a pas pu proposer l’installation. Voyez l’aide ci-dessous."); maj(); });
+    });
+    window.addEventListener("appinstalled", function () {
+      var avait = w.contains(document.activeElement), suivant = bar.querySelector(".v3-ct-b") || optsT;
+      w.parentNode && w.parentNode.removeChild(w);
+      say("Guide installé.");
+      if (avait && suivant && suivant.getClientRects().length) { suivant.focus(); }
+      else if (avait) { var plus = bar.querySelector(".v3-plus"); if (plus) { plus.focus(); } }
+    });
+    document.addEventListener("click", function (e) { if (!p.hidden && !w.contains(e.target)) { ouvrir(false); } });
+    w.addEventListener("focusout", function (e) { if (!p.hidden && e.relatedTarget && !w.contains(e.relatedTarget)) { ouvrir(false); } });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape" || p.hidden) { return; }
+      ouvrir(false);
+      // Dans le menu ≡, Échap le ferme aussi et rend le focus à son bouton : le bouton Installer, caché, ne le reprend pas.
+      if (b.getClientRects().length) { e.stopPropagation(); b.focus(); }
+    }, true);
+  })();
+
   // Contacts : un bouton de la barre, juste avant Options, ouvre un petit menu de liens ; le menu ≡ des petits
   // écrans en reprend les liens dans un groupe « Contacts », en dernier. Les deux adresses se règlent à un seul
   // endroit : la clé « contacts » de scripts/11-rc-config.json. Une adresse LinkedIn vide ne rend aucune entrée.

@@ -5,7 +5,7 @@
     var plus = bar && bar.querySelector(":scope > .v3-plus"), pan = document.getElementById("v3-plus-pan");
     if (!bar || !optsT || !plus || !pan || !window.matchMedia) { return; }
     var mq = matchMedia("screen and (max-width:32.49rem)");
-    var MOBILES = [".rn-bar-b", ".rc-gallery-toggle", ".v3-fs", ".rc-opts-toggle"], places = [];
+    var MOBILES = [".rn-bar-b", ".rc-gallery-toggle", ".v3-fs", ".v3-inst", ".rc-opts-toggle"], places = [];
     function ouvrir(oui) { pan.hidden = !oui; plus.setAttribute("aria-expanded", String(oui)); }
     function perdu() {
       var a = document.activeElement;
@@ -32,7 +32,8 @@
     }
     plus.addEventListener("click", function () { ouvrir(pan.hidden); });
     pan.addEventListener("click", function (e) {
-      if (!e.target.closest || !e.target.closest("button")) { return; }
+      // Un bouton marqué data-garde-menu déplie un panneau en place (Installer) : le menu reste ouvert.
+      if (!e.target.closest || !e.target.closest("button") || e.target.closest("[data-garde-menu]")) { return; }
       ouvrir(false);
       if (perdu()) { plus.focus(); }
     });

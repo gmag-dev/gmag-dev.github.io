@@ -9,3 +9,5 @@ Disallow: /
 # Tous les autres robots, dont la recherche et la lecture à la demande : admis.
 User-agent: *
 Allow: /
+
+Sitemap: https://gmag-dev.github.io/bien-demarrer-claude-code/sitemap.xml

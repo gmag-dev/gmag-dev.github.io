@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-forme="web">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-ldbuJjw0mtaFCpe8EdZp3Se4SDOwIvKeLZ3pFs8ip30=' 'sha256-RCIeAo1jFBFIxCmUFQoqBSUr2B4K7ICMBdZzgY5qNLo=' 'sha256-u2YUaZbU9fEbpomsKwooLSc3ZdSuSKP6msmbUaZh3VE=' 'sha256-op3MJ1MoGmVeN4Yt3ekt+/j87xSPe57CQkHSPVpjkNw=' 'sha256-5VSE7fgtSdHEO0XJnRgDJ4wsT9vliNevQ62kweDc8fg=' 'sha256-aDaCt5sJ2r5j6SbgDwQUuGwM0jnDWLBui/Fmr7uLomc=' 'sha256-JPdMwmiDEWNSC0cp+QyvOp713E15L3wLQo1R2p9P+Ro=' 'sha256-tYBqrzlflv4JdJUphPoyCPaN4qFc8x2FeiTjpScnKPY=' 'sha256-cXShkryiL/jXC3NEAdj19RrImP17o3lVOzukMtZBdzk=' 'sha256-IegSfyMTAJONvChE6jD6k//FYbqfaV7qqjciRX9caAY=' 'sha256-9zhKM/Aye741GpqjrmDQqIjtOU2k3kpyZ6w754g2sbg=' 'sha256-kymY/KSs/34vWUBGCNn/EXRpQGAr1kR4lDjEDo8+D5w=' 'sha256-2k8aRRbvP5kmPfFXvI4E9EitY5GVHy1VIJw8XnBXFaY=' 'sha256-xF9FTbY3VhFCYjriPAyal+bckn9KInh97GOfXes+Bro=' 'sha256-6/Wm35lBvL5LbFHZN8Bde4x5DSEgyhe9QVrdGO5WpmE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
@@ -29,11 +29,10 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Bien démarrer avec Claude Code : guide de bonnes pratiques et exercices, du premier jour à la pratique experte. Un petit robot lit un livre ouvert.">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Bien démarrer avec Claude Code : guide de bonnes pratiques","description":"Guide de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte.","url":"https://gmag-dev.github.io/bien-demarrer-claude-code/","inLanguage":"fr","author":{"@type":"Person","name":"Gabrielle Magnan"},"isAccessibleForFree":true}</script>
 <meta name="edition" content="publique">
 
 
-<title>Bien démarrer avec Claude Code : guide de bonnes pratiques (version 3.2.0+publique.web)</title>
+<title>Bien démarrer avec Claude Code : guide de bonnes pratiques (version 3.2.0)</title>
 <link rel="stylesheet" href="ressources/style-e494d5796a71.css">
 <link rel="stylesheet" href="ressources/rc-style-09e8ab276b56.css" id="rc-style">
 <link rel="stylesheet" href="ressources/cb-style-4b81042f4bdd.css" id="cb-style">
@@ -42,8 +41,12 @@
 <link rel="stylesheet" href="ressources/rn-style-f66795e41cf3.css" id="rn-style">
 <link rel="stylesheet" href="ressources/ext-style-13c400070e63.css" id="ext-style">
 <link rel="stylesheet" href="ressources/v3-icones-style-510b79dd3c83.css" id="v3-icones-style">
-<link rel="stylesheet" href="ressources/v3-menu-style-8f62fb1aab22.css" id="v3-menu-style">
+<link rel="stylesheet" href="ressources/v3-menu-style-9da866181641.css" id="v3-menu-style">
 <link rel="stylesheet" href="ressources/parallaxe-css-97d3675a8430.css" id="parallaxe-css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="alternate" type="text/markdown" href="guide.md">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","name":"Bien démarrer avec Claude Code","headline":"Bien démarrer avec Claude Code : guide de bonnes pratiques","description":"Guide de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.2.0.","url":"https://gmag-dev.github.io/bien-demarrer-claude-code/","inLanguage":"fr","version":"3.2.0","dateModified":"2026-11-21","license":"https://creativecommons.org/licenses/by-nc-nd/4.0/","isAccessibleForFree":true,"author":{"@type":"Person","name":"Gabrielle Magnan","sameAs":"https://www.linkedin.com/in/gabrielle-magnan/"}}</script>
 </head>
 <body>
 <script id="parallaxe-avant">
@@ -5416,8 +5419,8 @@
   if (window.ResizeObserver) { new ResizeObserver(set).observe(bar); } else { window.addEventListener("resize", set); }
 })();
 </script>
-<link rel="stylesheet" href="ressources/v3-outils-style-cfe52a4972f4.css" id="v3-outils-style">
-<script src="ressources/v3-outils-7c7c3845ccf8.js" id="v3-outils"></script>
+<link rel="stylesheet" href="ressources/v3-outils-style-873cfe06540b.css" id="v3-outils-style">
+<script src="ressources/v3-outils-056669fa1e70.js" id="v3-outils"></script>
 <script id="v3-icones">
 (function () {
   try {
@@ -5429,7 +5432,7 @@
   } catch (e) {}
 })();
 </script>
-<script src="ressources/v3-menu-56e4510245c4.js" id="v3-menu"></script>
+<script src="ressources/v3-menu-fd6f6056fbfc.js" id="v3-menu"></script>
 <link rel="stylesheet" href="ressources/rc-fondu-style-3848a05f17f2.css" id="rc-fondu-style">
 <script id="rc-fondu">
 (function () {
