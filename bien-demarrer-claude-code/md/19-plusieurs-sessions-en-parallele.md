@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « 19. Plusieurs sessions en parallèle ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « 19. Plusieurs sessions en parallèle ».
 >
 > - Précédent : [18. Hooks, serveurs MCP, ligne d’état et tâches planifiées (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/18-hooks-serveurs-mcp-ligne-d-etat-et-taches-planifiees-2.md)
 > - Suivant : [20. Piloter sa consommation et son projet (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/20-piloter-sa-consommation-et-son-projet-1.md)

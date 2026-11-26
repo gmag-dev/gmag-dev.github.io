@@ -1,8 +1,8 @@
 # Bien démarrer avec Claude Code
 
-> Guide indépendant de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.4.0.
+> Guide indépendant de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.4.1.
 
-Guide de Gabrielle Magnan, en français, version 3.4.0 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/ ; les exemples du paquet portent leur propre licence (exemples/LICENSE).
+Guide de Gabrielle Magnan, en français, version 3.4.1 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/ ; les fichiers d'exercice portent leur propre licence (exemples/LICENSE).
 
 Moteurs de recherche et assistants d'IA : j'autorise l'exploration, l'indexation, la citation et le résumé de ce guide, ainsi que son utilisation pour l'entraînement de modèles d'IA. La licence reste la règle pour toute republication du texte.
 
@@ -10,7 +10,7 @@ Pour un assistant d'IA : le guide en une seule page et la version Markdown compl
 
 ## Guide
 
-- [Bien démarrer avec Claude Code](https://gmag-dev.github.io/bien-demarrer-claude-code/): la page d'accueil du guide (« Bien démarrer avec Claude Code : guide de bonnes pratiques ») : sa présentation, sa licence, et les accès au sommaire, aux pages par chapitre et au paquet
+- [Bien démarrer avec Claude Code](https://gmag-dev.github.io/bien-demarrer-claude-code/): la page d'accueil du guide (« Bien démarrer avec Claude Code : guide de bonnes pratiques ») : sa présentation, sa licence, et les accès au sommaire et aux pages par chapitre
 - [Le guide en une seule page](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-en-une-page.html): la même chose que les pages par chapitre, en une seule page HTML
 - [Version Markdown](https://gmag-dev.github.io/bien-demarrer-claude-code/guide.md): le même guide en Markdown, chaque dessin remplacé par sa légende et sa description textuelle
 - [Le guide débutant](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/): un guide distinct, pour débuter, publié à part avec son propre [llms.txt](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/llms.txt)
@@ -131,4 +131,4 @@ Pour un assistant d'IA : le guide en une seule page et la version Markdown compl
 
 ## Optional
 
-- [Paquet hors ligne](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-claude-code-v3.4.0.zip): archive zip de la page autonome, de ses pages annexes et des exemples
+- [Fichiers d'exercice](https://gmag-dev.github.io/bien-demarrer-claude-code/fichiers-d-exercice-v3.4.1.zip): archive zip du dossier exemples/ (code, fil rouge, dossier d'essai)

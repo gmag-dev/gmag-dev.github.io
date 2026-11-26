@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « 16. Relire pour réfuter, corriger l’instance et la classe, capitaliser ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « 16. Relire pour réfuter, corriger l’instance et la classe, capitaliser ».
 >
 > - Précédent : [15. Déléguer (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/15-deleguer-2.md)
 > - Suivant : [17. Le harnais en couches (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/17-le-harnais-en-couches-1.md)

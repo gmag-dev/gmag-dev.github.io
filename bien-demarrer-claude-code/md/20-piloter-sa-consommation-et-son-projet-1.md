@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « 20. Piloter sa consommation et son projet », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « 20. Piloter sa consommation et son projet », partie 1 sur 2.
 >
 > - Précédent : [19. Plusieurs sessions en parallèle](https://gmag-dev.github.io/bien-demarrer-claude-code/md/19-plusieurs-sessions-en-parallele.md)
 > - Suivant : [20. Piloter sa consommation et son projet (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/20-piloter-sa-consommation-et-son-projet-2.md)

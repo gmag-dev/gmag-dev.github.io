@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « Annexe B. Glossaire », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « Annexe B. Glossaire », partie 2 sur 2.
 >
 > - Reprise : ce morceau poursuit une liste du morceau précédent, coupée entre deux entrées
 > - Précédent : [Annexe B. Glossaire (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-b-glossaire-1.md)

@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « 8. Le travail en parallèle », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « 8. Le travail en parallèle », partie 1 sur 2.
 >
 > - Précédent : [7. Écrire ses premières extensions : skills et hooks (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/7-ecrire-ses-premieres-extensions-2.md)
 > - Suivant : [8. Le travail en parallèle (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/8-le-travail-en-parallele-2.md)

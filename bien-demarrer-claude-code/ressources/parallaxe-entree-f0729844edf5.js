@@ -6,7 +6,8 @@
   window.rcEntree = {
     actif: function () { return actif; },
     ensuite: function (jouer, tout) { if (actif) { attente.push([jouer, tout]); } else { jouer(); } },
-    partir: function () { partir(); }
+    partir: function () { partir(); },
+    couper: function () { if (actif) { finir(true); } }
   };
   if (!root.classList) { return; }
   

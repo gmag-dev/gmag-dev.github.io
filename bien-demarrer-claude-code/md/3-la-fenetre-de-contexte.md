@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « 3. La fenêtre de contexte ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « 3. La fenêtre de contexte ».
 >
 > - Précédent : [2. Bien démarrer (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/2-bien-demarrer-2.md)
 > - Suivant : [4. La méthode de travail (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/4-la-methode-de-travail-1.md)

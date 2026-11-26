@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 1 sur 2.
 >
 > - Précédent : [22. Une architecture de référence du harnais](https://gmag-dev.github.io/bien-demarrer-claude-code/md/22-une-architecture-de-reference-du-harnais.md)
 > - Suivant : [23. Sécurité et propriété intellectuelle en entreprise (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/23-securite-et-propriete-intellectuelle-en-entreprise-2.md)
