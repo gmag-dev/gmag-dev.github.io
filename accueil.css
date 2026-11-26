@@ -1,5 +1,5 @@
 /* Page d'accueil du domaine (question 113.A, 2026-11-26) : jetons repris de la couverture du guide complet. */
-:root{--fond:#f7f9fc;--surface:#ffffff;--texte:#0d1520;--discret:#4a5a6e;--filet:#d3dce8;--lien:#0b5cad;--focus:#b0138a;--accent:#00768f;color-scheme:light dark}
+:root{--fond:#f7f9fc;--surface:#ffffff;--texte:#0d1520;--discret:#4a5a6e;--filet:#d3dce8;--lien:#0b5cad;--focus:#b0138a;--accent:#00596b;color-scheme:light dark}
 @media (prefers-color-scheme:dark){:root{--fond:#0a0e14;--surface:#0f141c;--texte:#e6edf3;--discret:#9fb0c3;--filet:#253041;--lien:#7cc7ff;--focus:#ff4fd8;--accent:#4fd1e8}}
 *{box-sizing:border-box}
 html{background:var(--fond)}
