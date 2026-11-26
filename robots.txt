@@ -4,3 +4,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://gmag-dev.github.io/bien-demarrer-claude-code/sitemap.xml
+Sitemap: https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/sitemap.xml

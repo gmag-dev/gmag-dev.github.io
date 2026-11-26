@@ -1,0 +1,39 @@
+# Bien démarrer avec Claude Code : le guide débutant
+
+> Un guide réécrit pour débuter : quinze étapes guidées, sur un dossier d’essai. Version 1.0.0.
+
+Guide de Gabrielle Magnan, en français, version 1.0.0 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/.
+
+## Pages
+
+- [Bien démarrer avec Claude Code : le guide débutant](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/): Un guide réécrit pour débuter : quinze étapes guidées, sur un dossier d’essai.
+- [Avant de commencer](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/avant-de-commencer.html): Ce guide vous fait installer Claude Code, puis vous en servir pendant une première semaine, pas à pas, dans un dossier d’essai. Lisez cette page avant la…
+- [P01 · Copier le dossier d’essai](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p01-copier-le-dossier-d-essai.html): Avoir sur votre ordinateur un dossier d’essai, aux courriers inventés, et y placer votre terminal.
+- [P02 · Installer git et vous présenter](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p02-installer-git.html): Donner une mémoire à votre dossier d’essai, et dire à cette mémoire qui vous êtes.
+- [P03 · Enregistrer l’état de départ](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p03-enregistrer-l-etat-de-depart.html): Demander à git de garder l’historique du dossier d’essai, et y enregistrer un premier état, celui d’avant tout changement.
+- [P04 · Installer Claude Code](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p04-installer-claude-code.html): Installer Claude Code sur votre ordinateur, et vérifier qu’il répond.
+- [P05 · Lancer une première session](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p05-lancer-une-premiere-session.html): Lancer Claude Code pour la première fois, vous connecter, et lire dans quel mode il travaille avant de lui demander quoi que ce soit.
+- [P06 · Poser vos réglages de départ](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p06-poser-vos-reglages-de-depart.html): Faire démarrer chaque session en mode Manual, sans avoir à taper l’option de l’étape précédente.
+- [P07 · Écrire un CLAUDE.md court](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p07-ecrire-un-claude-md-court.html): Donner à Claude, en quelques lignes, ce qu’il ne peut pas trouver seul dans votre dossier, et vérifier qu’il les a lues.
+- [P08 · Protéger un faux secret](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p08-proteger-un-faux-secret.html): Interdire à Claude la lecture d’un fichier qui contiendrait un mot de passe, et savoir où cette interdiction s’arrête.
+- [P09 · Repartir d’une conversation vide](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p09-repartir-d-une-conversation-vide.html): Finir une tâche, puis repartir d’une conversation vide pour la suivante, et constater ce que Claude garde et ce qu’il oublie.
+- [P10 · Faire planifier, corriger, approuver](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p10-faire-planifier.html): Faire écrire par Claude l’explication d’un courrier, après avoir lu son plan, l’avoir corrigé, puis l’avoir approuvé.
+- [P11 · Revenir en arrière](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p11-revenir-en-arriere.html): Défaire une modification de Claude tant que rien de précieux n’est en jeu, pour savoir le refaire le jour où il le faudra.
+- [P12 · Écrire une demande complète](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p12-ecrire-une-demande-complete.html): Écrire une demande que Claude n’a pas à deviner, et qui dit d’avance à quoi vous reconnaîtrez que le travail est fini.
+- [P13 · Voir une vérification échouer, puis passer](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p13-voir-une-verification-echouer.html): Vérifier vous-même l’explication écrite par Claude, contre une liste que vous avez dressée, et voir cette vérification échouer avant de la voir passer.
+- [P14 · Relire, puis enregistrer vous-même](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p14-relire-puis-enregistrer.html): Enregistrer dans l’historique le travail que vous avez vérifié, et lui seul, après avoir relu ce qui va y entrer.
+- [P15 · Faire relire par un regard neuf](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p15-faire-relire.html): Faire relire votre travail enregistré par un regard qui n’a pas suivi son écriture : une session neuve, puis, si vous le pouvez, une personne.
+- [Le test d’arrivée](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/test-d-arrivee.html): Le parcours vous a fait garder sept preuves, une par geste. Ce test les rassemble. Il ne demande aucune commande nouvelle, et Claude Code n’a pas à être lancé.
+- [F01 · Faire d’une demande retapée une commande à vous](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/fiches/f01-une-commande-a-vous.html): Vous retapez la même demande pour la troisième fois. Enregistrez-la une fois, puis lancez-la par son nom.
+- [F02 · Confier une tâche annexe, et vérifier le rapport](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/fiches/f02-confier-une-tache-annexe.html): Une tâche annexe remplirait la conversation de lectures que vous ne relirez pas : relever, chercher, recenser. Confiez-la, et ne gardez que son résultat.
+- [F03 · Faire lire un document d’origine inconnue](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/fiches/f03-document-d-origine-inconnue.html): On vous a transmis un document, ou vous l’avez téléchargé, et vous voulez que Claude le lise. Vous ne savez pas qui l’a écrit.
+- [F04 · Comprendre une session décevante](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/fiches/f04-session-decevante.html): Une session ne s’est pas passée comme prévu, et vous vous apprêtez à réessayer. Nommez d’abord la cause : une parade appliquée à la mauvaise cause ne change…
+- [F05 · Reprendre un travail le lendemain](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/fiches/f05-reprendre-le-lendemain.html): Le travail n’est pas fini, et vous arrêtez pour aujourd’hui. L’état d’un travail se garde dans des fichiers, pas dans la conversation : écrivez-le avant de…
+- [F06 · Lire votre consommation](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/fiches/f06-lire-votre-consommation.html): Vous voulez savoir où vous en êtes de votre forfait, ou une limite vient de vous arrêter.
+- [F07 · Choisir quoi ajouter quand une gêne revient](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/fiches/f07-quoi-ajouter.html): Une gêne revient, et vous vous demandez s’il faut ajouter quelque chose à Claude Code. N’ajoutez rien d’avance : commencez par vos consignes seules, et…
+- [La liste des étapes](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/liste-des-etapes.html): Les étapes du parcours, puis le test et les fiches, sur une seule page à imprimer. Cochez une étape une fois sa vérification faite.
+- [Les mots du guide](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/glossaire.html): Les mots que ce guide définit, par ordre alphabétique, chacun avec la page qui l’introduit.
+
+## Pour aller plus loin
+
+- [Bien démarrer avec Claude Code](https://gmag-dev.github.io/bien-demarrer-claude-code/): le guide complet
