@@ -206,6 +206,8 @@ main section:not(.rappel,.verifier,.garde,.plus-loin) > h2{color:var(--titre-2)}
 .px-mat{position:absolute;width:4px;background:var(--px-eol)}
 .px-mat-p{width:8px}
 .px-rotor{position:absolute;display:block}
+/* L'animation se pose sur l'enveloppe HTML : sur un <svg>, Chromium ne l'accélère pas. */
+.px-rotor > svg,.px-ballon > svg{display:block;width:100%;height:100%}
 /* Montgolfières : présentes même immobiles ; elles flottent quand le mouvement est admis. */
 .px-ballon{position:absolute;display:block}
 .px-b0{left:5%;top:23vh;width:48px;height:60px}
@@ -282,10 +284,22 @@ summary{cursor:pointer;font-weight:600;padding:.2rem 0}
 .systemes{border:1px solid var(--trait);border-radius:4px;margin:.7rem 0;padding:0 .9rem .5rem}
 .systeme + .systeme{border-top:1px dashed var(--trait)}
 .systeme > h3{margin-top:.8rem}
-.suite{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;justify-content:space-between;
+/* Pied de navigation : précédente à gauche, accueil au centre, suivante à droite ; empilés sous
+   40rem, chacun sur toute la largeur. Cibles d'au moins 44 pixels (WCAG 2.5.8 et au-delà). */
+.suite{display:grid;grid-template-columns:1fr auto 1fr;gap:.75rem;align-items:stretch;
   border-top:1px solid var(--trait);padding-top:1rem;padding-bottom:1rem}
-.suite a{display:inline-block;padding:.45rem 0;min-height:1.5rem}
-.suite .suivante{margin-left:auto;font-weight:700}
+.suite a{display:flex;flex-direction:column;justify-content:center;gap:.1rem;min-height:2.75rem;
+  padding:.5rem .8rem;border:1px solid var(--trait);border-radius:6px;text-decoration:none;box-sizing:border-box}
+.suite a:hover .cible,.suite a:focus-visible .cible,.suite .sommaire:hover{text-decoration:underline}
+.suite .sens{font-size:.85rem;color:var(--discret)}
+.suite .precedente{grid-column:1;text-align:left}
+.suite .sommaire{grid-column:2;align-self:center;text-align:center}
+.suite .suivante{grid-column:3;text-align:right;font-weight:700}
+@media (max-width:40rem){
+  .suite{grid-template-columns:1fr}
+  .suite .precedente,.suite .sommaire,.suite .suivante{grid-column:1}
+  .suite .sommaire{align-self:stretch}
+}
 .pied{color:var(--discret);font-size:.92rem;border-top:1px solid var(--trait);padding-top:.8rem;padding-bottom:2.5rem}
 .pied p{margin:.3rem 0}
 /* Figures, reprises du guide complet ou propres au débutant : mêmes règles que le complet. */
@@ -407,7 +421,7 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 <div class="parallaxe" aria-hidden="true">
 <div class="px-voute"></div>
 <svg class="px-defs" width="0" height="0" focusable="false"><symbol id="px-eo" viewBox="-8 -8 16 16"><path class="px-c-eol" d="M-.5-7h1v7h-1z"/><path class="px-c-eol" d="M-.5-7h1v7h-1z" transform="rotate(120)"/><path class="px-c-eol" d="M-.5-7h1v7h-1z" transform="rotate(240)"/><path class="px-c-balise" d="M-1-1h2v2h-2z"/></symbol></svg>
-<div class="px-plan px-ciel" data-px-vitesse="0.04" data-px-base="0.0" data-px-mode="plein" data-px-crete="0" data-px-periode="224"><svg class="px-fond" focusable="false"><defs><pattern id="px-sp-nuages" x="11" width="160" height="56" patternUnits="userSpaceOnUse" patternTransform="scale(4)">
+<div class="px-plan px-ciel" data-px-vitesse="0" data-px-base="0.0" data-px-mode="plein" data-px-crete="0" data-px-periode="224"><svg class="px-fond" focusable="false"><defs><pattern id="px-sp-nuages" x="11" width="160" height="56" patternUnits="userSpaceOnUse" patternTransform="scale(4)">
 <path class="px-c-et2" d="M14 13h24v1h-24zM94 37h20v1h-20zM58 49h10v1h-10zM134 17h8v1h-8z"/>
 <path class="px-c-et1" d="M18 6h10v2h-10zM14 8h20v2h-20zM12 10h28v3h-28zM98 30h8v2h-8zM94 32h18v2h-18zM92 34h24v3h-24zM58 46h8v1h-8zM56 47h14v2h-14zM134 14h6v1h-6zM132 15h12v2h-12z"/>
 </pattern></defs><rect width="100%" height="100%" fill="url(#px-sp-nuages)"/></svg>
@@ -415,27 +429,27 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 <path class="px-c-lune-o" d="M11 0h2v3h-2zM11 21h2v3h-2zM0 11h3v2h-3zM21 11h3v2h-3zM3 3h2v2h-2zM19 3h2v2h-2zM3 19h2v2h-2zM19 19h2v2h-2z"/>
 <path class="px-c-lune" d="M9 5h6v1h-6zM7 6h10v1h-10zM6 7h12v2h-12zM5 9h14v6h-14zM6 15h12v2h-12zM7 17h10v1h-10zM9 18h6v1h-6z"/>
 </svg>
-<svg class="px-ballon px-b0" viewBox="0 0 16 20" focusable="false">
+<span class="px-ballon px-b0"><svg viewBox="0 0 16 20" focusable="false">
 <path class="px-c-mag" d="M5 0h6v1h-6zM3 1h10v1h-10zM2 2h12v2h-12zM1 4h14v5h-14zM2 9h12v2h-12zM3 11h10v1h-10zM4 12h8v1h-8zM5 13h6v1h-6zM6 14h4v1h-4z"/>
 <path class="px-c-et1" d="M3 2h2v9h-2zM11 2h2v9h-2z"/>
 <path class="px-c-ambre" d="M7 0h2v15h-2z"/>
 <path class="px-c-mil-a" d="M5 15h1v2h-1zM10 15h1v2h-1z"/>
 <path class="px-c-tronc" d="M6 17h4v3h-4z"/>
-</svg>
-<svg class="px-ballon px-b1" viewBox="0 0 16 20" focusable="false">
+</svg></span>
+<span class="px-ballon px-b1"><svg viewBox="0 0 16 20" focusable="false">
 <path class="px-c-ambre" d="M5 0h6v1h-6zM3 1h10v1h-10zM2 2h12v2h-12zM1 4h14v5h-14zM2 9h12v2h-12zM3 11h10v1h-10zM4 12h8v1h-8zM5 13h6v1h-6zM6 14h4v1h-4z"/>
 <path class="px-c-cyan" d="M3 2h2v9h-2zM11 2h2v9h-2z"/>
 <path class="px-c-balise" d="M7 0h2v15h-2z"/>
 <path class="px-c-mil-a" d="M5 15h1v2h-1zM10 15h1v2h-1z"/>
 <path class="px-c-tronc" d="M6 17h4v3h-4z"/>
-</svg></div>
-<div class="px-plan px-loin" data-px-vitesse="0.12" data-px-base="0.4" data-px-mode="plein" data-px-crete="384" data-px-periode="32"><svg class="px-fond" focusable="false"><defs><pattern id="px-sp-loin" x="0" width="240" height="96" patternUnits="userSpaceOnUse" patternTransform="scale(4)">
+</svg></span></div>
+<div class="px-plan px-loin" data-px-vitesse="0" data-px-base="0.4" data-px-mode="plein" data-px-crete="384" data-px-periode="32"><svg class="px-fond" focusable="false"><defs><pattern id="px-sp-loin" x="0" width="240" height="96" patternUnits="userSpaceOnUse" patternTransform="scale(4)">
 <path class="px-c-loin-f" d="M0 22h16v74h-16zM16 18h16v78h-16zM32 16h16v80h-16zM48 18h16v78h-16zM64 24h16v72h-16zM80 30h16v66h-16zM96 34h16v62h-16zM112 32h16v64h-16zM128 26h16v70h-16zM144 20h16v76h-16zM160 18h16v78h-16zM176 22h16v74h-16zM192 28h16v68h-16zM208 32h16v64h-16zM224 28h16v68h-16z"/>
 <path class="px-c-loin" d="M0 40h8v56h-8zM8 36h8v60h-8zM16 32h8v64h-8zM24 30h8v66h-8zM32 28h8v68h-8zM40 28h8v68h-8zM48 30h8v66h-8zM56 34h8v62h-8zM64 38h8v58h-8zM72 44h8v52h-8zM80 50h8v46h-8zM88 54h8v42h-8zM96 56h8v40h-8zM104 56h8v40h-8zM112 54h8v42h-8zM120 50h8v46h-8zM128 46h8v50h-8zM136 42h8v54h-8zM144 40h8v56h-8zM152 40h8v56h-8zM160 42h8v54h-8zM168 46h8v50h-8zM176 50h8v46h-8zM184 52h8v44h-8zM192 52h8v44h-8zM200 50h8v46h-8zM208 46h8v50h-8zM216 42h8v54h-8zM224 40h8v56h-8zM232 40h8v56h-8z"/>
 <path class="px-c-pro-i" d="M18 29h4v3h-4zM50 27h5v3h-5zM66 35h4v3h-4zM98 53h5v3h-5zM106 54h4v2h-4zM122 47h4v3h-4zM162 39h5v3h-5zM186 49h4v3h-4zM218 39h5v3h-5zM234 37h4v3h-4z"/>
 </pattern></defs><rect width="100%" height="384" fill="url(#px-sp-loin)"/><rect class="px-c-loin" y="384" width="100%" height="100%"/></svg>
-<span class="px-mat" style="left:80px;top:32px;height:40px"></span><svg class="px-rotor px-e0" style="left:58px;top:8px" width="48" height="48" focusable="false"><use href="#px-eo"/></svg><span class="px-mat" style="left:176px;top:40px;height:72px"></span><svg class="px-rotor px-e1" style="left:146px;top:8px" width="64" height="64" focusable="false"><use href="#px-eo"/></svg><span class="px-mat" style="left:600px;top:40px;height:40px"></span><svg class="px-rotor px-e2" style="left:578px;top:16px" width="48" height="48" focusable="false"><use href="#px-eo"/></svg><span class="px-mat" style="left:1168px;top:48px;height:72px"></span><svg class="px-rotor px-e3" style="left:1138px;top:16px" width="64" height="64" focusable="false"><use href="#px-eo"/></svg><span class="px-mat" style="left:1264px;top:104px;height:72px"></span><svg class="px-rotor px-e4" style="left:1234px;top:72px" width="64" height="64" focusable="false"><use href="#px-eo"/></svg><span class="px-mat" style="left:1560px;top:40px;height:40px"></span><svg class="px-rotor px-e5" style="left:1538px;top:16px" width="48" height="48" focusable="false"><use href="#px-eo"/></svg><span class="px-mat" style="left:1728px;top:136px;height:72px"></span><svg class="px-rotor px-e6" style="left:1698px;top:104px" width="64" height="64" focusable="false"><use href="#px-eo"/></svg><span class="px-mat" style="left:1840px;top:96px;height:72px"></span><svg class="px-rotor px-e7" style="left:1810px;top:64px" width="64" height="64" focusable="false"><use href="#px-eo"/></svg></div>
-<div class="px-plan px-milieu" data-px-vitesse="0.3" data-px-base="0.52" data-px-mode="plein" data-px-crete="288" data-px-periode="48"><svg class="px-fond" focusable="false"><defs><pattern id="px-sp-ville" x="57" width="200" height="72" patternUnits="userSpaceOnUse" patternTransform="scale(4)">
+<span class="px-mat" style="left:80px;top:32px;height:40px"></span><span class="px-rotor px-e0" style="left:58px;top:8px;width:48px;height:48px"><svg width="48" height="48" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat" style="left:176px;top:40px;height:72px"></span><span class="px-rotor px-e1" style="left:146px;top:8px;width:64px;height:64px"><svg width="64" height="64" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat" style="left:600px;top:40px;height:40px"></span><span class="px-rotor px-e2" style="left:578px;top:16px;width:48px;height:48px"><svg width="48" height="48" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat" style="left:1168px;top:48px;height:72px"></span><span class="px-rotor px-e3" style="left:1138px;top:16px;width:64px;height:64px"><svg width="64" height="64" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat" style="left:1264px;top:104px;height:72px"></span><span class="px-rotor px-e4" style="left:1234px;top:72px;width:64px;height:64px"><svg width="64" height="64" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat" style="left:1560px;top:40px;height:40px"></span><span class="px-rotor px-e5" style="left:1538px;top:16px;width:48px;height:48px"><svg width="48" height="48" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat" style="left:1728px;top:136px;height:72px"></span><span class="px-rotor px-e6" style="left:1698px;top:104px;width:64px;height:64px"><svg width="64" height="64" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat" style="left:1840px;top:96px;height:72px"></span><span class="px-rotor px-e7" style="left:1810px;top:64px;width:64px;height:64px"><svg width="64" height="64" focusable="false"><use href="#px-eo"/></svg></span></div>
+<div class="px-plan px-milieu" data-px-vitesse="0" data-px-base="0.52" data-px-mode="plein" data-px-crete="288" data-px-periode="48"><svg class="px-fond" focusable="false"><defs><pattern id="px-sp-ville" x="57" width="200" height="72" patternUnits="userSpaceOnUse" patternTransform="scale(4)">
 <path class="px-c-mil" d="M10 20h20v52h-20zM80 8h12v64h-12zM122 44h38v28h-38zM167 22h10v8h-10zM182 28h14v44h-14z"/>
 <path class="px-c-verre" d="M50 52h12v2h-12zM46 54h20v2h-20zM44 56h24v4h-24zM42 60h28v12h-28z"/>
 <path class="px-c-mil-a" d="M6 32h28v2h-28zM6 46h28v2h-28zM6 60h28v2h-28zM10 20h1v52h-1zM91 8h1v64h-1zM122 46h1v26h-1zM171 30h2v42h-2zM180 40h18v2h-18zM180 54h18v2h-18zM182 28h1v44h-1zM42 60h28v1h-28zM55 52h1v20h-1zM48 54h1v18h-1zM62 54h1v18h-1zM42 71h28v1h-28zM85 2h1v4h-1z"/>
@@ -454,7 +468,7 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 <path class="px-c-et1" d="M48 5h1v1h-1zM102 8h1v1h-1zM140 3h1v1h-1zM185 10h1v1h-1zM27 10h1v1h-1z"/>
 <path class="px-c-neon3" d="M22 6h1v2h-1zM78 4h1v2h-1zM112 9h1v2h-1zM188 5h1v2h-1z"/>
 </pattern></defs><rect width="100%" height="288" fill="url(#px-sp-ville)"/><rect y="288" width="100%" height="100%" fill="url(#px-sp-pre)"/></svg></div>
-<div class="px-plan px-trafic" data-px-vitesse="0.42" data-px-base="0.3" data-px-mode="bande" data-px-hauteur="384" data-px-retour="0.9">
+<div class="px-plan px-trafic" data-px-vitesse="0" data-px-base="0.3" data-px-mode="bande" data-px-hauteur="384" data-px-retour="0.9">
 <div class="px-vol px-vol-d px-c0v0" data-px-y="24"><svg class="px-veh" viewBox="0 0 24 10" width="96" height="40" focusable="false">
 <path class="px-c-veh" d="M6 0h12v1h-12zM3 1h18v1h-18zM1 2h22v3h-22zM3 5h18v1h-18zM6 6h12v1h-12z"/>
 <path class="px-c-veh-v" d="M1 3h22v1h-22z"/>
@@ -472,7 +486,7 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 <path class="px-c-feu-ar" d="M0 1h1v2h-1z"/>
 </svg></div>
 </div>
-<div class="px-plan px-proche" data-px-vitesse="0.62" data-px-base="0.74" data-px-mode="bande" data-px-hauteur="288" data-px-retour="1.6"><svg class="px-fond" focusable="false"><defs><pattern id="px-sp-jardin" x="23" width="220" height="72" patternUnits="userSpaceOnUse" patternTransform="scale(4)">
+<div class="px-plan px-proche" data-px-vitesse="0" data-px-base="0.74" data-px-mode="bande" data-px-hauteur="288" data-px-retour="1.6"><svg class="px-fond" focusable="false"><defs><pattern id="px-sp-jardin" x="23" width="220" height="72" patternUnits="userSpaceOnUse" patternTransform="scale(4)">
 <path class="px-c-mil" d="M120 26h28v46h-28z"/>
 <path class="px-c-mil-a" d="M55 58h1v14h-1zM69 58h1v14h-1zM83 58h1v14h-1zM198 44h1v28h-1zM120 26h1v46h-1z"/>
 <path class="px-c-tronc" d="M20 40h4v32h-4zM16 44h4v2h-4zM24 48h5v2h-5zM172 46h3v26h-3z"/>
@@ -497,7 +511,7 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 <path class="px-c-mil-a" d="M140 40h6v1h-6zM140 42h6v1h-6z"/>
 <path class="px-c-mag" d="M73 33h1v1h-1zM83 32h1v1h-1zM128 24h1v1h-1zM119 22h1v1h-1z"/>
 </pattern></defs><rect width="100%" height="100%" fill="url(#px-sp-allee)"/></svg>
-<span class="px-mat px-mat-p" style="left:248px;top:64px;height:100px"></span><svg class="px-rotor px-e8" style="left:188px;top:0px" width="128" height="128" focusable="false"><use href="#px-eo"/></svg><span class="px-mat px-mat-p" style="left:888px;top:64px;height:100px"></span><svg class="px-rotor px-e9" style="left:828px;top:0px" width="128" height="128" focusable="false"><use href="#px-eo"/></svg><span class="px-mat px-mat-p" style="left:1528px;top:64px;height:100px"></span><svg class="px-rotor px-e10" style="left:1468px;top:0px" width="128" height="128" focusable="false"><use href="#px-eo"/></svg><span class="px-mat px-mat-p" style="left:2168px;top:64px;height:100px"></span><svg class="px-rotor px-e11" style="left:2108px;top:0px" width="128" height="128" focusable="false"><use href="#px-eo"/></svg></div>
+<span class="px-mat px-mat-p" style="left:248px;top:64px;height:100px"></span><span class="px-rotor px-e8" style="left:188px;top:0px;width:128px;height:128px"><svg width="128" height="128" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat px-mat-p" style="left:888px;top:64px;height:100px"></span><span class="px-rotor px-e9" style="left:828px;top:0px;width:128px;height:128px"><svg width="128" height="128" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat px-mat-p" style="left:1528px;top:64px;height:100px"></span><span class="px-rotor px-e10" style="left:1468px;top:0px;width:128px;height:128px"><svg width="128" height="128" focusable="false"><use href="#px-eo"/></svg></span><span class="px-mat px-mat-p" style="left:2168px;top:64px;height:100px"></span><span class="px-rotor px-e11" style="left:2108px;top:0px;width:128px;height:128px"><svg width="128" height="128" focusable="false"><use href="#px-eo"/></svg></span></div>
 </div>
 
 <header>
@@ -603,13 +617,13 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 
 </main>
 <nav class="suite" aria-label="D’une page à l’autre">
-<a class="precedente" rel="prev" href="../fiches/f06-lire-votre-consommation.html">F06 · Lire votre consommation</a>
-<a class="sommaire" href="../index.html">Bien démarrer avec Claude Code : le guide débutant</a>
-<a class="suivante" rel="next" href="../liste-des-etapes.html">La liste des étapes</a>
+<a class="precedente" rel="prev" href="../fiches/f06-lire-votre-consommation.html"><span class="sens"><span aria-hidden="true">←</span> Précédente</span> <span class="cible">F06 · Lire votre consommation</span></a>
+<a class="sommaire" href="../index.html">Accueil du guide</a>
+<a class="suivante" rel="next" href="../liste-des-etapes.html"><span class="sens">Suivante <span aria-hidden="true">→</span></span> <span class="cible">La liste des étapes</span></a>
 </nav>
 </div>
 <footer class="pied">
-<p>Bien démarrer avec Claude Code : le guide débutant, version 1.2.0+legere.web · 26 novembre 2026</p>
+<p>Bien démarrer avec Claude Code : le guide débutant, version 1.3.0+legere.web · 26 novembre 2026</p>
 <p>Dernière relecture des faits dans la documentation de Claude Code 2.1.332&nbsp;: le 2026-11-26. Votre version et sa documentation font foi. Socle commun 0.1.0.</p>
 <p class="vers-complet">Vous lisez le guide débutant. Pour aller plus loin&nbsp;: <a href="https://gmag-dev.github.io/bien-demarrer-claude-code/">le guide complet</a>.</p>
 <p>Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré.</p>
