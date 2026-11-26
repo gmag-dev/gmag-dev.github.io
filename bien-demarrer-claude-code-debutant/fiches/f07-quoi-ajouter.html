@@ -266,6 +266,8 @@ kbd{border:1px solid var(--trait);border-bottom-width:2px;border-radius:4px;padd
 .scene{border-left-color:var(--titre-2)}
 /* L'écho rappelle la scène : il en reprend le filet, pour ne pas se lire comme une consigne à constater. */
 .verifier .echo{border-left:3px solid var(--titre-2);padding-left:.6rem}
+/* Icône de chaque titre de section : jeu Tabler du guide complet, à la couleur du titre. */
+h2 > .ico{width:1.15em;height:1.15em;vertical-align:-.18em;margin-right:.45em}
 /* Sous-titre du guide complet cité : gras, et sa densité en petites capitales. */
 .sous-titre-complet{font-weight:700}
 .dense{font-variant-caps:small-caps;letter-spacing:.02em}
@@ -521,12 +523,17 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 <article class="fiche">
 
 <section class="quand">
-<h2>Quand ouvrir cette fiche</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 16l2 -6l6 -2l-2 6l-6 2" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+  <path d="M12 3l0 2" />
+  <path d="M12 19l0 2" />
+  <path d="M3 12l2 0" />
+  <path d="M19 12l2 0" /></svg>Quand ouvrir cette fiche</h2>
 <p>Une gêne revient, et vous vous demandez s’il faut ajouter quelque chose à Claude Code. N’ajoutez rien d’avance&nbsp;: commencez par vos consignes seules, et n’ajoutez que le jour où une gêne précise se répète.</p>
 </section>
 
 <section class="causes">
-<h2>À chaque gêne, son ajout</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" /></svg>À chaque gêne, son ajout</h2>
 <dl>
 <dt>Claude se trompe deux fois sur la même convention</dt>
 <dd>Une ligne dans <code data-bloc="f-claude-md">CLAUDE.md</code>, comme à l’<a href="../parcours/p07-ecrire-un-claude-md-court.html">étape P07</a>.</dd>
@@ -542,7 +549,12 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </section>
 
 <section class="geste">
-<h2>Geste</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
+  <path d="M14.5 5.5l4 4" />
+  <path d="M12 8l-5 -5l-4 4l5 5" />
+  <path d="M7 8l-1.5 1.5" />
+  <path d="M16 12l5 5l-4 4l-5 -5" />
+  <path d="M16 17l-1.5 1.5" /></svg>Geste</h2>
 <ol>
 <li>
 <p>Notez la gêne le jour où elle arrive, en une phrase.</p>
@@ -560,17 +572,27 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </section>
 
 <section class="verifier">
-<h2>Vérifiez vous-même</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+  <path d="M21 21l-6 -6" />
+  <path d="M7 10l2 2l4 -4" /></svg>Vérifiez vous-même</h2>
 <p>À la ligne 4, la gêne ne doit plus se produire. Si elle revient, retirez ce que vous avez ajouté&nbsp;: un ajout qui n’agit pas ne rend rien.</p>
 </section>
 
 <section class="garde">
-<h2>Mise en garde</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" />
+  <path d="M12 16h.01" /></svg>Mise en garde</h2>
 <p data-bloc="n-extension-provenance" class="bloc-garde"><strong>N’installez rien que vous n’ayez lu.</strong> Une extension écrite par quelqu’un d’autre peut lancer des commandes avec vos droits, ou faire entrer dans la conversation ce qu’elle lit ailleurs. Anthropic n’audite pas la sécurité des serveurs que d’autres publient. Tenez-vous à une provenance que vous connaissez.</p>
 </section>
 
 <section class="plus-loin">
-<h2>Pour aller plus loin</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -14" />
+  <path d="M9 5a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -14" />
+  <path d="M5 8h4" />
+  <path d="M9 16h4" />
+  <path d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041" />
+  <path d="M14 9l4 -1" />
+  <path d="M16 16l3.923 -.98" /></svg>Pour aller plus loin</h2>
 <ul>
 <li><a href="https://gmag-dev.github.io/bien-demarrer-claude-code/#s6-1">Partir d’une gêne</a>, section 6.1 du guide complet&nbsp;: la liste entière des gênes et de leurs ajouts.</li>
 <li><a href="https://gmag-dev.github.io/bien-demarrer-claude-code/#s6-3">Choisir entre les extensions</a>, section 6.3 du guide complet.</li>
@@ -587,7 +609,7 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </nav>
 </div>
 <footer class="pied">
-<p>Bien démarrer avec Claude Code : le guide débutant, version 1.1.0+legere.web · 26 novembre 2026</p>
+<p>Bien démarrer avec Claude Code : le guide débutant, version 1.2.0+legere.web · 26 novembre 2026</p>
 <p>Dernière relecture des faits dans la documentation de Claude Code 2.1.332&nbsp;: le 2026-11-26. Votre version et sa documentation font foi. Socle commun 0.1.0.</p>
 <p class="vers-complet">Vous lisez le guide débutant. Pour aller plus loin&nbsp;: <a href="https://gmag-dev.github.io/bien-demarrer-claude-code/">le guide complet</a>.</p>
 <p>Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré.</p>

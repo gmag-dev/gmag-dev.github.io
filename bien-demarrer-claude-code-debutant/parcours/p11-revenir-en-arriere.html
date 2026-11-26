@@ -266,6 +266,8 @@ kbd{border:1px solid var(--trait);border-bottom-width:2px;border-radius:4px;padd
 .scene{border-left-color:var(--titre-2)}
 /* L'écho rappelle la scène : il en reprend le filet, pour ne pas se lire comme une consigne à constater. */
 .verifier .echo{border-left:3px solid var(--titre-2);padding-left:.6rem}
+/* Icône de chaque titre de section : jeu Tabler du guide complet, à la couleur du titre. */
+h2 > .ico{width:1.15em;height:1.15em;vertical-align:-.18em;margin-right:.45em}
 /* Sous-titre du guide complet cité : gras, et sa densité en petites capitales. */
 .sous-titre-complet{font-weight:700}
 .dense{font-variant-caps:small-caps;letter-spacing:.02em}
@@ -535,17 +537,26 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 <p>Bernard veut aussi une preuve&nbsp;: il écrit un contrôle qui compare les dates et les montants d’un courrier à ceux de son brouillon. Inès en fait la version sans code. Et quand un doute reste, c’est Odile qui tranche. Cette séance commence par le filet de sécurité qu’il faut avant de confier davantage&nbsp;: savoir défaire une modification.</p>
 </section>
 <section class="but">
-<h2>But</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+  <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+  <path d="M14 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>But</h2>
 <p>Défaire une modification de Claude tant que rien de précieux n’est en jeu, pour savoir le refaire le jour où il le faudra.</p>
 </section>
 
 <section class="depart">
-<h2>Point de départ</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7l6 -3l6 3l6 -3v13l-6 3l-6 -3l-6 3v-13" />
+  <path d="M9 4v13" />
+  <path d="M15 7v13" /></svg>Point de départ</h2>
 <p>Vous avez fini l’étape P10. Votre terminal est ouvert dans le dossier <code data-bloc="f-mon-essai">mon-essai</code>. Lancez Claude Code s’il ne l’est pas, et vérifiez que la barre d’état affiche <code data-bloc="a-barre-manual">⏸ manual mode on</code>. Sinon, appuyez sur <kbd>Maj</kbd>+<kbd>Tab</kbd> jusqu’à la lire.</p>
 </section>
 
 <section class="geste">
-<h2>Geste</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
+  <path d="M14.5 5.5l4 4" />
+  <path d="M12 8l-5 -5l-4 4l5 5" />
+  <path d="M7 8l-1.5 1.5" />
+  <path d="M16 12l5 5l-4 4l-5 -5" />
+  <path d="M16 17l-1.5 1.5" /></svg>Geste</h2>
 <ol>
 <li>
 <p>Videz la conversation par <code data-bloc="c-clear">/clear</code>.</p>
@@ -569,7 +580,9 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </section>
 
 <section class="voir">
-<h2>Ce que vous devez voir</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+  <path d="M6 8h.01" />
+  <path d="M9 8h.01" /></svg>Ce que vous devez voir</h2>
 <ul>
 <li>À la ligne 3, la sortie montre la ligne ajoutée, précédée du signe plus.</li>
 <li>À la ligne 4, la conversation revient au point où elle était avant votre demande.</li>
@@ -579,7 +592,9 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </section>
 
 <section class="verifier">
-<h2>Vérifiez vous-même</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+  <path d="M21 21l-6 -6" />
+  <path d="M7 10l2 2l4 -4" /></svg>Vérifiez vous-même</h2>
 <p>Comparez les deux sorties, celle de la ligne 3 et celle de la ligne 5. La ligne ajoutée est dans la première, et plus dans la seconde. Vous avez trois gestes, du plus léger au plus sûr&nbsp;: arrêter Claude par <kbd>Échap</kbd>, défaire par <code data-bloc="c-rewind">/rewind</code>, et comparer à l’état que git a enregistré.</p>
 <figure id="fig-d-retour"><div class="fig-scroll fig-zoom" tabindex="0" role="button" data-zoom="fig-d-retour" aria-describedby="fig-d-retour-t fig-d-retour-d"><span class="sr-only">Agrandir le schéma</span><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 220" width="680" height="220" role="img" aria-labelledby="fig-d-retour-t fig-d-retour-d" font-family="Libertinus Serif, Georgia, serif"><title id="fig-d-retour-t">Arrêter, défaire, retrouver</title><desc id="fig-d-retour-d">Trois gestes, du plus léger au plus sûr. Échap arrête Claude dès qu’il commence à répondre, et ce qui est déjà fait reste. /rewind rétablit la conversation et les fichiers que Claude a modifiés par ses outils d’édition, mais pas un fichier changé par une commande seule. git retrouve ce qu’un commit a enregistré.</desc><rect x="0" y="0" width="680" height="220" style="fill:var(--fx-ffffff)"/><defs><marker id="fig-d-retour-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--fx-00768f)"/></marker></defs><rect x="10" y="20" width="200" height="78" rx="6" stroke-width="2" stroke-dasharray="6 4" style="fill:var(--fx-edf2f8);stroke:var(--fx-4a5a6e)"/><text x="110" y="44" font-size="12" text-anchor="middle" font-weight="bold" style="fill:var(--fx-0d1520)">Échap</text><text x="110" y="64" font-size="11" text-anchor="middle" style="fill:var(--fx-0d1520)">arrête Claude, mais ce</text><text x="110" y="80" font-size="11" text-anchor="middle" style="fill:var(--fx-0d1520)">qui est déjà fait reste</text><rect x="240" y="20" width="200" height="78" rx="6" stroke-width="2" stroke-dasharray="6 4" style="fill:var(--fx-edf2f8);stroke:var(--fx-0b5cad)"/><text x="340" y="44" font-size="12" text-anchor="middle" font-weight="bold" font-family="monospace" style="fill:var(--fx-0d1520)">/rewind</text><text x="340" y="64" font-size="11" text-anchor="middle" style="fill:var(--fx-0d1520)">rétablit la conversation et</text><text x="340" y="80" font-size="11" text-anchor="middle" style="fill:var(--fx-0d1520)">ce que Claude a édité</text><path d="M340,98 L340,118" fill="none" stroke-width="1.5" style="stroke:var(--fx-8a5c00)"/><rect x="240" y="118" width="200" height="40" rx="6" stroke-width="1.5" style="fill:var(--fx-fdeedd);stroke:var(--fx-8a5c00)"/><text x="340" y="134" font-size="11" text-anchor="middle" style="fill:var(--fx-0d1520)">mais pas un fichier changé</text><text x="340" y="150" font-size="11" text-anchor="middle" style="fill:var(--fx-0d1520)">par une commande seule</text><rect x="470" y="20" width="200" height="78" rx="6" stroke-width="2" stroke-dasharray="6 4" style="fill:var(--fx-e2f6ee);stroke:var(--fx-087a55)"/><text x="570" y="44" font-size="12" text-anchor="middle" font-weight="bold" font-family="monospace" style="fill:var(--fx-0d1520)">git</text><text x="570" y="64" font-size="11" text-anchor="middle" style="fill:var(--fx-0d1520)">ce qu’un commit a enregistré</text><text x="570" y="80" font-size="11" text-anchor="middle" style="fill:var(--fx-0d1520)">se retrouve</text><path d="M20,196 L658,196" fill="none" stroke-width="1.5" marker-end="url(#fig-d-retour-a)" style="stroke:var(--fx-00768f)"/><text x="340" y="186" font-size="11" text-anchor="middle" style="fill:var(--fx-0d1520)">du plus léger au plus sûr</text></svg></div><figcaption><strong>Figure&nbsp;:</strong> Arrêter, défaire, retrouver. En tirets vos gestes, en ambre la limite du retour en arrière de Claude Code, en vert ce qui tient.</figcaption>
 <details>
@@ -595,7 +610,10 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </section>
 
 <section class="sinon">
-<h2>Si ce n’est pas ce que vous voyez</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" />
+  <path d="M19 22v.01" />
+  <path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>Si ce n’est pas ce que vous voyez</h2>
 <h3>À la ligne 2, Claude propose une commande au lieu d’une modification du fichier</h3>
 <p>Refusez, et rappelez-lui la fin de votre demande. Le retour en arrière de cette étape ne suit que les modifications faites par l’outil d’édition.</p>
 <h3>À la ligne 3 ou 5, Claude demande un accord</h3>
@@ -607,13 +625,21 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </section>
 
 <section class="garde">
-<h2>Mise en garde</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" />
+  <path d="M12 16h.01" /></svg>Mise en garde</h2>
 <p data-bloc="n-rewind-limite" class="bloc-garde"><strong>Ce retour en arrière ne défait pas tout.</strong> Il rétablit les fichiers que Claude a modifiés par ses outils d’édition. Un fichier qu’une commande seule a changé, créé ou effacé reste en l’état. Votre filet, c’est git&nbsp;: ce que vous avez enregistré par un commit se retrouve.</p>
 <p data-bloc="n-jamais-sans-demandes" class="bloc-garde"><strong>Gardez les demandes d’accord.</strong> Claude Code a un mode qui les supprime toutes. N’en usez jamais sur votre ordinateur&nbsp;: il est fait pour une machine isolée, sans vos fichiers ni vos secrets.</p>
 </section>
 
 <section class="plus-loin">
-<h2>Pour aller plus loin</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -14" />
+  <path d="M9 5a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -14" />
+  <path d="M5 8h4" />
+  <path d="M9 16h4" />
+  <path d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041" />
+  <path d="M14 9l4 -1" />
+  <path d="M16 16l3.923 -.98" /></svg>Pour aller plus loin</h2>
 <p>Rien de ce qui suit n’est nécessaire pour passer à l’étape suivante.</p>
 <ul>
 <li><a href="https://gmag-dev.github.io/bien-demarrer-claude-code/#s2-4">Garder la main</a>, section 2.4 du guide complet&nbsp;: les autres choix du retour en arrière, et ce qu’il ne rétablit pas.</li>
@@ -630,7 +656,7 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </nav>
 </div>
 <footer class="pied">
-<p>Bien démarrer avec Claude Code : le guide débutant, version 1.1.0+legere.web · 26 novembre 2026</p>
+<p>Bien démarrer avec Claude Code : le guide débutant, version 1.2.0+legere.web · 26 novembre 2026</p>
 <p>Dernière relecture des faits dans la documentation de Claude Code 2.1.332&nbsp;: le 2026-11-26. Votre version et sa documentation font foi. Socle commun 0.1.0.</p>
 <p class="vers-complet">Vous lisez le guide débutant. Pour aller plus loin&nbsp;: <a href="https://gmag-dev.github.io/bien-demarrer-claude-code/">le guide complet</a>.</p>
 <p>Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré.</p>

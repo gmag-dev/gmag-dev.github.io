@@ -266,6 +266,8 @@ kbd{border:1px solid var(--trait);border-bottom-width:2px;border-radius:4px;padd
 .scene{border-left-color:var(--titre-2)}
 /* L'écho rappelle la scène : il en reprend le filet, pour ne pas se lire comme une consigne à constater. */
 .verifier .echo{border-left:3px solid var(--titre-2);padding-left:.6rem}
+/* Icône de chaque titre de section : jeu Tabler du guide complet, à la couleur du titre. */
+h2 > .ico{width:1.15em;height:1.15em;vertical-align:-.18em;margin-right:.45em}
 /* Sous-titre du guide complet cité : gras, et sa densité en petites capitales. */
 .sous-titre-complet{font-weight:700}
 .dense{font-variant-caps:small-caps;letter-spacing:.02em}
@@ -521,18 +523,30 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 <article class="fiche">
 
 <section class="quand">
-<h2>Quand ouvrir cette fiche</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 16l2 -6l6 -2l-2 6l-6 2" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+  <path d="M12 3l0 2" />
+  <path d="M12 19l0 2" />
+  <path d="M3 12l2 0" />
+  <path d="M19 12l2 0" /></svg>Quand ouvrir cette fiche</h2>
 <p>Une tâche annexe remplirait la conversation de lectures que vous ne relirez pas&nbsp;: relever, chercher, recenser. Confiez-la, et ne gardez que son résultat.</p>
 <p data-bloc="d-sous-agent">Un <dfn>sous-agent</dfn> est un assistant que Claude lance pour une tâche annexe. Il travaille dans un contexte à lui, sans voir votre conversation, et ne rend à Claude qu’un résumé.</p>
 </section>
 
 <section class="depart">
-<h2>Point de départ</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7l6 -3l6 3l6 -3v13l-6 3l-6 -3l-6 3v-13" />
+  <path d="M9 4v13" />
+  <path d="M15 7v13" /></svg>Point de départ</h2>
 <p>Vous avez fini le parcours. Claude Code est lancé dans le dossier <code data-bloc="f-mon-essai">mon-essai</code>, la barre d’état affiche <code data-bloc="a-barre-manual">⏸ manual mode on</code>, et la conversation est vide. Sinon, appuyez sur <kbd>Maj</kbd>+<kbd>Tab</kbd> jusqu’à lire ce mode.</p>
 </section>
 
 <section class="geste">
-<h2>Geste</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
+  <path d="M14.5 5.5l4 4" />
+  <path d="M12 8l-5 -5l-4 4l5 5" />
+  <path d="M7 8l-1.5 1.5" />
+  <path d="M16 12l5 5l-4 4l-5 -5" />
+  <path d="M16 17l-1.5 1.5" /></svg>Geste</h2>
 <ol>
 <li>
 <p>Copiez cette demande dans Claude Code, puis envoyez-la. Elle dit ce que le sous-agent rend, ce qu’il ne touche pas, et la preuve attendue.</p>
@@ -564,12 +578,17 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </section>
 
 <section class="verifier">
-<h2>Vérifiez vous-même</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+  <path d="M21 21l-6 -6" />
+  <path d="M7 10l2 2l4 -4" /></svg>Vérifiez vous-même</h2>
 <p>Notez, pour vos deux valeurs, si le courrier les écrit ainsi et à cet endroit. Les lignes que vous avez relues peuvent servir. Les autres restent «&nbsp;non vérifiées&nbsp;», jusqu’à ce que vous les relisiez.</p>
 </section>
 
 <section class="sinon">
-<h2>Si ce n’est pas ce que vous voyez</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" />
+  <path d="M19 22v.01" />
+  <path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>Si ce n’est pas ce que vous voyez</h2>
 <h3>Claude fait le relevé lui-même</h3>
 <p>Redites-le&nbsp;: <span class="dit">«&nbsp;Confie ce relevé à un sous-agent.&nbsp;»</span></p>
 <h3>Le rapport ne donne pas les lignes</h3>
@@ -577,13 +596,21 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </section>
 
 <section class="garde">
-<h2>Mise en garde</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 9v4" />
+  <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" />
+  <path d="M12 16h.01" /></svg>Mise en garde</h2>
 <p data-bloc="n-rapport-a-verifier" class="bloc-garde"><strong>Un rapport n’est pas une preuve.</strong> Il dit ce que le sous-agent croit avoir fait. Avant de vous en servir, relisez vous-même ce qu’il cite&nbsp;: le fichier, la ligne, la sortie.</p>
 <p>Les demandes d’un sous-agent comptent dans les mêmes limites que les vôtres. La <a href="f06-lire-votre-consommation.html">fiche F06</a> dit où le lire.</p>
 </section>
 
 <section class="plus-loin">
-<h2>Pour aller plus loin</h2>
+<h2><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -14" />
+  <path d="M9 5a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -14" />
+  <path d="M5 8h4" />
+  <path d="M9 16h4" />
+  <path d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041" />
+  <path d="M14 9l4 -1" />
+  <path d="M16 16l3.923 -.98" /></svg>Pour aller plus loin</h2>
 <ul>
 <li><a href="https://gmag-dev.github.io/bien-demarrer-claude-code/#s8-1">L’éventail des sous-agents</a>, section 8.1 du guide complet.</li>
 <li><a href="https://gmag-dev.github.io/bien-demarrer-claude-code/#s15-3">Le rapport est une donnée à vérifier</a>, section 15.3 du guide complet.</li>
@@ -600,7 +627,7 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
 </nav>
 </div>
 <footer class="pied">
-<p>Bien démarrer avec Claude Code : le guide débutant, version 1.1.0+legere.web · 26 novembre 2026</p>
+<p>Bien démarrer avec Claude Code : le guide débutant, version 1.2.0+legere.web · 26 novembre 2026</p>
 <p>Dernière relecture des faits dans la documentation de Claude Code 2.1.332&nbsp;: le 2026-11-26. Votre version et sa documentation font foi. Socle commun 0.1.0.</p>
 <p class="vers-complet">Vous lisez le guide débutant. Pour aller plus loin&nbsp;: <a href="https://gmag-dev.github.io/bien-demarrer-claude-code/">le guide complet</a>.</p>
 <p>Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré.</p>
