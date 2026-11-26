@@ -36,4 +36,8 @@ html:root .rc-main .soutien-encart p{text-align:start;-webkit-hyphens:manual;hyp
 @media screen and (max-width:32.49rem){ .rc-bar .rc-search{flex-basis:9rem;min-width:4rem} }
 /* Sous-titre d'édition (décision 68.A du 2026-11-26) : seconde ligne, sous le sous-titre descriptif. */
 .titlepage .title-text .subtitle.subtitle-edition{margin-top:.35rem;font-size:clamp(.95rem,2.3vw,1.1rem);font-weight:700;color:var(--text)}
+/* Choix du 2026-11-26 : « déraisonnablement dense » en petites capitales, pour souligner la densité ;
+   le signe du second degré (🧱🤓) ne se coupe pas entre ses deux emojis. */
+.subtitle-edition .dense{font-variant-caps:small-caps;letter-spacing:.02em}
+.subtitle-edition .second-degre{white-space:nowrap}
 @media print{ .soutien-encart{display:none!important} }

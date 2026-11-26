@@ -1,9 +1,9 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « Annexe F. Grille de relecture experte ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « Annexe F. Grille de relecture experte ».
 >
 > - Précédent : [Annexe E. Gabarits](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-e-gabarits.md)
 > - Suivant : [Annexe G. Grille d’auto-évaluation](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-g-grille-d-auto-evaluation.md)
 > - Sommaire : [llms.txt](https://gmag-dev.github.io/bien-demarrer-claude-code/llms.txt), tous les morceaux dans l'ordre de lecture
-> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-ann-f>
+> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-f-grille-de-relecture-experte.html#h-ann-f>
 > - Licence du texte : <https://creativecommons.org/licenses/by-nc-nd/4.0/>
 
 ---
@@ -31,19 +31,19 @@ Une réponse à la question 2 qui ne s’appuie sur aucune source ni aucun essai
 
 ### F.2 La note d’expert
 
-Chaque situation trouvée à la question 2 donne une [note d’expert](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-note-d-expert). Elle tient en six lignes. Sa forme courte va dans l’encadré « Quand la règle cède » de la section, en trois puces : la situation où la règle cède, ce qui tient alors, le renvoi. Sa forme longue va en Partie II.
+Chaque situation trouvée à la question 2 donne une [note d’expert](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-note-d-expert). Elle tient en six lignes. Sa forme courte va dans l’encadré « Quand la règle cède » de la section, en trois puces : la situation où la règle cède, ce qui tient alors, le renvoi. Sa forme longue va en Partie II.
 
-**Tableau :** La forme d’une note d’expert, avec un exemple tiré de la [section 1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s1-4). Proposée par ce guide.
+**Tableau :** La forme d’une note d’expert, avec un exemple tiré de la [section 1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/1-ce-qu-est-claude-code.html#s1-4). Proposée par ce guide.
 
 | Champ | Contenu | Exemple |
 | --- | --- | --- |
-| Règle relue | la règle et sa section | ce qui ne souffre aucune exception devient une règle imposée, que le harnais applique ([section 1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s1-4)). Chez Passerelle 🌉 : « l’outil n’envoie jamais rien » |
+| Règle relue | la règle et sa section | ce qui ne souffre aucune exception devient une règle imposée, que le harnais applique ([section 1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/1-ce-qu-est-claude-code.html#s1-4)). Chez Passerelle 🌉 : « l’outil n’envoie jamais rien » |
 | Vérification | la date et la version de Claude Code | le jour de la relecture, avec la version affichée par `claude --version` |
-| Où elle cède | la situation qui la contredit | une règle `deny` porte sur le texte de l’appel d’outil, pas sur l’intention : un script lancé par Claude peut encore lire le fichier qu’elle protège [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permissions) |
-| Ce qui tient alors | la parade qui reste vraie dans cette situation | ce qui doit tenir à coup sûr se place aussi là où le poste ne peut pas l’atteindre, comme la protection d’une branche sur le serveur. Pour Passerelle, aucun outil web ni serveur qui sort. Le shell sort encore : sa sortie est réduite, sous garde humaine, en mode Manual (sections [10.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s10-3) et [17.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-4)) |
-| Source | la source publique relue | la page des permissions de Claude Code [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-permissions) |
-| Renvoi | le renvoi posé dans le chapitre débutant, ou « aucun » | « Pour aller plus loin : [section 17.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s17-3) et [chapitre 18](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch18) », à la fin de la [section 1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s1-4) |
+| Où elle cède | la situation qui la contredit | une règle `deny` porte sur le texte de l’appel d’outil, pas sur l’intention : un script lancé par Claude peut encore lire le fichier qu’elle protège [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-permissions) |
+| Ce qui tient alors | la parade qui reste vraie dans cette situation | ce qui doit tenir à coup sûr se place aussi là où le poste ne peut pas l’atteindre, comme la protection d’une branche sur le serveur. Pour Passerelle, aucun outil web ni serveur qui sort. Le shell sort encore : sa sortie est réduite, sous garde humaine, en mode Manual (sections [10.3](https://gmag-dev.github.io/bien-demarrer-claude-code/10-securite.html#s10-3) et [17.4](https://gmag-dev.github.io/bien-demarrer-claude-code/17-le-harnais-en-couches.html#s17-4)) |
+| Source | la source publique relue | la page des permissions de Claude Code [\[14\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-permissions) |
+| Renvoi | le renvoi posé dans le chapitre débutant, ou « aucun » | « Pour aller plus loin : [section 17.3](https://gmag-dev.github.io/bien-demarrer-claude-code/17-le-harnais-en-couches.html#s17-3) et [chapitre 18](https://gmag-dev.github.io/bien-demarrer-claude-code/18-hooks-serveurs-mcp-ligne-d-etat-et-taches-planifiees.html#ch18) », à la fin de la [section 1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/1-ce-qu-est-claude-code.html#s1-4) |
 
 **Pour vous exercer.** Appliquez la grille à une section de la Partie I que vous utilisez souvent. Pour chaque situation trouvée à la question 2, écrivez une note d’expert dans la forme du tableau, et vérifiez que son renvoi mène bien à une section qui existe. Une note dont la source n’a pas été relue ce jour-là porte la marque 🟡 À vérifier.
 
-[Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
+[Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-en-une-page.html#toc)

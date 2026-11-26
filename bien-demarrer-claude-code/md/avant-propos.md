@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « Avant-propos ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « Avant-propos ».
 >
 > - Précédent : aucun, début du guide
 > - Suivant : [Comment lire ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/md/comment-lire-ce-guide.md)
@@ -12,17 +12,17 @@
 
 > Version Markdown du guide, produite depuis la même source que la page en ligne, https://gmag-dev.github.io/bien-demarrer-claude-code/ ; les dessins y sont remplacés par leur légende et leur description textuelle.
 
-Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
+Guide de bonnes pratiques et exercices, du premier jour à la pratique experte humaniste
 
-Édition intégrale et déraisonnablement dense
+**Édition intégrale et déraisonnablement dense** 🧱🤓
 
 - **Autrice** : [Gabrielle Magnan](https://www.linkedin.com/in/gabrielle-magnan/)
-- **Version** : 3.3.0+publique.web · 26 novembre 2026
+- **Version** : 3.4.0+publique.web · 26 novembre 2026
 - **Soutenir** : [sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 Guide indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » et « Claude Code » sont des marques d’Anthropic.
 
-**Pourquoi ce guide.** Claude Code produit vite un plan, un diff ou un texte, mais rien ne garantit que ce qu’il produit est juste. Ce guide apprend à le faire travailler, puis à exiger la preuve de ce qu’il a fait, et à la vérifier, avant de s’en servir. Son autrice a choisi de l’écrire d’abord en français, pour rendre ces technologies plus accessibles aux francophones ; une version anglaise viendra peut-être plus tard.
+**Pourquoi ce guide.** Claude Code produit vite un plan, un diff ou un texte, mais rien ne garantit que ce qu’il produit est juste. Ce guide apprend à le faire travailler, puis à exiger la preuve de ce qu’il a fait, et à la vérifier, avant de s’en servir. J’ai choisi de l’écrire d’abord en français, pour rendre ces technologies plus accessibles aux francophones ; une version anglaise viendra peut-être plus tard.
 
 **À quoi il sert.** À bien démarrer, par des règles nettes qui disent chacune leur limite (Partie I), puis à aller jusqu’à la pratique experte, là où ces règles cèdent (Partie II). Chaque chapitre finit par un exercice, et chacun des quatre jalons du guide se valide par une preuve que vous pouvez montrer.
 
@@ -36,7 +36,7 @@ Guide indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » 
 
 Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
 
-Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+Votre soutien m’aide à préparer d’autres publications et à mener des projets humanistes.
 
 Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
 

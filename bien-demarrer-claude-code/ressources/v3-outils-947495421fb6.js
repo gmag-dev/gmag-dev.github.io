@@ -57,9 +57,9 @@
     }
   }
 
-  // Installer le guide (décision 32.A de l'autrice, 2026-11-21 : installer seul, sans lecture hors ligne). Forme web
+  // Installer le guide (décision 32.A du 2026-11-21 : installer seul, sans lecture hors ligne). Forme web
   // seulement : la marque data-forme que pose l'assemblage, et une page servie en http(s). Le bouton reste toujours au
-  // même endroit : une ligne « Installer » des options, après Affichage (demande de l'autrice du 2026-11-26, pour
+  // même endroit : une ligne « Installer » des options, après Affichage (choix du 2026-11-26, pour
   // faire de la place dans la barre ; il était avant Contacts) ; son panneau, déplié en place, propose l'installation en un geste quand le navigateur l'offre
   // (beforeinstallprompt), sinon dit où se trouve la commande du navigateur, ou qu'il n'y en a pas. Une fois le guide
   // installé, le bouton n'existe plus. Aucun service worker : Chromium juge la page installable sans lui (recette F49).
@@ -161,7 +161,7 @@
     if (!/^[^\s@"<>]+@[^\s@"<>]+\.[^\s@"<>]+$/.test(mel)) { mel = ""; }
     if (!/^https:\/\/[^\s"<>]+$/.test(tip)) { tip = ""; }
     if (!li && !mel && !tip) { return; }
-    // Logo décoratif devant le texte d'un lien (demande de l'autrice du 2026-11-21) : le texte porte seul le nom accessible.
+    // Logo décoratif devant le texte d'un lien (choix du 2026-11-21) : le texte porte seul le nom accessible.
     function logo(sym, cls) {
       var s = document.createElementNS("http://www.w3.org/2000/svg", "svg"), u = document.createElementNS("http://www.w3.org/2000/svg", "use");
       s.setAttribute("class", "ico-marque " + cls); s.setAttribute("aria-hidden", "true"); s.setAttribute("focusable", "false");
@@ -178,7 +178,7 @@
       }
       if (mel) {
         var m = el("a", { href: "mailto:" + mel }), t = el("span", { "class": "v3-ct-adr" });
-        m.textContent = "Écrire à l’autrice "; t.textContent = mel; m.appendChild(t);
+        m.textContent = "M’écrire "; t.textContent = mel; m.appendChild(t);
         m.insertBefore(logo("ti-mail", "ico-mel"), m.firstChild);
         ul.appendChild(el("li")).appendChild(m);
       }

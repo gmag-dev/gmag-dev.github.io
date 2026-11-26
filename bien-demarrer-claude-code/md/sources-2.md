@@ -1,10 +1,10 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « Sources », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « Sources », partie 2 sur 2.
 >
 > - Reprise : ce morceau poursuit une liste du morceau précédent, coupée entre deux entrées
 > - Précédent : [Sources (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-1.md)
 > - Suivant : aucun, fin du guide
 > - Sommaire : [llms.txt](https://gmag-dev.github.io/bien-demarrer-claude-code/llms.txt), tous les morceaux dans l'ordre de lecture
-> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-biblio>
+> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#h-biblio>
 > - Licence du texte : <https://creativecommons.org/licenses/by-nc-nd/4.0/>
 
 ---
@@ -39,13 +39,13 @@
 190. \[190\] Anthropic. *Consumer Terms of Service*. [https://www.anthropic.com/legal/consumer-terms](https://www.anthropic.com/legal/consumer-terms). Consultée le 2026-11-25.
 191. \[191\] CNIL. *Le règlement général sur la protection des données, chapitre IV, Responsable du traitement et sous-traitant*. [https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4). Consultée le 2026-11-25.
 
-[Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
+[Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-en-une-page.html#toc)
 
 Soutenir ce guide
 
 Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
 
-Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+Votre soutien m’aide à préparer d’autres publications et à mener des projets humanistes.
 
 Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
 
@@ -53,7 +53,7 @@ Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel on
 
 Mention de transparence
 
-Ce guide a été réalisé avec l’aide de plusieurs outils d’intelligence artificielle : Claude, d’Anthropic, ChatGPT, d’OpenAI, et des modèles exécutés en local, configurés par l’autrice. Les illustrations dessinées ont été générées avec ChatGPT. Gabrielle Magnan en a conçu le plan, choisi le contenu et en porte la responsabilité éditoriale. Cette mention est volontaire, écrite dans l’esprit de l’article 50 du règlement européen sur l’intelligence artificielle (règlement (UE) 2024/1689, dit AI Act). Le numéro et la date de version de la page de titre font foi.
+Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré. Les illustrations sont générées par une IA. Je porte la responsabilité éditoriale du guide. Cette mention est volontaire, écrite dans l’esprit de l’article 50 du règlement européen sur l’intelligence artificielle (règlement (UE) 2024/1689, dit AI Act). Le numéro et la date de version de la page de titre font foi.
 
 Licence et permissions
 
@@ -61,9 +61,9 @@ Licence et permissions
 
 Exemples de code : les fichiers du dossier `exemples/` et les blocs de code de ce guide sont sous licence MIT (© 2026 Gabrielle Magnan). Vous pouvez les utiliser, les copier, les modifier et les redistribuer, y compris dans un projet professionnel ou commercial, en gardant la mention de droit d’auteur et le texte de la licence dans vos copies. Ils sont fournis tels quels, sans garantie. Le texte de la licence, en anglais, accompagne les exemples (fichier `LICENSE`) : [https://spdx.org/licenses/MIT.html](https://spdx.org/licenses/MIT.html).
 
-Permissions supplémentaires : le partage interne à une équipe ou à une entreprise, sans contrepartie, est autorisé. Une formation interne à une équipe ou à une organisation peut s’appuyer sur ce guide, sans contrepartie, en citant son titre, son autrice et sa licence. Toute utilisation dans une formation payante demande une autorisation écrite préalable de l’autrice : écrivez à [gmag.contact@pm.me](mailto:gmag.contact@pm.me).
+Permissions supplémentaires : le partage interne à une équipe ou à une entreprise, sans contrepartie, est autorisé. Une formation interne à une équipe ou à une organisation peut s’appuyer sur ce guide, sans contrepartie, en citant son titre, mon nom et sa licence. Toute utilisation dans une formation payante demande mon autorisation écrite préalable : écrivez-moi à [gmag.contact@pm.me](mailto:gmag.contact@pm.me).
 
-Moteurs de recherche et assistants d’IA : l’autrice autorise l’exploration, l’indexation, la citation et le résumé de ce guide, ainsi que son utilisation pour l’entraînement de modèles d’IA. La licence reste la règle pour toute republication du texte.
+Moteurs de recherche et assistants d’IA : j’autorise l’exploration, l’indexation, la citation et le résumé de ce guide, ainsi que son utilisation pour l’entraînement de modèles d’IA. La licence reste la règle pour toute republication du texte.
 
 Ce guide est indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » et « Claude Code » sont des marques d’Anthropic. Les autres noms de produits et de marques cités dans le guide appartiennent à leurs titulaires.
 
@@ -71,9 +71,11 @@ Ce guide est indépendant : Anthropic ne l’a ni commandé ni approuvé. « Cla
 
 Bien démarrer avec Claude Code
 
-Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
+Guide de bonnes pratiques et exercices, du premier jour à la pratique experte humaniste
 
-Autrice : Gabrielle Magnan · Version : 3.3.0+publique.web · 26 novembre 2026 · Édition publique
+Autrice : Gabrielle Magnan · Version : 3.4.0+publique.web · 26 novembre 2026 · Édition publique
+
+Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré.
 
 [Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 

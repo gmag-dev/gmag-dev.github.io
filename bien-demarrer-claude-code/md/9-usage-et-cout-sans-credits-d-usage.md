@@ -1,9 +1,9 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « 9. Usage et coût sans crédits d’usage ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « 9. Usage et coût sans crédits d’usage ».
 >
 > - Précédent : [8. Le travail en parallèle (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/8-le-travail-en-parallele-2.md)
 > - Suivant : [10. Sécurité (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/10-securite-1.md)
 > - Sommaire : [llms.txt](https://gmag-dev.github.io/bien-demarrer-claude-code/llms.txt), tous les morceaux dans l'ordre de lecture
-> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-ch9>
+> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/9-usage-et-cout-sans-credits-d-usage.html#h-ch9>
 > - Licence du texte : <https://creativecommons.org/licenses/by-nc-nd/4.0/>
 
 ---
@@ -22,9 +22,9 @@
 >
 > **Le fil rouge** 🌉 Passerelle : Bernard relève chaque soir ce que coûte la vague de courriers, et Amadou, le trésorier, tient le tableau de la semaine. 🏛️ Le Cahier commun : Mei mesure ce qu’a coûté son éventail de sous-agents, et choisit le niveau d’effort de la synthèse.
 >
-> **Où en est Passerelle** : en arrivant, deux branches relues, aucun fichier écrit par les deux, et la vague de soixante courriers en cours ([chapitre 8](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch8)). À la fin du chapitre, une semaine de relevés, et pour Le Cahier commun un niveau d’effort retenu, avec sa raison.
+> **Où en est Passerelle** : en arrivant, deux branches relues, aucun fichier écrit par les deux, et la vague de soixante courriers en cours ([chapitre 8](https://gmag-dev.github.io/bien-demarrer-claude-code/8-le-travail-en-parallele.html#ch8)). À la fin du chapitre, une semaine de relevés, et pour Le Cahier commun un niveau d’effort retenu, avec sa raison.
 
-Sur un abonnement, Claude Code ne se paie pas à la requête : il consomme un quota limité dans le temps. Ce guide ne donne aucun prix, parce qu’ils changent : la page des tarifs les donne, offre par offre, avec ce que chacune comprend de Claude Code [\[6\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-tarifs). Sans crédits d’usage activés, atteindre une limite veut dire attendre sa réinitialisation [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-plan-usage) [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs). Pour une association en pleine vague de courriers, une semaine bloquée au troisième jour, ce sont des personnes qui attendent leur brouillon. Ce chapitre explique les compteurs, une façon de répartir la consommation sur la semaine, la lecture de `/usage`, et les habitudes qui économisent.
+Sur un abonnement, Claude Code ne se paie pas à la requête : il consomme un quota limité dans le temps. Ce guide ne donne aucun prix, parce qu’ils changent : la page des tarifs les donne, offre par offre, avec ce que chacune comprend de Claude Code [\[6\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-tarifs). Sans crédits d’usage activés, atteindre une limite veut dire attendre sa réinitialisation [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-plan-usage) [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs). Pour une association en pleine vague de courriers, une semaine bloquée au troisième jour, ce sont des personnes qui attendent leur brouillon. Ce chapitre explique les compteurs, une façon de répartir la consommation sur la semaine, la lecture de `/usage`, et les habitudes qui économisent.
 
 > **⏭️ Vous pouvez sauter ce chapitre si…**
 >
@@ -38,9 +38,9 @@ Sur un abonnement, Claude Code ne se paie pas à la requête : il consomme un qu
 
 ### 9.1 Deux compteurs communs, et un troisième
 
-Pour ne pas tomber à court au milieu d’une semaine, il faut savoir quels compteurs avancent quand vous travaillez, et quand chacun repart. Les forfaits Pro et Max ont deux limites qui s’appliquent en même temps : une [fenêtre de cinq heures](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-fenetre-de-cinq-heures), quelle que soit la session, et une [limite hebdomadaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-limite-hebdomadaire). Ultra n’a que la limite hebdomadaire : un compte Ultra vérifié n’a pas de fenêtre de cinq heures. Ce sont les deux compteurs communs. Max et Ultra en ont un troisième, une limite de la semaine qui ne compte que l’usage des modèles [Fable](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-fable), une famille de modèles de Claude [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-plan-usage) [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-usage-limits).
+Pour ne pas tomber à court au milieu d’une semaine, il faut savoir quels compteurs avancent quand vous travaillez, et quand chacun repart. Les forfaits Pro et Max ont deux limites qui s’appliquent en même temps : une [fenêtre de cinq heures](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-fenetre-de-cinq-heures), quelle que soit la session, et une [limite hebdomadaire](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-limite-hebdomadaire). Ultra n’a que la limite hebdomadaire : un compte Ultra vérifié n’a pas de fenêtre de cinq heures. Ce sont les deux compteurs communs. Max et Ultra en ont un troisième, une limite de la semaine qui ne compte que l’usage des modèles [Fable](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-fable), une famille de modèles de Claude [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-plan-usage) [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-usage-limits).
 
-**Tableau 9.1 :** Les compteurs d’un forfait Pro, Max ou Ultra, d’après [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-usage-limits), [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-plan-usage) et [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs).
+**Tableau 9.1 :** Les compteurs d’un forfait Pro, Max ou Ultra, d’après [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-usage-limits), [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-plan-usage) et [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs).
 
 | Propriété | Fenêtre de cinq heures (Pro et Max) | Limite hebdomadaire (Pro, Max et Ultra) |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ Pour ne pas tomber à court au milieu d’une semaine, il faut savoir quels comp
 | Une fois atteinte | changer de modèle avec `/model` ne rétablit pas l’accès, et le message donne l’heure de réinitialisation | la même chose |
 | Modèles Fable | sans objet | sur Max et Ultra, une troisième limite, d’une semaine, ne compte que l’usage des modèles Fable |
 
-Les [crédits d’usage](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-credits-d-usage) permettent de continuer après une limite. Sans eux, il faut attendre [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-plan-usage) [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs). Anthropic ne publie pas le volume exact de ces limites, seulement une fenêtre de cinq heures et une limite hebdomadaire [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-plan-usage). Ce guide n’en donne donc aucun chiffre : fiez-vous à `/usage`.
+Les [crédits d’usage](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-credits-d-usage) permettent de continuer après une limite. Sans eux, il faut attendre [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-plan-usage) [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs). Anthropic ne publie pas le volume exact de ces limites, seulement une fenêtre de cinq heures et une limite hebdomadaire [\[69\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-plan-usage). Ce guide n’en donne donc aucun chiffre : fiez-vous à `/usage`.
 
 > **⚠️ Attention**
 >
@@ -63,18 +63,18 @@ Chez Passerelle, Bernard lance la vague un lundi à 9 heures : sa fenêtre de ci
 >
 > - Le volume des limites n’est pas publié, et il évolue : un pourcentage ne se compare qu’à lui-même, d’un jour à l’autre.
 > - Ce qui tient : `/usage`, relu chaque jour, plutôt qu’un chiffre trouvé en ligne.
-> - 🕘 Depuis la version 2.1.234, Claude Code peut attendre la réinitialisation, puis reprendre seul la tâche interrompue [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs).
-> - Pour aller plus loin : [section 20.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s20-2).
+> - 🕘 Depuis la version 2.1.234, Claude Code peut attendre la réinitialisation, puis reprendre seul la tâche interrompue [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs).
+> - Pour aller plus loin : [section 20.2](https://gmag-dev.github.io/bien-demarrer-claude-code/20-piloter-sa-consommation-et-son-projet.html#s20-2).
 
 ### 9.2 Lisser sur la semaine et le mois
 
 Sans crédits d’usage, la question n’est pas « combien cela coûte », mais « vais-je tomber à court avant la réinitialisation ». Un mois compte quatre à cinq cycles hebdomadaires : lisser chaque semaine suffit donc à lisser le mois.
 
-💡 Conseil : visez environ un septième de la limite hebdomadaire par jour, ou un cinquième par jour ouvré si vous ne travaillez pas le week-end. C’est ce que ce guide appelle le [rythme lissé](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-rythme-lisse). Regardez `/usage` en début et en milieu de journée. Placez les grosses tâches au début d’une fenêtre de cinq heures plutôt qu’à sa fin, et gardez une marge pour les imprévus de la fin de semaine.
+💡 Conseil : visez environ un septième de la limite hebdomadaire par jour, ou un cinquième par jour ouvré si vous ne travaillez pas le week-end. C’est ce que ce guide appelle le [rythme lissé](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-rythme-lisse). Regardez `/usage` en début et en milieu de journée. Placez les grosses tâches au début d’une fenêtre de cinq heures plutôt qu’à sa fin, et gardez une marge pour les imprévus de la fin de semaine.
 
-Le [tableau 9.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-9-2) compare deux semaines. Dans la première, la consommation suit le rythme lissé. Dans la seconde, tout est lancé dès le premier jour.
+Le [tableau 9.2](https://gmag-dev.github.io/bien-demarrer-claude-code/9-usage-et-cout-sans-credits-d-usage.html#tab-9-2) compare deux semaines. Dans la première, la consommation suit le rythme lissé. Dans la seconde, tout est lancé dès le premier jour.
 
-**Tableau 9.2 :** Deux rythmes sur une semaine, en part cumulée de la limite hebdomadaire. Valeurs illustratives. Le fonctionnement de la limite vient de [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-usage-limits), le rythme lissé est un conseil de ce guide.
+**Tableau 9.2 :** Deux rythmes sur une semaine, en part cumulée de la limite hebdomadaire. Valeurs illustratives. Le fonctionnement de la limite vient de [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-usage-limits), le rythme lissé est un conseil de ce guide.
 
 | Jour | Rythme lissé | Rythme concentré | Ce qui se passe dans la semaine concentrée |
 | --- | --- | --- | --- |
@@ -92,26 +92,26 @@ Chez Passerelle, lisser ne veut pas dire traiter les courriers au hasard : la pe
 >
 > - Le septième par jour suppose une charge régulière. Une semaine de livraison concentre l’effort : placez la pointe au début d’une fenêtre de cinq heures, et gardez la marge pour elle.
 > - Ce qui tient : la consommation de chaque jour se compare à la même référence, et une pointe se décide d’avance.
-> - Pour aller plus loin : sections [20.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s20-4) et [20.5](https://gmag-dev.github.io/bien-demarrer-claude-code/#s20-5).
+> - Pour aller plus loin : sections [20.4](https://gmag-dev.github.io/bien-demarrer-claude-code/20-piloter-sa-consommation-et-son-projet.html#s20-4) et [20.5](https://gmag-dev.github.io/bien-demarrer-claude-code/20-piloter-sa-consommation-et-son-projet.html#s20-5).
 
 ### 9.3 Lire /usage
 
-Au début, `/usage` sert à répondre à une seule question : où en suis-je de ma semaine ? Regardez la barre hebdomadaire chaque jour et comparez-la au rythme lissé ([section 9.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s9-2)). La répartition et les recommandations servent ensuite, quand vous cherchez ce qui consomme le plus.
+Au début, `/usage` sert à répondre à une seule question : où en suis-je de ma semaine ? Regardez la barre hebdomadaire chaque jour et comparez-la au rythme lissé ([section 9.2](https://gmag-dev.github.io/bien-demarrer-claude-code/9-usage-et-cout-sans-credits-d-usage.html#s9-2)). La répartition et les recommandations servent ensuite, quand vous cherchez ce qui consomme le plus.
 
-Sur les forfaits Pro, Max et Ultra, `/usage` affiche les barres d’usage du forfait. Sur ces forfaits comme sur Team et Enterprise, il donne aussi une répartition de votre consommation récente par [skill](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-skill), [sous-agent](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-sous-agent), plugin et serveur MCP [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs). Il propose des recommandations, une par ligne, pour tout comportement qui pèse au moins 10 % de votre usage récent, comme un contexte long ou des ratés du cache : un cache expiré fait tout relire au plein tarif. Les touches `d` et `w` basculent entre les 24 dernières heures et les 7 derniers jours. Quand le pied de page l’indique, `f` fait appliquer les recommandations qui peuvent l’être, en vous montrant chaque changement avant de le faire [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs). Les chiffres de la répartition sont approximatifs. Les barres du forfait comptent tout l’usage du compte, mais la répartition et les recommandations ne comptent que l’historique de cette machine : l’usage d’autres appareils ou de claude.ai n’y figure pas [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs) [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-usage-limits). `/cost` est un autre nom de `/usage` [\[67\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-commands).
+Sur les forfaits Pro, Max et Ultra, `/usage` affiche les barres d’usage du forfait. Sur ces forfaits comme sur Team et Enterprise, il donne aussi une répartition de votre consommation récente par [skill](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-skill), [sous-agent](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-sous-agent), plugin et serveur MCP [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs). Il propose des recommandations, une par ligne, pour tout comportement qui pèse au moins 10 % de votre usage récent, comme un contexte long ou des ratés du cache : un cache expiré fait tout relire au plein tarif. Les touches `d` et `w` basculent entre les 24 dernières heures et les 7 derniers jours. Quand le pied de page l’indique, `f` fait appliquer les recommandations qui peuvent l’être, en vous montrant chaque changement avant de le faire [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs). Les chiffres de la répartition sont approximatifs. Les barres du forfait comptent tout l’usage du compte, mais la répartition et les recommandations ne comptent que l’historique de cette machine : l’usage d’autres appareils ou de claude.ai n’y figure pas [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs) [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-usage-limits). `/cost` est un autre nom de `/usage` [\[67\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-commands).
 
-La [figure 9.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#fig-9-1) donne la décision à prendre après chaque relevé.
+La [figure 9.1](https://gmag-dev.github.io/bien-demarrer-claude-code/9-usage-et-cout-sans-credits-d-usage.html#fig-9-1) donne la décision à prendre après chaque relevé.
 
 *Dessin : Que faire d’un relevé de /usage. Schéma : la description suit.*
 
-**Figure 9.1 :** Que faire d’un relevé de `/usage`. En gris le relevé, en bleu la comparaison, en vert ce qui continue, en ambre ce qui demande d’agir, en rouge ce qui bloque, en tirets la décision d’une personne. Schéma proposé par ce guide, d’après [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs) et [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-usage-limits).
+**Figure 9.1 :** Que faire d’un relevé de `/usage`. En gris le relevé, en bleu la comparaison, en vert ce qui continue, en ambre ce qui demande d’agir, en rouge ce qui bloque, en tirets la décision d’une personne. Schéma proposé par ce guide, d’après [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs) et [\[70\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-usage-limits).
 
 La même décision, en texte :
 
 1. Notez la barre hebdomadaire avec le jour et l’heure, puis comparez-la au rythme lissé.
 2. Sous le rythme ou juste au-dessus : continuez, et relisez le soir.
-3. Nettement au-dessus : lisez la répartition et les recommandations, appliquez les habitudes de la [section 9.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s9-4), reportez ce qui peut attendre.
-4. Limite atteinte : regardez d’abord quel compteur est épuisé. Si c’est la seule limite des modèles Fable, passez à un autre modèle, qui reste dans le forfait, ou continuez avec des crédits d’usage [\[185\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-fable-plan). Si c’est une limite commune, attendez la réinitialisation : changer de modèle ne rétablit pas l’accès.
+3. Nettement au-dessus : lisez la répartition et les recommandations, appliquez les habitudes de la [section 9.4](https://gmag-dev.github.io/bien-demarrer-claude-code/9-usage-et-cout-sans-credits-d-usage.html#s9-4), reportez ce qui peut attendre.
+4. Limite atteinte : regardez d’abord quel compteur est épuisé. Si c’est la seule limite des modèles Fable, passez à un autre modèle, qui reste dans le forfait, ou continuez avec des crédits d’usage [\[185\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-fable-plan). Si c’est une limite commune, attendez la réinitialisation : changer de modèle ne rétablit pas l’accès.
 5. Dans tous les cas, c’est vous qui décidez de la suite.
 
 Chez Passerelle, le mercredi soir, la barre de Bernard est à 55 %, pour 43 % attendus. Sur les 7 derniers jours, `/usage` montre que les sous-agents de la vague pèsent plus de la moitié de son usage, et signale des contextes longs. 🏛️ Mei fait la même lecture : son éventail de cinq sous-agents sur 40 contributions a pris environ 4 % de sa semaine, relevé fictif. Pour les 400, elle décide d’avancer thème par thème, sur plusieurs jours.
@@ -120,13 +120,13 @@ Chez Passerelle, le mercredi soir, la barre de Bernard est à 55 %, pour 43 % at
 >
 > - La répartition ne compte que l’historique de cette machine : un usage sur claude.ai ou sur un autre appareil n’y figure pas, alors qu’il pèse sur la même limite.
 > - Ce qui tient : avant de conclure qu’un skill ou un sous-agent consomme trop, comparez sur les mêmes jours, depuis la même machine.
-> - Pour aller plus loin : [section 20.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s20-2). Autres commandes de suivi, dont `/insights` : [annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-l), [section L.6](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-l-6).
+> - Pour aller plus loin : [section 20.2](https://gmag-dev.github.io/bien-demarrer-claude-code/20-piloter-sa-consommation-et-son-projet.html#s20-2). Autres commandes de suivi, dont `/insights` : [annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-l-fiches-des-composants.html#ann-l), [section L.6](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-l-fiches-des-composants.html#s-l-6).
 
 ### 9.4 Les habitudes qui économisent
 
-Le coût suit la taille du contexte : plus Claude traite de contexte, plus il consomme [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs). Une session ouverte depuis des heures peut consommer bien plus que votre activité ne le laisse croire : contexte long, ratés du cache après une pause, tâches planifiées, vérifications d’objectifs, sous-agents [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs). Le [tableau 9.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#tab-9-3) rassemble les habitudes qui répondent à chacune de ces causes.
+Le coût suit la taille du contexte : plus Claude traite de contexte, plus il consomme [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs). Une session ouverte depuis des heures peut consommer bien plus que votre activité ne le laisse croire : contexte long, ratés du cache après une pause, tâches planifiées, vérifications d’objectifs, sous-agents [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs). Le [tableau 9.3](https://gmag-dev.github.io/bien-demarrer-claude-code/9-usage-et-cout-sans-credits-d-usage.html#tab-9-3) rassemble les habitudes qui répondent à chacune de ces causes.
 
-**Tableau 9.3 :** Les habitudes qui économisent l’usage, d’après [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-costs), [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-best-practices) et [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-model-config).
+**Tableau 9.3 :** Les habitudes qui économisent l’usage, d’après [\[40\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-costs), [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-best-practices) et [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-model-config).
 
 | Habitude | Pourquoi elle économise |
 | --- | --- |
@@ -137,10 +137,10 @@ Le coût suit la taille du contexte : plus Claude traite de contexte, plus il co
 | un plugin d’intelligence de code pour les langages typés | un « aller à la définition » remplace une recherche suivie de plusieurs lectures |
 | la ligne de commande plutôt qu’un serveur MCP, et les serveurs inutilisés désactivés | moins de listes d’outils dans le contexte |
 | un `CLAUDE.md` sous 200 lignes, les procédures déplacées dans des skills | les skills ne se chargent qu’à la demande |
-| un modèle léger pour les sous-agents simples, et le [niveau d’effort](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-niveau-d-effort) adapté | la réflexion, réglée par l’effort, est facturée comme des jetons de sortie |
-| arrêter les `/loop`, les objectifs de `/goal` et les sous-agents devenus inutiles | ils envoient des requêtes quand vous ne tapez rien, même la nuit ([annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-l), [section L.15](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-l-15)) |
+| un modèle léger pour les sous-agents simples, et le [niveau d’effort](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-niveau-d-effort) adapté | la réflexion, réglée par l’effort, est facturée comme des jetons de sortie |
+| arrêter les `/loop`, les objectifs de `/goal` et les sous-agents devenus inutiles | ils envoient des requêtes quand vous ne tapez rien, même la nuit ([annexe L](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-l-fiches-des-composants.html#ann-l), [section L.15](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-l-fiches-des-composants.html#s-l-15)) |
 
-Le niveau d’effort règle combien Claude réfléchit et vérifie avant de répondre. Les niveaux sont `low`, `medium`, `high`, `xhigh` et `max`, et sur Opus 5.5 le défaut est `medium` [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-model-config). 💡 Conseil : pour commencer, ne réglez rien, le défaut convient à la plupart des tâches, et choisissez le modèle et l’effort en début de session. Monter ou baisser l’effort : [section 4.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-4). Ce qui protège d’une erreur, ce sont les tests, git et la relecture, pas une réflexion plus longue.
+Le niveau d’effort règle combien Claude réfléchit et vérifie avant de répondre. Les niveaux sont `low`, `medium`, `high`, `xhigh` et `max`, et sur Opus 5.5 le défaut est `medium` [\[39\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-model-config). 💡 Conseil : pour commencer, ne réglez rien, le défaut convient à la plupart des tâches, et choisissez le modèle et l’effort en début de session. Monter ou baisser l’effort : [section 4.4](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#s4-4). Ce qui protège d’une erreur, ce sont les tests, git et la relecture, pas une réflexion plus longue.
 
 Chez Passerelle, Bernard a appliqué deux habitudes dès le jeudi : `/clear` entre deux courriers, puisque chaque brouillon est indépendant, et les sous-agents lancés trois par trois. 🏛️ Mei, elle, a fait la même synthèse des 40 contributions deux fois, en `medium` puis en `high`. Relevés fictifs : environ 3 % de sa semaine en `medium`, 5 % en `high`, et dans les deux cas deux phrases à reprendre, l’une qui citait une contribution inexistante, l’autre qui disait « beaucoup » pour trois personnes. Le niveau plus haut n’a pas fait moins d’erreurs, et ces erreurs-là, la vérification des citations et sa relecture les attrapent. Elle garde `medium`, avec cette raison écrite dans le dossier, et note qu’un seul essai n’est qu’une indication. La synthèse reviendra aux habitantes et aux habitants avant que le conseil municipal décide.
 
@@ -148,7 +148,7 @@ Chez Passerelle, Bernard a appliqué deux habitudes dès le jeudi : `/clear` ent
 >
 > - Filtrer un journal avant de le donner peut retirer la ligne qui explique l’erreur.
 > - Ce qui tient : filtrer pour lire, garder le journal entier pour chercher la cause.
-> - Pour aller plus loin : [section 16.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s16-4). Les défauts des autres modèles, où régler l’effort de façon durable, par modèle et par agent, et quand repartir d’une session neuve : [section 15.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s15-4).
+> - Pour aller plus loin : [section 16.4](https://gmag-dev.github.io/bien-demarrer-claude-code/16-relire-pour-refuter-corriger-l-instance-et-la-classe.html#s16-4). Les défauts des autres modèles, où régler l’effort de façon durable, par modèle et par agent, et quand repartir d’une session neuve : [section 15.4](https://gmag-dev.github.io/bien-demarrer-claude-code/15-deleguer.html#s15-4).
 
 > **📌 À retenir**
 >
@@ -192,6 +192,6 @@ Chez Passerelle, Bernard a appliqué deux habitudes dès le jeudi : `/clear` ent
 >
 > **③** Chaque relevé porte un jour et une heure. Si votre courbe dépasse le rythme lissé deux jours de suite, la recommandation la plus lourde est votre première piste. Pour l’effort, comparez les défauts comptés, pas votre impression : si le niveau plus haut ne les réduit pas, gardez le défaut. Un seul essai reste une indication.
 
-[Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
+[Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-en-une-page.html#toc)
 
 ![Illustration : la personne en long manteau violet et son petit compagnon de cristal cyan, dans un laboratoire où un bras mécanique travaille sous un dôme de verre, entre des portes à champ de force et des casiers verrouillés.](https://gmag-dev.github.io/bien-demarrer-claude-code/images/c26a47938759.avif)

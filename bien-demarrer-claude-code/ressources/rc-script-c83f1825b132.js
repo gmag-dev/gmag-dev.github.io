@@ -1,6 +1,7 @@
 
 (function () {
-  
+  // Les choix exclusifs passent par window.rcRadio (29-rc-radio.js, en tête de page).
+
   var root = document.documentElement, bar = document.getElementById("rc-bar");
   var cfgEl = document.getElementById("rc-config"), vBox = document.getElementById("rc-ver");
   if (!bar || !cfgEl) return;
@@ -168,10 +169,10 @@
   });
 
   
-  var themeBtns = bar.querySelectorAll("[data-rc-theme]");
+  var themeBtns = bar.querySelectorAll("[data-rc-theme]"), themeCoche = themeBtns.length ? window.rcRadio(themeBtns[0].parentNode, "[data-rc-theme]") : null;
   function setTheme(t, announce) {
     if (t === "light" || t === "dark") root.setAttribute("data-theme", t); else { root.removeAttribute("data-theme"); t = "auto"; }
-    themeBtns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-rc-theme") === t)); });
+    if (themeCoche) themeCoche(function (b) { return b.getAttribute("data-rc-theme") === t; });
     store("rc-theme", t === "auto" ? null : t);
     if (announce) say(fmt(L.theme_say, { x: L.theme_names[t] }));
   }
@@ -461,7 +462,7 @@
 
   
   var main = document.querySelector("main") || document.body, demote = new RegExp("^(" + (C.demote.join("|") || "\\b\\B") + ")$");
-  var gItems = [], gBanner = null;
+  var gItems = [], gBanner = null, gCoche = null;
   function inDemoted(el) { var s = el.closest("section[id]"); while (s) { if (demote.test(s.id)) return true; s = s.parentElement && s.parentElement.closest("section[id]"); } return false; }
   function sectionLabel(el) {
     var s = el.closest("section[id]");
@@ -489,19 +490,21 @@
     var nf = main.querySelectorAll(".rc-g-fig").length, nt = main.querySelectorAll(".rc-g-tab").length;
     gBanner = document.createElement("div");
     gBanner.className = "rc-g-banner"; gBanner.setAttribute("role", "region"); gBanner.setAttribute("aria-label", L.gallery);
-    gBanner.innerHTML = '<p class="rc-g-count"></p><span class="rc-g-filters" role="group" aria-label="' + L.gallery + '">' +
-      '<button type="button" data-rc-g="all" aria-pressed="true"></button><button type="button" data-rc-g="fig" aria-pressed="false"></button>' +
-      '<button type="button" data-rc-g="tab" aria-pressed="false"></button></span><button type="button" class="rc-g-exit"></button>';
+    gBanner.innerHTML = '<p class="rc-g-count"></p><span class="rc-g-filters" role="radiogroup" aria-label="' + L.gallery + '">' +
+      '<button type="button" role="radio" data-rc-g="all"></button><button type="button" role="radio" data-rc-g="fig"></button>' +
+      '<button type="button" role="radio" data-rc-g="tab"></button></span><button type="button" class="rc-g-exit"></button>';
     gBanner.querySelector(".rc-g-count").textContent = fmt(L.g_banner, { f: nf, t: nt });
     gBanner.querySelector('[data-rc-g="all"]').textContent = L.g_all;
     gBanner.querySelector('[data-rc-g="fig"]').textContent = L.g_fig + " (" + nf + ")";
     gBanner.querySelector('[data-rc-g="tab"]').textContent = L.g_tab + " (" + nt + ")";
     gBanner.querySelector(".rc-g-exit").textContent = L.g_exit;
+    gCoche = window.rcRadio(gBanner.querySelector(".rc-g-filters"), "[data-rc-g]");
+    gCoche(function (x) { return x.getAttribute("data-rc-g") === "all"; });
     gBanner.querySelectorAll("[data-rc-g]").forEach(function (b) {
       b.addEventListener("click", function () {
         var f = b.getAttribute("data-rc-g");
         root.classList.toggle("rc-g-only-fig", f === "fig"); root.classList.toggle("rc-g-only-tab", f === "tab");
-        gBanner.querySelectorAll("[data-rc-g]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        gCoche(function (x) { return x === b; });
       });
     });
     gBanner.querySelector(".rc-g-exit").addEventListener("click", function () { setGallery(false); });
@@ -511,7 +514,8 @@
   function setGallery(on) {
     if (on) gPrepare();
     root.classList.toggle("rc-gallery", on);
-    if (!on) root.classList.remove("rc-g-only-fig", "rc-g-only-tab");
+    // À la sortie, tous les éléments reviennent : le filtre coché revient à « Tout ».
+    if (!on) { root.classList.remove("rc-g-only-fig", "rc-g-only-tab"); if (gCoche) gCoche(function (x) { return x.getAttribute("data-rc-g") === "all"; }); }
     gBtn.setAttribute("aria-pressed", String(on));
     say(on ? L.g_on : L.g_off);
     if (on) { window.scrollTo(0, main.getBoundingClientRect().top + window.scrollY - bar.offsetHeight); gBanner.querySelector(".rc-g-exit").focus({ preventScroll: true }); }
@@ -1190,10 +1194,10 @@
   
   
   var keysOn = (function () { try { return localStorage.getItem("rc-keys") !== "off"; } catch (e) { return true; } })();
-  var keyBtns = bar.querySelectorAll("[data-rc-keys]");
+  var keyBtns = bar.querySelectorAll("[data-rc-keys]"), keyCoche = keyBtns.length ? window.rcRadio(keyBtns[0].parentNode, "[data-rc-keys]") : null;
   function setKeys(on, announce) {
     keysOn = on;
-    keyBtns.forEach(function (b) { b.setAttribute("aria-pressed", String((b.getAttribute("data-rc-keys") === "on") === on)); });
+    if (keyCoche) keyCoche(function (b) { return (b.getAttribute("data-rc-keys") === "on") === on; });
     store("rc-keys", on ? null : "off");
     if (announce) say(on ? L.keys_say_on : L.keys_say_off);
   }
@@ -1241,7 +1245,7 @@
     "o": function () {
       var open = !root.classList.contains("rc-opts-open");
       setOpts(open);
-      var first = open && opts.querySelector("button:not(:disabled), input");
+      var first = open && opts.querySelector('button:not(:disabled):not([tabindex="-1"]), input');
       if (first) first.focus(); else ot.focus();
     },
     "n": function () { jump(1); }, "p": function () { jump(-1); }, "l": copyCurrent
@@ -1267,6 +1271,9 @@
   
   
   var pgBtns = bar.querySelectorAll("[data-rc-pages]"), pgAuto = bar.querySelector('[data-rc-pages="auto"]');
+  var pgCoche = pgBtns.length ? window.rcRadio(pgBtns[0].parentNode, "[data-rc-pages]") : null;
+  function pgMontre(v) { if (pgCoche) pgCoche(function (b) { return b.getAttribute("data-rc-pages") === v; }); }
+  pgMontre("1");
   var dpWide = window.matchMedia("(min-width:87.5rem)"), dpPanes = [], dpTop = 0, dpRaf = 0, pgWant = "1", pgT;
   
   
@@ -1362,7 +1369,7 @@
   function setPages(v, announce) {
     v = v === "2" || v === "3" || v === "auto" ? v : "1";
     pgWant = v;
-    pgBtns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-rc-pages") === v)); });
+    pgMontre(v);
     var n = dpPlace();
     if (announce) { store("rc-pages", v === "1" ? null : v); say(fmt(v === "auto" ? L.pages_say_auto : L.pages_say, { p: pgWord(n) })); }
   }
@@ -1390,7 +1397,7 @@
     var pgSaved = (function () { try { return localStorage.getItem("rc-pages"); } catch (e) { return null; } })();
     if (pgSaved === "2" || pgSaved === "3" || pgSaved === "auto") {
       pgWant = pgSaved;
-      pgBtns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-rc-pages") === pgSaved)); });
+      pgMontre(pgSaved);
       idle(dpPlace);
     }
   }

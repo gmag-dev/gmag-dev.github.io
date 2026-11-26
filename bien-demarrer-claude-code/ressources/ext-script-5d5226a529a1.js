@@ -8,7 +8,7 @@
     return OFFICIAL_HOSTS.some(function (o) { return h === o || h.slice(-(o.length + 1)) === "." + o; });
   }
   window.rcOfficialHost = official;
-  // Les liens de l'autrice (son profil, sa page de soutien) n'avertissent pas : ce sont ses propres pages. Leurs adresses
+  // Les liens de contact et de soutien (profil, page de soutien) n'avertissent pas : ce sont les canaux du guide lui-même, pas des sites cités. Leurs adresses
   // viennent de la clé « contacts » de la configuration ; l'exemption porte sur l'adresse exacte, pas sur son hôte.
   var siennes = null;
   function nue(u) { return String(u || "").replace(/[?#].*$/, "").replace(/\/+$/, ""); }

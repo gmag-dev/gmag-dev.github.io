@@ -1,9 +1,9 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « 12. Diagnostiquer, rendre lisible, reformuler ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « 12. Diagnostiquer, rendre lisible, reformuler ».
 >
 > - Précédent : [11. Commits et collaboration](https://gmag-dev.github.io/bien-demarrer-claude-code/md/11-commits-et-collaboration.md)
 > - Suivant : [13. Les pièges fréquents](https://gmag-dev.github.io/bien-demarrer-claude-code/md/13-les-pieges-frequents.md)
 > - Sommaire : [llms.txt](https://gmag-dev.github.io/bien-demarrer-claude-code/llms.txt), tous les morceaux dans l'ordre de lecture
-> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-ch12>
+> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/12-diagnostiquer-rendre-lisible-reformuler.html#h-ch12>
 > - Licence du texte : <https://creativecommons.org/licenses/by-nc-nd/4.0/>
 
 ---
@@ -12,7 +12,7 @@
 
 > **🪪 Ce chapitre**
 >
-> **Pour qui** : toute personne qui écrit déjà des [prompts](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-prompt) de réalisation ([section 4.7](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-7)), qu’elle code ou non, et qui bute sur un sujet qu’elle connaît mal, sur un rapport que personne d’autre ne comprend, ou sur une dictée mal transcrite.
+> **Pour qui** : toute personne qui écrit déjà des [prompts](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-prompt) de réalisation ([section 4.7](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#s4-7)), qu’elle code ou non, et qui bute sur un sujet qu’elle connaît mal, sur un rapport que personne d’autre ne comprend, ou sur une dictée mal transcrite.
 >
 > **Sur quel poste** : n’importe lequel. Le chapitre se lit et s’exerce sans installation, sauf le barreau ③, qui demande Claude Code ou l’application Claude.
 >
@@ -22,9 +22,9 @@
 >
 > **Le fil rouge** 🌉 Passerelle : Bernard demande un diagnostic sur un brouillon que le contrôle refuse, avant toute correction. Samia demande l’état de la vague de courriers pour la réunion du jeudi, et Inès dicte une demande que Claude reformule avant d’agir.
 >
-> **Où en est Passerelle** : en arrivant, l’historique du projet est propre et vérifié avant son premier dépôt distant ([chapitre 11](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch11)), et les bénévoles reprennent pour chaque courrier le prompt de réalisation du [chapitre 4](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch4). À la fin du chapitre, l’état de la vague est rendu à Samia en schéma et en texte, et le `CLAUDE.md` porte deux lignes qui demandent une reformulation et un désaccord motivé.
+> **Où en est Passerelle** : en arrivant, l’historique du projet est propre et vérifié avant son premier dépôt distant ([chapitre 11](https://gmag-dev.github.io/bien-demarrer-claude-code/11-commits-et-collaboration.html#ch11)), et les bénévoles reprennent pour chaque courrier le prompt de réalisation du [chapitre 4](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#ch4). À la fin du chapitre, l’état de la vague est rendu à Samia en schéma et en texte, et le `CLAUDE.md` porte deux lignes qui demandent une reformulation et un désaccord motivé.
 
-Le prompt de réalisation du [chapitre 4](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch4) suppose que vous savez ce que vous voulez obtenir. Trois situations le mettent en défaut : un sujet que vous connaissez mal, où vous ne savez pas encore quoi demander, un résultat qu’une autre personne devra lire sans avoir suivi la session, et vos propres mots, quand une dictée ou une phrase tapée vite les a changés. Ce chapitre donne un geste pour chacune.
+Le prompt de réalisation du [chapitre 4](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#ch4) suppose que vous savez ce que vous voulez obtenir. Trois situations le mettent en défaut : un sujet que vous connaissez mal, où vous ne savez pas encore quoi demander, un résultat qu’une autre personne devra lire sans avoir suivi la session, et vos propres mots, quand une dictée ou une phrase tapée vite les a changés. Ce chapitre donne un geste pour chacune.
 
 > **⏭️ Vous pouvez sauter ce chapitre si…**
 >
@@ -32,15 +32,15 @@ Le prompt de réalisation du [chapitre 4](https://gmag-dev.github.io/bien-demarr
 >
 > **Voir la réponse attendue**
 >
-> Une réponse d’experte commence par se situer : sur un code qu’on connaît mal, le premier prompt demande un diagnostic, sans modification. Ce qui se passe probablement, les fichiers en jeu, et comment Claude l’a vérifié. Une fois la cause connue, le prompt de réalisation réunit quatre ingrédients ([section 4.7](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-7)) : le contexte (le fichier, le symptôme), le but, les contraintes et le critère de fin, par exemple un test qui échoue puis passe. Sur le compte rendu, même début : demander où le compte rendu et les notes divergent, ligne par ligne, sans rien réécrire. Le critère de fin de la correction : chaque date du compte rendu retrouvée dans les notes.
+> Une réponse d’experte commence par se situer : sur un code qu’on connaît mal, le premier prompt demande un diagnostic, sans modification. Ce qui se passe probablement, les fichiers en jeu, et comment Claude l’a vérifié. Une fois la cause connue, le prompt de réalisation réunit quatre ingrédients ([section 4.7](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#s4-7)) : le contexte (le fichier, le symptôme), le but, les contraintes et le critère de fin, par exemple un test qui échoue puis passe. Sur le compte rendu, même début : demander où le compte rendu et les notes divergent, ligne par ligne, sans rien réécrire. Le critère de fin de la correction : chaque date du compte rendu retrouvée dans les notes.
 >
 > Vous avez ces éléments ? Lisez seulement les encadrés « Quand la règle cède » et « La limite », puis faites le barreau ③ de l’exercice. Sinon, lisez le chapitre dans l’ordre : il est écrit pour vous.
 
 ### 12.1 Le diagnostic avant la correction
 
-Sur un sujet que vous connaissez mal, une correction demandée trop tôt soigne souvent le symptôme et laisse la cause, qui revient ailleurs. Un bon prompt commence alors simplement : dites ce que vous voulez obtenir, avec vos mots, comme à une ou un collègue, et ne demandez pas tout de suite une correction. Demandez d’abord un diagnostic : ce qui se passe, pourquoi, quelles pistes existent, avec les fichiers et les sources que Claude a consultés. Vous choisissez ensuite la correction en connaissance de cause, et vous la faites vérifier. Le mode plan ([section 4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-2)) est fait pour ce premier temps : Claude lit et propose, sans rien modifier.
+Sur un sujet que vous connaissez mal, une correction demandée trop tôt soigne souvent le symptôme et laisse la cause, qui revient ailleurs. Un bon prompt commence alors simplement : dites ce que vous voulez obtenir, avec vos mots, comme à une ou un collègue, et ne demandez pas tout de suite une correction. Demandez d’abord un diagnostic : ce qui se passe, pourquoi, quelles pistes existent, avec les fichiers et les sources que Claude a consultés. Vous choisissez ensuite la correction en connaissance de cause, et vous la faites vérifier. Le mode plan ([section 4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#s4-2)) est fait pour ce premier temps : Claude lit et propose, sans rien modifier.
 
-**Tableau 12.1 :** Le même problème, à trois niveaux. Proposé par ce guide, d’après [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-best-practices).
+**Tableau 12.1 :** Le même problème, à trois niveaux. Proposé par ce guide, d’après [\[16\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-best-practices).
 
 | Si vous… | Ce que vous demandez | Exemple de prompt |
 | --- | --- | --- |
@@ -50,7 +50,7 @@ Sur un sujet que vous connaissez mal, une correction demandée trop tôt soigne 
 
 > **📏 La limite**
 >
-> Un diagnostic reste une hypothèse tant qu’un contrôle ne l’a pas confirmé : demandez toujours comment Claude l’a vérifié ([chapitre 5](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch5)).
+> Un diagnostic reste une hypothèse tant qu’un contrôle ne l’a pas confirmé : demandez toujours comment Claude l’a vérifié ([chapitre 5](https://gmag-dev.github.io/bien-demarrer-claude-code/5-verification-et-tests.html#ch5)).
 
 ### 12.2 Des visuels, un lecteur qui n’était pas là, et toujours le lien
 
@@ -58,11 +58,11 @@ Un rapport juste ne sert à rien si la personne qui le lit ne le comprend pas, o
 
 **Demander un visuel.** Une architecture, un parcours, un état ou une décision se lisent plus vite en schéma qu’en paragraphes. Demandez-le, avec trois exigences :
 
-- un format texte : un diagramme [Mermaid](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-mermaid), qu’un outil dessine à partir d’une description écrite proche du Markdown [\[86\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-mermaid-intro), ou une figure SVG. Les deux se relisent dans un diff et se gardent dans le dépôt,
+- un format texte : un diagramme [Mermaid](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-mermaid), qu’un outil dessine à partir d’une description écrite proche du Markdown [\[86\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-mermaid-intro), ou une figure SVG. Les deux se relisent dans un diff et se gardent dans le dépôt,
 - un repli en texte : la même information en quelques lignes, pour qui lit dans un terminal, ne voit pas le schéma ou utilise un outil qui ne l’affiche pas,
-- l’état dit par la couleur, une icône et un mot, jamais par la couleur seule. « ✓ Vérifié », « ⚠️ Non vérifié », « ⛔ Bloqué » se lisent encore en noir et blanc, et par qui ne distingue pas les couleurs. Les règles d’accessibilité du web le demandent : critère 1.4.1 des [WCAG](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-wcag) [\[87\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-wcag22).
+- l’état dit par la couleur, une icône et un mot, jamais par la couleur seule. « ✓ Vérifié », « ⚠️ Non vérifié », « ⛔ Bloqué » se lisent encore en noir et blanc, et par qui ne distingue pas les couleurs. Les règles d’accessibilité du web le demandent : critère 1.4.1 des [WCAG](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html#g-wcag) [\[87\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-wcag22).
 
-Samia a demandé l’état de la vague de courriers pour la réunion du jeudi. Claude a rendu ce schéma, puis son repli en texte ([figure 12.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#fig-12-1)).
+Samia a demandé l’état de la vague de courriers pour la réunion du jeudi. Claude a rendu ce schéma, puis son repli en texte ([figure 12.1](https://gmag-dev.github.io/bien-demarrer-claude-code/12-diagnostiquer-rendre-lisible-reformuler.html#fig-12-1)).
 
 *Dessin : L’état de la vague de courriers, pour la réunion du jeudi. Schéma : la description suit.*
 
@@ -80,7 +80,7 @@ Le même état, en texte :
 - le détail ensuite, pour qui veut vérifier : les preuves, les options écartées, l’historique,
 - aucun mot propre à la session : un sigle interne, un fichier temporaire ou « comme convenu » n’ont de sens que pour qui était là.
 
-Un rapport de sous-agent est une donnée, pas un livrable. Il s’adresse à la session qui l’a lancé : elle le vérifie ([section 15.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s15-3)), puis écrit pour la personne. **Toujours le lien** : chaque ressource citée porte son lien, le chemin complet d’un fichier, l’adresse d’une page, l’identifiant d’un commit. « Voir le rapport » sans lien envoie la personne chercher, et peut-être trouver le mauvais.
+Un rapport de sous-agent est une donnée, pas un livrable. Il s’adresse à la session qui l’a lancé : elle le vérifie ([section 15.3](https://gmag-dev.github.io/bien-demarrer-claude-code/15-deleguer.html#s15-3)), puis écrit pour la personne. **Toujours le lien** : chaque ressource citée porte son lien, le chemin complet d’un fichier, l’adresse d’une page, l’identifiant d’un commit. « Voir le rapport » sans lien envoie la personne chercher, et peut-être trouver le mauvais.
 
 ```text
 Résume l'état de la vague de courriers pour Samia, qui n'a pas suivi la session.
@@ -88,11 +88,11 @@ D'abord ce qu'elle a à décider, et pour quand. Puis l'état de chaque lot, ave
 Ajoute un schéma Mermaid avec sa version en texte. Mets le chemin complet de chaque fichier cité.
 ```
 
-Ce que Claude rend arrive souvent en Markdown, avec des tableaux et des schémas, que le terminal montre en texte brut. Les façons de le lire avec son rendu complet, leurs pour et leurs contre, sont à l’[annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-d).
+Ce que Claude rend arrive souvent en Markdown, avec des tableaux et des schémas, que le terminal montre en texte brut. Les façons de le lire avec son rendu complet, leurs pour et leurs contre, sont à l’[annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-d-la-version-web.html#ann-d).
 
 > **⚠️ Attention**
 >
-> Coller un fichier dans un site de rendu ou un éditeur en ligne, c’est l’envoyer à ce site, et certains liens de partage portent le contenu dans leur adresse. Ne le faites jamais pour du code, un document confidentiel ou une donnée de personne. Lisez le rendu sur votre poste ([annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-d)).
+> Coller un fichier dans un site de rendu ou un éditeur en ligne, c’est l’envoyer à ce site, et certains liens de partage portent le contenu dans leur adresse. Ne le faites jamais pour du code, un document confidentiel ou une donnée de personne. Lisez le rendu sur votre poste ([annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-d-la-version-web.html#ann-d)).
 
 **Tableau 12.2 :** La même demande, à trois niveaux. Proposé par ce guide.
 
@@ -100,11 +100,11 @@ Ce que Claude rend arrive souvent en Markdown, avec des tableaux et des schémas
 | --- | --- | --- |
 | débutez | « Commence par ce que je dois faire. » Puis le lien de chaque fichier cité | vous agissez sans chercher |
 | êtes à l’aise | un schéma Mermaid avec son repli en texte, les états en couleur, icône et mot, le résumé et le geste en tête | la même information se lit d’un coup d’œil, ou à l’oral |
-| voulez aller plus loin | une forme fixe pour tout écrit qui sort de la session, inscrite dans un skill ([chapitre 21](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch21)), et une relecture à froid par une session neuve qui n’a pas suivi le travail ([chapitre 16](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch16)) | la forme ne dépend plus de votre mémoire |
+| voulez aller plus loin | une forme fixe pour tout écrit qui sort de la session, inscrite dans un skill ([chapitre 21](https://gmag-dev.github.io/bien-demarrer-claude-code/21-ecrire-des-skills-des-agents-et-des-artefacts.html#ch21)), et une relecture à froid par une session neuve qui n’a pas suivi le travail ([chapitre 16](https://gmag-dev.github.io/bien-demarrer-claude-code/16-relire-pour-refuter-corriger-l-instance-et-la-classe.html#ch16)) | la forme ne dépend plus de votre mémoire |
 
 > **📏 La limite**
 >
-> Un schéma clair peut être faux : il se relit contre le code ou les faits, comme un texte ([chapitre 16](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch16)).
+> Un schéma clair peut être faux : il se relit contre le code ou les faits, comme un texte ([chapitre 16](https://gmag-dev.github.io/bien-demarrer-claude-code/16-relire-pour-refuter-corriger-l-instance-et-la-classe.html#ch16)).
 
 ### 12.3 Dictée, reformulation et contradiction
 
@@ -119,19 +119,19 @@ Si tu n'es pas d'accord avec ma demande, dis-le avec ta raison avant d'agir.
 
 Inès dicte sur son téléphone : « Retire la phrase sur le loyer du brouillon PASS-B-012. » La dictée écrit « foyer ». Claude répond : « Je comprends : retirer la phrase sur le foyer. Le brouillon n’en a pas, mais il a une phrase sur le loyer. Laquelle retirer ? » Puis Inès demande de couper la phrase qui fixe le délai, pour raccourcir. Claude n’est pas d’accord, et le dit : ce délai est une date du courrier, et le critère de fin demande de garder chaque date. Inès garde la phrase. Odile, à la relecture, trouve le brouillon plus clair avec elle.
 
-Nouveau · 18 nov. 2026 **La voix, aussi comme atout.** La dictée n’est pas seulement un risque. À voix haute, on pense en parlant : on hésite, on se reprend, on change d’avis au milieu d’une phrase, et le vrai besoin peut apparaître là. Gardez donc les hésitations, et corrigez seulement les mots mal transcrits. Puis demandez à Claude ce qu’il a compris avant d’agir : sa reformulation fait le tri entre la pensée qui cherche et la demande qui reste. Pour que l’arrêt ne dépende pas d’une consigne, dictez en mode plan ([section 4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-2)). 💡 Conseil : cet usage est une proposition de ce guide. Une reformulation en une ligne suffit pour un mot douteux, cinq lignes servent pour une réflexion à voix haute.
+Nouveau · 18 nov. 2026 **La voix, aussi comme atout.** La dictée n’est pas seulement un risque. À voix haute, on pense en parlant : on hésite, on se reprend, on change d’avis au milieu d’une phrase, et le vrai besoin peut apparaître là. Gardez donc les hésitations, et corrigez seulement les mots mal transcrits. Puis demandez à Claude ce qu’il a compris avant d’agir : sa reformulation fait le tri entre la pensée qui cherche et la demande qui reste. Pour que l’arrêt ne dépende pas d’une consigne, dictez en mode plan ([section 4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#s4-2)). 💡 Conseil : cet usage est une proposition de ce guide. Une reformulation en une ligne suffit pour un mot douteux, cinq lignes servent pour une réflexion à voix haute.
 
 ```text
 Je réfléchis à voix haute : mes hésitations font partie de ma réflexion, ne les exécute pas. Reformule en cinq lignes au plus ce que tu as compris de ma demande, ce que j'ai écarté en chemin et ce qui reste à trancher. N'agis pas avant ma réponse.
 ```
 
-Dans Claude Code, `/voice` active la dictée [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation). Par défaut, on garde `Espace` enfoncée pendant qu’on parle, et au relâchement Claude Code insère la transcription et attend que vous appuyiez sur `Entrée` : vous la relisez avant qu’elle parte [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation). Avec `/voice tap`, on appuie une fois pour commencer et une seconde fois pour envoyer : la transcription part seule dès qu’elle compte au moins trois mots [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation). Pour relire avant l’envoi, gardez donc le mode par défaut. La touche se change dans `~/.claude/keybindings.json` [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation). La transcription est réglée pour le vocabulaire du code, et le nom du projet et celui de la branche git lui sont donnés comme indices [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation). Sa langue suit le réglage `language`, que l’on change par `/config`, et le français fait partie des langues prises en charge [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation). La transcription ne consomme ni messages ni jetons, et ne compte pas dans les limites que montre `/usage` [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation).
+Dans Claude Code, `/voice` active la dictée [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation). Par défaut, on garde `Espace` enfoncée pendant qu’on parle, et au relâchement Claude Code insère la transcription et attend que vous appuyiez sur `Entrée` : vous la relisez avant qu’elle parte [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation). Avec `/voice tap`, on appuie une fois pour commencer et une seconde fois pour envoyer : la transcription part seule dès qu’elle compte au moins trois mots [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation). Pour relire avant l’envoi, gardez donc le mode par défaut. La touche se change dans `~/.claude/keybindings.json` [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation). La transcription est réglée pour le vocabulaire du code, et le nom du projet et celui de la branche git lui sont donnés comme indices [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation). Sa langue suit le réglage `language`, que l’on change par `/config`, et le français fait partie des langues prises en charge [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation). La transcription ne consomme ni messages ni jetons, et ne compte pas dans les limites que montre `/usage` [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation).
 
 Chez Passerelle, Inès dicte un soir dans Claude Code, seule à la permanence : « Pour PASS-C-068, fais le brouillon… non, attends. D’abord les délais, parce que la dernière fois… enfin, liste les délais, et le brouillon après. » Claude reformule : « Je comprends : lister d’abord les délais de PASS-C-068, puis écrire le brouillon. Vous avez écarté de commencer par le brouillon. Reste à trancher : vous avez commencé « parce que la dernière fois… » sans finir. Faut-il en tenir compte pour la liste ? » Inès répond : « Oui. La dernière fois, une date de rendez-vous manquait : liste aussi les rendez-vous. » Elle relit la liste avant la suite.
 
 > **⚠️ Attention**
 >
-> Ce que vous dictez entre dans la session comme ce que vous tapez, et part en plus en audio : il est transcrit sur les serveurs d’Anthropic, pas sur votre poste [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation). La même règle vaut donc : ni nom d’usager, ni contenu confidentiel, ni donnée de client ou d’employeur. Le micro capte aussi les voix de la pièce : ne dictez pas quand une autre personne parle près de vous. C’est pourquoi Inès dicte seule.
+> Ce que vous dictez entre dans la session comme ce que vous tapez, et part en plus en audio : il est transcrit sur les serveurs d’Anthropic, pas sur votre poste [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation). La même règle vaut donc : ni nom d’usager, ni contenu confidentiel, ni donnée de client ou d’employeur. Le micro capte aussi les voix de la pièce : ne dictez pas quand une autre personne parle près de vous. C’est pourquoi Inès dicte seule.
 
 > **💡 Conseil**
 >
@@ -141,13 +141,13 @@ Chez Passerelle, Inès dicte un soir dans Claude Code, seule à la permanence : 
 >
 > - Les deux lignes du `CLAUDE.md` sont des consignes : Claude les suit presque toujours, sans garantie.
 > - Ce qui tient : pour un geste qu’on ne défait pas, le mode Manual, où vous validez chaque modification et les commandes qui ne font pas que lire. Pour que l’arrêt avant d’agir ne dépende pas d’une consigne, le mode plan.
-> - Pour `/voice`, il faut un compte Claude.ai : la dictée n’est pas disponible quand Claude Code passe par une clé d’API d’Anthropic, Amazon Bedrock, l’Agent Platform de Google Cloud ou Microsoft Foundry [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation). Il faut aussi un micro sur le poste : elle ne marche ni dans une session cloud ni par SSH [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-voice-dictation).
-> - Pour aller plus loin : sections [1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/#s1-4) et [4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-2).
+> - Pour `/voice`, il faut un compte Claude.ai : la dictée n’est pas disponible quand Claude Code passe par une clé d’API d’Anthropic, Amazon Bedrock, l’Agent Platform de Google Cloud ou Microsoft Foundry [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation). Il faut aussi un micro sur le poste : elle ne marche ni dans une session cloud ni par SSH [\[88\]](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#src-voice-dictation).
+> - Pour aller plus loin : sections [1.4](https://gmag-dev.github.io/bien-demarrer-claude-code/1-ce-qu-est-claude-code.html#s1-4) et [4.2](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#s4-2).
 
 > **📌 À retenir**
 >
 > - Sur un sujet que vous connaissez mal, demandez le diagnostic avant la correction, et comment Claude l’a vérifié.
-> - Le prompt de réalisation, avec ses quatre ingrédients, est à la [section 4.7](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-7). Il sert une fois la cause connue.
+> - Le prompt de réalisation, avec ses quatre ingrédients, est à la [section 4.7](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#s4-7). Il sert une fois la cause connue.
 > - Un schéma avec son repli en texte, l’état en couleur, icône et mot. Le résumé et le geste demandé d’abord, le lien de chaque ressource toujours.
 > - Quand vos mots peuvent être faux, demandez une reformulation en une ligne, et le désaccord avec sa raison.
 > - Pensez à voix haute si cela vous aide, hésitations comprises, puis relisez la reformulation. Ne dictez rien de confidentiel : l’audio quitte le poste.
@@ -162,7 +162,7 @@ Chez Passerelle, Inès dicte un soir dans Claude Code, seule à la permanence : 
 > Le contrôle refuse le brouillon PASS-B-014 alors que ses dates me semblent justes. Ne modifie rien pour l'instant. Explique-moi ce qui se passe probablement, montre-moi les fichiers en jeu, et dis-moi comment tu l'as vérifié.
 > ```
 >
-> Claude répond que la date « 1er décembre » n’est pas reconnue, montre la ligne qui cherche les dates, et dit l’avoir vérifié en relançant le contrôle sur une copie du brouillon où la date est écrite « 1 décembre », qui passe. `git status` ne montre aucun fichier modifié. Bernard écrit ensuite son prompt de réalisation ([section 4.7](https://gmag-dev.github.io/bien-demarrer-claude-code/#s4-7)), avec un test qui échoue d’abord. Puis Samia demande l’état de la vague pour la réunion du jeudi, avec la demande de la [section 12.2](https://gmag-dev.github.io/bien-demarrer-claude-code/#s12-2) : elle reçoit d’abord ce qu’elle a à décider, puis le schéma et son repli en texte, et le chemin complet de chaque fichier cité. **Pourquoi ?** Pourquoi Bernard n’a-t-il pas demandé tout de suite la correction ?
+> Claude répond que la date « 1er décembre » n’est pas reconnue, montre la ligne qui cherche les dates, et dit l’avoir vérifié en relançant le contrôle sur une copie du brouillon où la date est écrite « 1 décembre », qui passe. `git status` ne montre aucun fichier modifié. Bernard écrit ensuite son prompt de réalisation ([section 4.7](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html#s4-7)), avec un test qui échoue d’abord. Puis Samia demande l’état de la vague pour la réunion du jeudi, avec la demande de la [section 12.2](https://gmag-dev.github.io/bien-demarrer-claude-code/12-diagnostiquer-rendre-lisible-reformuler.html#s12-2) : elle reçoit d’abord ce qu’elle a à décider, puis le schéma et son repli en texte, et le chemin complet de chaque fichier cité. **Pourquoi ?** Pourquoi Bernard n’a-t-il pas demandé tout de suite la correction ?
 >
 > **② À compléter.** Samia veut, pour la réunion des bénévoles, un résumé des remarques d’Odile sur les brouillons de la semaine. Amadou, qui sera absent, le lira seul le lendemain. La demande commence ainsi :
 >
@@ -186,6 +186,6 @@ Chez Passerelle, Inès dicte un soir dans Claude Code, seule à la permanence : 
 >
 > **③** Votre diagnostic nomme les fichiers en jeu et dit comment Claude l’a vérifié, et `git status` ne montre rien de modifié. Si la personne qui a lu votre résumé a dû vous demander quoi faire, le geste n’était pas en tête : corrigez la demande, pas seulement le résumé.
 
-[Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
+[Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-en-une-page.html#toc)
 
 ![Illustration : la personne en long manteau violet et son petit compagnon de cristal cyan, éclairent d’un rayon trois pièges marqués de triangles d’alerte dans un atelier : une trappe, un câble emmêlé et une fausse porte.](https://gmag-dev.github.io/bien-demarrer-claude-code/images/f27673fa5907.avif)

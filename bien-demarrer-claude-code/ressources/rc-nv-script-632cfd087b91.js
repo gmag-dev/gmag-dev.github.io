@@ -23,14 +23,14 @@
     var row = prev && prev.closest(".rc-row");
     if (!row || document.querySelector("[data-rc-nv]")) return;
     var r = document.createElement("div"); r.className = "rc-row";
-    r.innerHTML = '<span class="rc-lbl" aria-hidden="true">Nouveautés</span><span class="rc-grp" role="group" aria-label="Nouveautés">'
-      + '<button type="button" data-rc-nv="tout">Tout le guide</button><button type="button" data-rc-nv="seules">Nouveautés seulement</button>'
-      + '<span class="rc-nv-note sr-only" role="status" aria-live="polite"></span></span>';  
+    r.innerHTML = '<span class="rc-lbl" aria-hidden="true">Nouveautés</span><span class="rc-grp" role="radiogroup" aria-label="Nouveautés">'
+      + '<button type="button" role="radio" data-rc-nv="tout">Tout le guide</button><button type="button" role="radio" data-rc-nv="seules">Nouveautés seulement</button></span>'
+      + '<span class="rc-nv-note sr-only" role="status" aria-live="polite"></span>';
     row.parentNode.insertBefore(r, row.nextSibling);
-    var bs = r.querySelectorAll("button"), note = r.querySelector(".rc-nv-note");
+    var bs = r.querySelectorAll("button"), note = r.querySelector(".rc-nv-note"), coche = window.rcRadio(r.querySelector(".rc-grp"), "[data-rc-nv]");
     function show(say) {
       var seules = on(), n = count();
-      bs.forEach(function (b) { b.setAttribute("aria-pressed", String((b.getAttribute("data-rc-nv") === "seules") === seules)); });
+      coche(function (b) { return (b.getAttribute("data-rc-nv") === "seules") === seules; });
       if (say) note.textContent = seules ? (n ? n + " nouveautés affichées, avec la page « Quoi de neuf ». Le reste du guide est masqué." : "Aucune nouveauté dans cette version : seule la page « Quoi de neuf » reste.") : "Tout le guide est affiché.";
     }
     bs.forEach(function (b) { b.addEventListener("click", function () { set(b.getAttribute("data-rc-nv") === "seules"); show(true); }); });

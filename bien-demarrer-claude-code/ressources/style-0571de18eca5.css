@@ -208,6 +208,11 @@ figure{margin:1.6rem 0}
 .fig-scroll svg{display:block;width:100%;min-width:34rem;height:auto;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 figcaption{font-size:.93rem;margin-top:.45rem;color:var(--text)}
 figcaption strong{font-weight:700}
+/* Description en texte d'un schéma, dans sa figure après la légende : même espace qu'entre une figure et le texte
+   qui la suit, et la figure rend sa marge du bas, pour que la page garde l'apparence d'une description qui suit la figure. */
+.fig-desc{margin-top:1.6rem}
+figure:has(>.fig-desc){margin-bottom:0}
+@media print{figure:has(>.fig-desc){break-inside:auto}}
 .fb{fill:var(--fig-fill);stroke:var(--fig-stroke);stroke-width:1.5}
 .fo{fill:var(--fig-ok);stroke:var(--fig-stroke);stroke-width:1.5}
 .fw{fill:var(--fig-warn);stroke:var(--fig-stroke);stroke-width:1.5}
@@ -640,7 +645,7 @@ footer.site .pied-logo{width:56px;height:56px;margin-bottom:.15rem}
 footer.site .pied-titre{font-family:"Orbitron",system-ui,"Segoe UI",sans-serif;font-weight:700;font-size:1.1rem;
   letter-spacing:.04em;color:var(--heading);text-wrap:balance}
 footer.site .pied-sous{font-size:.9rem;color:var(--text);text-wrap:balance}
-footer.site :is(.pied-meta,.pied-lic,.pied-contact,.pied-haut){font-size:.85rem}
+footer.site :is(.pied-meta,.pied-redaction,.pied-lic,.pied-contact,.pied-haut){font-size:.85rem}
 footer.site .pied-contact a{overflow-wrap:anywhere}
 footer.site .pied-lic a span{margin-left:.35em}
 html[data-style="classic"] footer.site .pied-titre{font-family:inherit;color:var(--text)}

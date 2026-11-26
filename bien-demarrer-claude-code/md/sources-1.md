@@ -1,9 +1,9 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « Sources », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.0 : « Sources », partie 1 sur 2.
 >
 > - Précédent : [Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques (partie 5 sur 5)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-l-fiches-des-composants-5.md)
 > - Suivant : [Sources (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-2.md)
 > - Sommaire : [llms.txt](https://gmag-dev.github.io/bien-demarrer-claude-code/llms.txt), tous les morceaux dans l'ordre de lecture
-> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/#h-biblio>
+> - Page en ligne : <https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html#h-biblio>
 > - Licence du texte : <https://creativecommons.org/licenses/by-nc-nd/4.0/>
 
 ---

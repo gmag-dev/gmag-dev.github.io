@@ -19,7 +19,11 @@
       }, rnd(3000, 7000));
     }
     function loop(on) { clearTimeout(timer); clearTimeout(t2); timer = t2 = null; if (on && !calm.matches) next(); }
-    function apply() { var o = off() || calm.matches || classic(); root.classList.toggle("rc-motion-off", off()); h.classList.toggle("fx-off", o); if (o) h.classList.remove("gl-on"); loop(!o); }
+    function fx(o) { h.classList.toggle("fx-off", o); if (o) h.classList.remove("gl-on"); loop(!o); }
+    function apply() { var o = off() || calm.matches || classic(); root.classList.toggle("rc-motion-off", off()); fx(o); }
+    // Commande « Animations » de la couverture et du sommaire : elle pose la classe rc-motion-off elle-même,
+    // puis prévient par l'évènement rc-motion ; le titre suit la classe.
+    document.addEventListener("rc-motion", function () { var o = root.classList.contains("rc-motion-off") || calm.matches || classic(); fx(o); if (!o) burst(); });
     function render() { clearTimeout(step); clearTimeout(wait); step = wait = null; h.classList.remove("tw-run"); h.textContent = full; if (!classic()) h.appendChild(cursor()); }
     function finish() { render(); h.classList.add("tw-done"); if (!off() && !classic()) burst(); apply(); }
     
@@ -57,16 +61,38 @@
       }
       return ops;
     }
+    // Les options s'ajoutent à DOMContentLoaded : 29-rc-radio.js, en tête de page, a déjà défini
+    // window.rcRadio (choix exclusif en groupe radio). S'il manque, aucune ligne ne s'ajoute : deux
+    // boutons inertes dans le panneau vaudraient moins que leur absence.
     function addOption() {
       var keys = document.querySelector("[data-rc-keys]"), row = keys && keys.closest(".rc-row");
-      if (!row || document.querySelector("[data-rc-motion]")) return;
+      if (!row || !window.rcRadio || document.querySelector("[data-rc-motion]")) return;
       var r = document.createElement("div"); r.className = "rc-row";
-      r.innerHTML = '<span class="rc-lbl" aria-hidden="true">Animations</span><span class="rc-grp" role="group" aria-label="Animations">'
-        + '<button type="button" data-rc-motion="on">Activées</button><button type="button" data-rc-motion="off">Désactivées</button></span>';
+      r.innerHTML = '<span class="rc-lbl" aria-hidden="true">Animations</span><span class="rc-grp" role="radiogroup" aria-label="Animations">'
+        + '<button type="button" role="radio" data-rc-motion="on">Activées</button><button type="button" role="radio" data-rc-motion="off">Désactivées</button></span>'
+        + '<p class="rc-motion-note" id="rc-motion-note" hidden>Votre système demande moins de mouvement : le décor reste immobile.</p>';
       row.parentNode.insertBefore(r, row.nextSibling);
-      var bs = r.querySelectorAll("button");
-      function show() { var o = off(); bs.forEach(function (b) { b.setAttribute("aria-pressed", String((b.getAttribute("data-rc-motion") === "off") === o)); }); }
-      bs.forEach(function (b) { b.addEventListener("click", function () { remember(b.getAttribute("data-rc-motion") === "off"); show(); apply(); if (!off()) burst(); }); });
+      var bs = r.querySelectorAll("button"), note = r.querySelector(".rc-motion-note"), grp = r.querySelector(".rc-grp"), coche = window.rcRadio(grp, "[data-rc-motion]");
+      // Le système qui demande moins de mouvement l'emporte : « Désactivées » coché, « Activées » indisponible,
+      // une note visible, lue avec le groupe (aria-describedby posé seulement alors : une description lit
+      // même un élément caché), dit pourquoi ; le choix enregistré reste intact.
+      function show() {
+        var sys = calm.matches, o = sys || off();
+        bs.forEach(function (b) { if (sys && b.getAttribute("data-rc-motion") === "on") b.setAttribute("aria-disabled", "true"); else b.removeAttribute("aria-disabled"); });
+        coche(function (b) { return (b.getAttribute("data-rc-motion") === "off") === o; });
+        note.hidden = !sys;
+        if (sys) grp.setAttribute("aria-describedby", note.id); else grp.removeAttribute("aria-describedby");
+      }
+      bs.forEach(function (b) {
+        b.addEventListener("click", function () {
+          // Un choix explicite est toujours enregistré, même déjà coché par le système (hypothèse A
+          // de la fiche « animations sous mouvement réduit », P2-N4) ; « Activées » reste indisponible
+          // sous mouvement réduit.
+          if (b.getAttribute("aria-disabled") === "true") return;
+          remember(b.getAttribute("data-rc-motion") === "off"); show(); apply(); if (!off()) burst();
+        });
+      });
+      if (calm.addEventListener) calm.addEventListener("change", function () { show(); apply(); });
       show();
     }
     function setStyle(v) {
@@ -76,18 +102,21 @@
     }
     function addStyleOption() {
       var prev = document.querySelector("[data-rc-motion]") || document.querySelector("[data-rc-keys]"), row = prev && prev.closest(".rc-row");
-      if (!row || document.querySelector("[data-rc-style]")) return;
+      if (!row || !window.rcRadio || document.querySelector("[data-rc-style]")) return;
       var r = document.createElement("div"); r.className = "rc-row";
-      r.innerHTML = '<span class="rc-lbl" aria-hidden="true">Style</span><span class="rc-grp" role="group" aria-label="Style">'
-        + '<button type="button" data-rc-style="cyber">Cyberpunk</button><button type="button" data-rc-style="classic">Classique</button></span>';
+      r.innerHTML = '<span class="rc-lbl" aria-hidden="true">Style</span><span class="rc-grp" role="radiogroup" aria-label="Style">'
+        + '<button type="button" role="radio" data-rc-style="cyber">Cyberpunk</button><button type="button" role="radio" data-rc-style="classic">Classique</button></span>';
       row.parentNode.insertBefore(r, row.nextSibling);
-      var bs = r.querySelectorAll("button");
-      function show() { var c = classic(); bs.forEach(function (b) { b.setAttribute("aria-pressed", String((b.getAttribute("data-rc-style") === "classic") === c)); }); }
+      var bs = r.querySelectorAll("button"), coche = window.rcRadio(r.querySelector(".rc-grp"), "[data-rc-style]");
+      function show() { var c = classic(); coche(function (b) { return (b.getAttribute("data-rc-style") === "classic") === c; }); }
       bs.forEach(function (b) { b.addEventListener("click", function () { var v = b.getAttribute("data-rc-style"); if ((v === "classic") !== classic()) setStyle(v); show(); }); });
       show();
     }
     function addOptions() { addOption(); addStyleOption(); }
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addOptions); else addOptions();
+    // Couverture (page de titre marquée data-sans-frappe) : le titre reste tel que la page le donne, sans frappe,
+    // pour que sa première peinture reste la plus grande ; le curseur et les éclairs restent, aux mêmes conditions.
+    if (h.closest("[data-sans-frappe]")) { if (!classic()) h.appendChild(cursor()); h.classList.add("tw-done"); if (!off() && !classic()) burst(); apply(); return; }
     if (calm.matches || off() || classic()) { render(); apply(); return; }
     function start() { type(); var r = h.querySelector(".tw-rest"); if (r && !r.textContent) { r.textContent = full; } }
     function poise() { var sr = document.createElement("span"), shown = document.createElement("span"), rest = document.createElement("span"); sr.className = "sr-only"; sr.textContent = full; shown.setAttribute("aria-hidden", "true"); rest.setAttribute("aria-hidden", "true"); rest.className = "tw-rest"; rest.textContent = full; h.textContent = ""; h.append(sr, shown, cursor(), rest); h.classList.add("tw-run"); clearTimeout(wait); wait = setTimeout(start, 2000); }
