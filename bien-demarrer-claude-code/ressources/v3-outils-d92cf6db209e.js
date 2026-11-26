@@ -59,7 +59,8 @@
 
   // Installer le guide (décision 32.A de l'autrice, 2026-11-21 : installer seul, sans lecture hors ligne). Forme web
   // seulement : la marque data-forme que pose l'assemblage, et une page servie en http(s). Le bouton reste toujours au
-  // même endroit, avant Contacts ; son panneau propose l'installation en un geste quand le navigateur l'offre
+  // même endroit : une ligne « Installer » des options, après Affichage (demande de l'autrice du 2026-11-26, pour
+  // faire de la place dans la barre ; il était avant Contacts) ; son panneau, déplié en place, propose l'installation en un geste quand le navigateur l'offre
   // (beforeinstallprompt), sinon dit où se trouve la commande du navigateur, ou qu'il n'y en a pas. Une fois le guide
   // installé, le bouton n'existe plus. Aucun service worker : Chromium juge la page installable sans lui (recette F49).
   (function () {
@@ -85,10 +86,13 @@
       return "chromium";
     }
     var invite = null, fam = famille();
-    var w = el("span", { "class": "v3-inst" });
+    if (!opts) { return; }
+    var w = el("div", { "class": "rc-row v3-inst" }), lbl = el("span", { "class": "rc-lbl", "aria-hidden": "true" });
+    var g = el("span", { "class": "rc-grp", role: "group", "aria-label": "Installer" });
+    lbl.textContent = "Installer";
     var b = el("button", { type: "button", "class": "v3-inst-b", "aria-expanded": "false", "aria-controls": "v3-inst-pan",
-      "aria-label": "Installer le guide", title: "Installer le guide", "data-garde-menu": "" });
-    b.innerHTML = '<svg class="rc-i" aria-hidden="true" focusable="false"><use href="#ti-app-window"/></svg><span class="rc-txt" aria-hidden="true">Installer</span>';
+      "aria-label": "Installer le guide" });
+    b.innerHTML = '<svg class="rc-i" aria-hidden="true" focusable="false"><use href="#ti-app-window"/></svg><span class="rc-txt" aria-hidden="true">Installer le guide</span>';
     var p = el("div", { id: "v3-inst-pan", "class": "v3-inst-pan", role: "group", "aria-label": "Installer le guide" });
     p.hidden = true;
     var note = el("p", { "class": "v3-inst-note" });
@@ -105,8 +109,10 @@
     });
     autres.appendChild(sm); autres.appendChild(ul);
     p.appendChild(note); p.appendChild(go); p.appendChild(aide); p.appendChild(autres);
-    w.appendChild(b); w.appendChild(p);
-    bar.insertBefore(w, optsT && optsT.parentNode === bar ? optsT : null);
+    g.appendChild(b); g.appendChild(p); w.appendChild(lbl); w.appendChild(g);
+    // Après la ligne Affichage ; le tri des options (20-rc-opts-order.js) garde cette place.
+    var aff = opts.querySelector(".rc-fs"), apres = aff && aff.closest(".rc-row");
+    opts.insertBefore(w, apres ? apres.nextSibling : null);
     // Invite disponible : le geste unique ; sinon l'aide du navigateur. Le bouton « Installer maintenant » qui disparaît
     // sous le focus le rend au bouton Installer, pour que le focus ne tombe jamais dans le vide.
     function maj() {
@@ -128,7 +134,7 @@
       }, function () { say("Le navigateur n’a pas pu proposer l’installation. Voyez l’aide ci-dessous."); maj(); });
     });
     window.addEventListener("appinstalled", function () {
-      var avait = w.contains(document.activeElement), suivant = bar.querySelector(".v3-ct-b") || optsT;
+      var avait = w.contains(document.activeElement), suivant = optsT;
       w.parentNode && w.parentNode.removeChild(w);
       say("Guide installé.");
       if (avait && suivant && suivant.getClientRects().length) { suivant.focus(); }

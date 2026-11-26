@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « Avant-propos ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « Avant-propos ».
 >
 > - Précédent : aucun, début du guide
 > - Suivant : [Comment lire ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/md/comment-lire-ce-guide.md)
@@ -14,15 +14,11 @@
 
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
 
+Édition intégrale et déraisonnablement dense
+
 - **Autrice** : [Gabrielle Magnan](https://www.linkedin.com/in/gabrielle-magnan/)
-- **Version** : 3.2.3+publique.web · 26 novembre 2026
+- **Version** : 3.2.4+publique.web · 26 novembre 2026
 - **Soutenir** : [sur Tipeee](https://fr.tipeee.com/gmag-dev)
-
-Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
-
-Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
-
-[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 Guide indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » et « Claude Code » sont des marques d’Anthropic.
 
@@ -37,3 +33,11 @@ Guide indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » 
 État au 6 novembre 2026 : ce guide décrit Claude Code 2.1.319, la version publiée ce jour-là. Les nouveautés plus récentes, marquées 🆕, donnent leur version dans « Quoi de neuf ». Un fait marqué 🕘 change vite : `claude --version` vous donne votre version, et sa documentation fait foi.
 
 [Licences (texte : CC BY-NC-ND 4.0 ; code : MIT) et permissions](https://gmag-dev.github.io/bien-demarrer-claude-code/#licence) · [Mentions légales](https://gmag-dev.github.io/bien-demarrer-claude-code/mentions-legales.html)
+
+Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
+
+Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+
+Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
+
+[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)

@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 2 sur 2.
 >
 > - Précédent : [23. Sécurité et propriété intellectuelle en entreprise (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/23-securite-et-propriete-intellectuelle-en-entreprise-1.md)
 > - Suivant : [Annexe A. Ma première semaine](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-a-ma-premiere-semaine.md)
@@ -156,3 +156,11 @@ Chez Passerelle, Bernard branche le scanner de secrets à la porte de commit, et
 [Retour au sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/#toc)
 
 Annexes
+
+Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
+
+Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+
+Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
+
+[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)

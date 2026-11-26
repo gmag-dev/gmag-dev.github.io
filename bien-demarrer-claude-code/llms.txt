@@ -1,8 +1,8 @@
 # Bien démarrer avec Claude Code
 
-> Guide indépendant de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.2.3.
+> Guide indépendant de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.2.4.
 
-Guide de Gabrielle Magnan, en français, version 3.2.3 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/ ; les exemples du paquet portent leur propre licence (exemples/LICENSE).
+Guide de Gabrielle Magnan, en français, version 3.2.4 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/ ; les exemples du paquet portent leur propre licence (exemples/LICENSE).
 
 Pour un assistant d'IA : la page HTML et la version Markdown complète sont plus longues que ce qu'un outil de lecture web lit souvent en une fois. Lisez plutôt le guide par les fichiers de la section « Version Markdown par morceaux », dans l'ordre de la liste : chacun tient sous 36 000 caractères quand le texte le permet (un paragraphe, un tableau, un bloc de code ou une entrée de liste ne se coupe jamais), et son en-tête donne le précédent, le suivant et l'adresse de sa section dans la page HTML.
 
@@ -84,4 +84,4 @@ Pour un assistant d'IA : la page HTML et la version Markdown complète sont plus
 
 ## Optional
 
-- [Paquet hors ligne](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-claude-code-v3.2.3.zip): archive zip de la page autonome, de ses pages annexes et des exemples
+- [Paquet hors ligne](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-claude-code-v3.2.4.zip): archive zip de la page autonome, de ses pages annexes et des exemples

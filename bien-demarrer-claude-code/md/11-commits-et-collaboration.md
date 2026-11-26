@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 11. Commits et collaboration ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « 11. Commits et collaboration ».
 >
 > - Précédent : [10. Sécurité (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/10-securite-2.md)
 > - Suivant : [12. Diagnostiquer, rendre lisible, reformuler](https://gmag-dev.github.io/bien-demarrer-claude-code/md/12-diagnostiquer-rendre-lisible-reformuler.md)

@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 6. Choisir ses extensions », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « 6. Choisir ses extensions », partie 1 sur 2.
 >
 > - Précédent : [5. Vérification et tests](https://gmag-dev.github.io/bien-demarrer-claude-code/md/5-verification-et-tests.md)
 > - Suivant : [6. Choisir ses extensions (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/6-choisir-ses-extensions-2.md)

@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « Prérequis ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « Prérequis ».
 >
 > - Précédent : [Apprendre avec ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/md/apprendre-avec-ce-guide.md)
 > - Suivant : [1. Ce qu’est Claude Code](https://gmag-dev.github.io/bien-demarrer-claude-code/md/1-ce-qu-est-claude-code.md)
@@ -53,5 +53,13 @@ Partie I
 Bien démarrer et bien travailler
 
 Chapitres [1](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch1) à [13](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch13)
+
+Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
+
+Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+
+Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
+
+[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 ![Illustration : la personne en long manteau violet et son petit compagnon de cristal cyan, devant un noyau lumineux tenu dans un cadre de rails, entouré d’outils flottants reliés par des fils de lumière.](https://gmag-dev.github.io/bien-demarrer-claude-code/images/4f56525102f0.avif)

@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « Comment lire ce guide ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « Comment lire ce guide ».
 >
 > - Précédent : [Avant-propos](https://gmag-dev.github.io/bien-demarrer-claude-code/md/avant-propos.md)
 > - Suivant : [Apprendre avec ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/md/apprendre-avec-ce-guide.md)
@@ -77,7 +77,7 @@ Claude Code publie plusieurs versions par semaine : dix entre le 31 octobre et l
 
 La version 3.2.1, du 25 novembre 2026, corrige après une relecture critique des passages sur la sécurité et les permissions : aux chapitres 1, 2, 7, 9, 10, 12, 15, 17, 18, 21 et 23, et aux annexes A, C, E, J et L. Cinq sources s’ajoutent, de \[185\] à \[189\].
 
-La version 3.2.2, du 26 novembre 2026, poursuit ces corrections. Elles portent sur le mode `--bare` dans un dépôt non inspecté (chapitre 15), sur les écritures dans un chemin protégé selon le mode de permission (chapitre 17 et annexe L), sur l’expiration des tâches récurrentes (chapitre 18) et, au chapitre 23, sur les retours envoyés depuis une plateforme tierce, l’usage professionnel d’un compte grand public et le droit de la protection des données. Le chapitre 19 reçoit son exercice. Deux sources s’ajoutent, \[190\] et \[191\]. La version 3.2.3, du même jour, allège deux passages pour une première lecture, aux chapitres 1 et 2, et l’image de partage dit que le guide est indépendant.
+La version 3.2.2, du 26 novembre 2026, poursuit ces corrections. Elles portent sur le mode `--bare` dans un dépôt non inspecté (chapitre 15), sur les écritures dans un chemin protégé selon le mode de permission (chapitre 17 et annexe L), sur l’expiration des tâches récurrentes (chapitre 18) et, au chapitre 23, sur les retours envoyés depuis une plateforme tierce, l’usage professionnel d’un compte grand public et le droit de la protection des données. Le chapitre 19 reçoit son exercice. Deux sources s’ajoutent, \[190\] et \[191\]. La version 3.2.3, du même jour, allège deux passages pour une première lecture, aux chapitres 1 et 2, et l’image de partage dit que le guide est indépendant. La version 3.2.4, du même jour, place le rappel du soutien avant cette section et sous chaque intercalaire de partie, ajoute l’entrée Soutenir en tête de la barre de lecture, range la commande Installer dans les options, assombrit le violet du thème clair et précise sur la page de titre qu’il s’agit de l’édition intégrale.
 
 **Tableau :** Les nouveautés des soixante derniers jours, la plus récente d’abord, rassemblées depuis les badges 🆕 du texte. Une ligne reste soixante jours après sa date, puis disparaît à la version suivante du guide.
 

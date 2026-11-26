@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 13. Les pièges fréquents ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « 13. Les pièges fréquents ».
 >
 > - Précédent : [12. Diagnostiquer, rendre lisible, reformuler](https://gmag-dev.github.io/bien-demarrer-claude-code/md/12-diagnostiquer-rendre-lisible-reformuler.md)
 > - Suivant : [14. Le modèle propose, l’oracle vérifie, la personne tranche (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/14-le-modele-propose-l-oracle-verifie-la-personne-tranche-1.md)
@@ -159,5 +159,13 @@ Partie II
 Du jalon Confirmé au jalon Expert
 
 Chapitres [14](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch14) à [23](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch23)
+
+Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
+
+Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+
+Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
+
+[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 ![Illustration : la personne en long manteau violet et son petit compagnon de cristal cyan, devant trois postes alignés : un hologramme de proposition, un grand cristal qui le scanne, et une porte où la personne lève la main pour trancher.](https://gmag-dev.github.io/bien-demarrer-claude-code/images/87a6bddbba2f.avif)

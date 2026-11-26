@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 18. Hooks, serveurs MCP, ligne d’état et tâches planifiées », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « 18. Hooks, serveurs MCP, ligne d’état et tâches planifiées », partie 2 sur 2.
 >
 > - Précédent : [18. Hooks, serveurs MCP, ligne d’état et tâches planifiées (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/18-hooks-serveurs-mcp-ligne-d-etat-et-taches-planifiees-1.md)
 > - Suivant : [19. Plusieurs sessions en parallèle](https://gmag-dev.github.io/bien-demarrer-claude-code/md/19-plusieurs-sessions-en-parallele.md)

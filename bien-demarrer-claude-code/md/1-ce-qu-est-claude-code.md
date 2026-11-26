@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « 1. Ce qu’est Claude Code ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « 1. Ce qu’est Claude Code ».
 >
 > - Précédent : [Prérequis](https://gmag-dev.github.io/bien-demarrer-claude-code/md/prerequis.md)
 > - Suivant : [2. Bien démarrer (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/2-bien-demarrer-1.md)

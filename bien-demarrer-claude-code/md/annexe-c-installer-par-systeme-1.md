@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « Annexe C. Installer par système », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « Annexe C. Installer par système », partie 1 sur 2.
 >
 > - Précédent : [Annexe B. Glossaire (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-b-glossaire-2.md)
 > - Suivant : [Annexe C. Installer par système (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-c-installer-par-systeme-2.md)

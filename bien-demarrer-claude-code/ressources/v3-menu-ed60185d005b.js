@@ -5,7 +5,7 @@
     var plus = bar && bar.querySelector(":scope > .v3-plus"), pan = document.getElementById("v3-plus-pan");
     if (!bar || !optsT || !plus || !pan || !window.matchMedia) { return; }
     var mq = matchMedia("screen and (max-width:32.49rem)");
-    var MOBILES = [".rn-bar-b", ".rc-gallery-toggle", ".v3-fs", ".v3-inst", ".rc-opts-toggle"], places = [];
+    var MOBILES = [".rn-bar-b", ".rc-gallery-toggle", ".v3-fs", ".rc-opts-toggle"], places = [];
     function ouvrir(oui) { pan.hidden = !oui; plus.setAttribute("aria-expanded", String(oui)); }
     function perdu() {
       var a = document.activeElement;

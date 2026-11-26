@@ -4,15 +4,11 @@
 
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
 
+Édition intégrale et déraisonnablement dense
+
 - **Autrice** : [Gabrielle Magnan](https://www.linkedin.com/in/gabrielle-magnan/)
-- **Version** : 3.2.3+publique.web · 26 novembre 2026
+- **Version** : 3.2.4+publique.web · 26 novembre 2026
 - **Soutenir** : [sur Tipeee](https://fr.tipeee.com/gmag-dev)
-
-Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
-
-Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
-
-[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 Guide indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » et « Claude Code » sont des marques d’Anthropic.
 
@@ -27,6 +23,14 @@ Guide indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » 
 État au 6 novembre 2026 : ce guide décrit Claude Code 2.1.319, la version publiée ce jour-là. Les nouveautés plus récentes, marquées 🆕, donnent leur version dans « Quoi de neuf ». Un fait marqué 🕘 change vite : `claude --version` vous donne votre version, et sa documentation fait foi.
 
 [Licences (texte : CC BY-NC-ND 4.0 ; code : MIT) et permissions](https://gmag-dev.github.io/bien-demarrer-claude-code/#licence) · [Mentions légales](https://gmag-dev.github.io/bien-demarrer-claude-code/mentions-legales.html)
+
+Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
+
+Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+
+Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
+
+[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 ## Comment lire ce guide
 
@@ -97,7 +101,7 @@ Claude Code publie plusieurs versions par semaine : dix entre le 31 octobre et l
 
 La version 3.2.1, du 25 novembre 2026, corrige après une relecture critique des passages sur la sécurité et les permissions : aux chapitres 1, 2, 7, 9, 10, 12, 15, 17, 18, 21 et 23, et aux annexes A, C, E, J et L. Cinq sources s’ajoutent, de \[185\] à \[189\].
 
-La version 3.2.2, du 26 novembre 2026, poursuit ces corrections. Elles portent sur le mode `--bare` dans un dépôt non inspecté (chapitre 15), sur les écritures dans un chemin protégé selon le mode de permission (chapitre 17 et annexe L), sur l’expiration des tâches récurrentes (chapitre 18) et, au chapitre 23, sur les retours envoyés depuis une plateforme tierce, l’usage professionnel d’un compte grand public et le droit de la protection des données. Le chapitre 19 reçoit son exercice. Deux sources s’ajoutent, \[190\] et \[191\]. La version 3.2.3, du même jour, allège deux passages pour une première lecture, aux chapitres 1 et 2, et l’image de partage dit que le guide est indépendant.
+La version 3.2.2, du 26 novembre 2026, poursuit ces corrections. Elles portent sur le mode `--bare` dans un dépôt non inspecté (chapitre 15), sur les écritures dans un chemin protégé selon le mode de permission (chapitre 17 et annexe L), sur l’expiration des tâches récurrentes (chapitre 18) et, au chapitre 23, sur les retours envoyés depuis une plateforme tierce, l’usage professionnel d’un compte grand public et le droit de la protection des données. Le chapitre 19 reçoit son exercice. Deux sources s’ajoutent, \[190\] et \[191\]. La version 3.2.3, du même jour, allège deux passages pour une première lecture, aux chapitres 1 et 2, et l’image de partage dit que le guide est indépendant. La version 3.2.4, du même jour, place le rappel du soutien avant cette section et sous chaque intercalaire de partie, ajoute l’entrée Soutenir en tête de la barre de lecture, range la commande Installer dans les options, assombrit le violet du thème clair et précise sur la page de titre qu’il s’agit de l’édition intégrale.
 
 **Tableau :** Les nouveautés des soixante derniers jours, la plus récente d’abord, rassemblées depuis les badges 🆕 du texte. Une ligne reste soixante jours après sa date, puis disparaît à la version suivante du guide.
 
@@ -347,6 +351,14 @@ Partie I
 Bien démarrer et bien travailler
 
 Chapitres [1](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch1) à [13](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch13)
+
+Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
+
+Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+
+Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
+
+[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 ![Illustration : la personne en long manteau violet et son petit compagnon de cristal cyan, devant un noyau lumineux tenu dans un cadre de rails, entouré d’outils flottants reliés par des fils de lumière.](https://gmag-dev.github.io/bien-demarrer-claude-code/images/4f56525102f0.avif)
 
@@ -620,7 +632,7 @@ L’abonnement, le système, le terminal et Python sont dans « Prérequis », a
 >
 > Sur un poste fourni par votre employeur, cette section attend l’accord de la personne qui gère le poste : n’installez ni git ni Claude Code, et ne connectez aucun compte, avant ses réponses aux quatre questions de l’encadré des « Prérequis ». Le compte que vous connecterez à l’étape 4 est celui qu’elle autorise, et des données de l’employeur ne passent que par le compte que l’organisation fournit. Chez vous, sur votre propre ordinateur et avec votre propre compte, rien n’attend : suivez les étapes.
 
-**Un dossier d’essai**, pour votre projet d’essai aux données inventées. Sans lui, vous essaieriez Claude Code sur vos vrais fichiers. Ce guide en fournit un, `exemples/mon-essai/` : trois courriers inventés d’organismes fictifs de Rivelune, la commune du fil rouge, et le contrôle de référence `controle_dates.py`, pour le chemin avec code. Il est livré dans le paquet du guide, un fichier `guide-claude-code-v<version>.zip`, où `<version>` est le numéro de version de la page de titre, par exemple `3.2.3` : c’est le fichier que vous avez reçu avec ce guide, ou que vous téléchargez sur son site ([annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-d), « Où la trouver »). Décompressez-le, copiez `mon-essai` dans votre dossier personnel, par le terminal ou à la souris, puis, dans le terminal, `cd ~/mon-essai`. La [section C.9](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-c-9) donne les commandes de chaque système, et ce qu’il faut faire sans le paquet ou si un dossier `mon-essai` existe déjà. C’est ce dossier, jamais le dossier personnel, que vous ouvrirez à Claude Code. Son `README.md` dit quoi y faire.
+**Un dossier d’essai**, pour votre projet d’essai aux données inventées. Sans lui, vous essaieriez Claude Code sur vos vrais fichiers. Ce guide en fournit un, `exemples/mon-essai/` : trois courriers inventés d’organismes fictifs de Rivelune, la commune du fil rouge, et le contrôle de référence `controle_dates.py`, pour le chemin avec code. Il est livré dans le paquet du guide, un fichier `guide-claude-code-v<version>.zip`, où `<version>` est le numéro de version de la page de titre, par exemple `3.2.4` : c’est le fichier que vous avez reçu avec ce guide, ou que vous téléchargez sur son site ([annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-d), « Où la trouver »). Décompressez-le, copiez `mon-essai` dans votre dossier personnel, par le terminal ou à la souris, puis, dans le terminal, `cd ~/mon-essai`. La [section C.9](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-c-9) donne les commandes de chaque système, et ce qu’il faut faire sans le paquet ou si un dossier `mon-essai` existe déjà. C’est ce dossier, jamais le dossier personnel, que vous ouvrirez à Claude Code. Son `README.md` dit quoi y faire.
 
 **[git](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-git) en cinq minutes.** git garde l’historique de votre dossier, et ce guide s’en sert dès le [chapitre 5](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch5). `git --version` dit s’il est installé [\[7\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-setup). Sinon, installez Git for Windows depuis git-scm.com sous Windows, acceptez les outils de développement que macOS propose à la première commande `git`, ou lancez `sudo apt install git-all` sous Ubuntu [\[22\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-git-installer). Puis vérifiez s’il connaît l’adresse qu’il écrit dans chaque [commit](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-commit) : s’il en affiche une, gardez-la [\[23\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-git-first-setup).
 
@@ -3567,6 +3579,14 @@ Partie II
 Du jalon Confirmé au jalon Expert
 
 Chapitres [14](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch14) à [23](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch23)
+
+Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
+
+Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+
+Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
+
+[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 
 ![Illustration : la personne en long manteau violet et son petit compagnon de cristal cyan, devant trois postes alignés : un hologramme de proposition, un grand cristal qui le scanne, et une porte où la personne lève la main pour trancher.](https://gmag-dev.github.io/bien-demarrer-claude-code/images/87a6bddbba2f.avif)
 
@@ -6904,6 +6924,14 @@ Chez Passerelle, Bernard branche le scanner de secrets à la porte de commit, et
 
 Annexes
 
+Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
+
+Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+
+Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
+
+[Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
+
 ## Annexe A. Ma première semaine
 
 Cette annexe donne une liste d’actions pour votre première semaine avec Claude Code, jour par jour. Elle suit le chemin débutant de la Partie I et finit par un premier lot relu et commité. Chaque ligne nomme les sections qui expliquent le geste, et la preuve à garder : une sortie de commande, un fichier ou un diff. Cochez au stylo sur la version imprimée, ou recopiez le tableau dans un fichier de votre projet.
@@ -7503,7 +7531,7 @@ Ce guide propose de garder trois habitudes : relire le diff avant chaque commit,
 
 Cette section détaille deux gestes de la [section 2.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s2-1) : copier le dossier d’essai, puis en faire un dépôt git.
 
-**Copier le dossier d’essai.** Le paquet du guide, `guide-claude-code-v<version>.zip`, contient la version web et le dossier `exemples/`. Décompressez-le, par un double-clic ou « Extraire tout ». Si vous n’avez que la page web, téléchargez le paquet sur le site du guide ([annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-d), « Où la trouver »), ou demandez-le à la personne qui vous a transmis le guide, ou à l’autrice par le lien de la page de titre, ou recréez le dossier à partir de la [section A.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-a-3), qui donne ses trois documents en clair. Copiez ensuite `mon-essai` dans votre dossier personnel, où le terminal s’ouvre en général. Avec le terminal, placez-vous d’abord dans le dossier du paquet décompressé, `guide-claude-code-v<version>`, par `cd` suivi de son chemin, par exemple `cd ~/Downloads/guide-claude-code-v<version>` s’il est dans le dossier des téléchargements, dont le nom peut différer sur votre poste. Remplacez `<version>`, chevrons compris, par le numéro qui suit « Version » sur la page de titre, sans la date : `3.2.3` pour cette version. Si ce dossier ne contient pas `exemples/`, mais un dossier du même nom que le paquet, entrez d’abord dans ce dernier. Puis `cp -R exemples/mon-essai ~/mon-essai` sous macOS et Linux, `Copy-Item -Recurse exemples\mon-essai $HOME\mon-essai` sous Windows. Si un dossier `mon-essai` existe déjà dans votre dossier personnel, ces deux commandes copient le nouveau à l’intérieur, en `mon-essai/mon-essai` (essai de ce guide, le 9 novembre 2026) : renommez d’abord l’ancien, ou copiez sous un autre nom, comme `~/mon-essai-2`, et employez ce nom dans la suite. Sans le terminal, copiez le dossier `mon-essai` avec l’Explorateur de fichiers ou le Finder, et collez-le dans votre dossier personnel. Puis, dans le terminal, `cd ~/mon-essai`.
+**Copier le dossier d’essai.** Le paquet du guide, `guide-claude-code-v<version>.zip`, contient la version web et le dossier `exemples/`. Décompressez-le, par un double-clic ou « Extraire tout ». Si vous n’avez que la page web, téléchargez le paquet sur le site du guide ([annexe D](https://gmag-dev.github.io/bien-demarrer-claude-code/#ann-d), « Où la trouver »), ou demandez-le à la personne qui vous a transmis le guide, ou à l’autrice par le lien de la page de titre, ou recréez le dossier à partir de la [section A.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-a-3), qui donne ses trois documents en clair. Copiez ensuite `mon-essai` dans votre dossier personnel, où le terminal s’ouvre en général. Avec le terminal, placez-vous d’abord dans le dossier du paquet décompressé, `guide-claude-code-v<version>`, par `cd` suivi de son chemin, par exemple `cd ~/Downloads/guide-claude-code-v<version>` s’il est dans le dossier des téléchargements, dont le nom peut différer sur votre poste. Remplacez `<version>`, chevrons compris, par le numéro qui suit « Version » sur la page de titre, sans la date : `3.2.4` pour cette version. Si ce dossier ne contient pas `exemples/`, mais un dossier du même nom que le paquet, entrez d’abord dans ce dernier. Puis `cp -R exemples/mon-essai ~/mon-essai` sous macOS et Linux, `Copy-Item -Recurse exemples\mon-essai $HOME\mon-essai` sous Windows. Si un dossier `mon-essai` existe déjà dans votre dossier personnel, ces deux commandes copient le nouveau à l’intérieur, en `mon-essai/mon-essai` (essai de ce guide, le 9 novembre 2026) : renommez d’abord l’ancien, ou copiez sous un autre nom, comme `~/mon-essai-2`, et employez ce nom dans la suite. Sans le terminal, copiez le dossier `mon-essai` avec l’Explorateur de fichiers ou le Finder, et collez-le dans votre dossier personnel. Puis, dans le terminal, `cd ~/mon-essai`.
 
 **Les fichiers `.DS_Store` de macOS.** Sous macOS, le dossier peut contenir des fichiers `.DS_Store`, propres à macOS [\[180\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-apple-smb-ds-store), même dans `documents/`, que le `git add` de la [section 2.1](https://gmag-dev.github.io/bien-demarrer-claude-code/#s2-1) prendrait avec lui. La ligne `.DS_Store` d’un fichier `.gitignore` à la racine du dossier, écrite avant le `git add`, fait ignorer ces fichiers à tous les niveaux du dossier, et le `.gitignore` entre dans le même premier commit [\[181\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-gitignore). Un `.gitignore` ne retire pas un fichier déjà commité : git ne touche pas un fichier qu’il suit déjà [\[181\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-gitignore). Si un `.DS_Store` est entré dans le premier commit, `git rm --cached` suivi de son chemin le retire du suivi sans l’effacer du disque [\[182\]](https://gmag-dev.github.io/bien-demarrer-claude-code/#src-git-rm), puis un commit l’enregistre.
 
@@ -7517,7 +7545,7 @@ Cette section détaille deux gestes de la [section 2.1](https://gmag-dev.github.
 
 La version web du guide est un seul fichier [HTML](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-html), qui se lit dans un navigateur, en ligne sur le site du guide ou hors ligne depuis son paquet. Elle a des réglages que le [PDF](https://gmag-dev.github.io/bien-demarrer-claude-code/#g-pdf) n’a pas : une recherche, des options de lecture, des raccourcis, le plein écran, des annotations et les réponses repliées sous leur question. Cette annexe les décrit, avec la page de titre et le bas de page, puis dit comment lire avec son rendu complet un fichier Markdown que Claude vous rend, et comment régler ce que vous voyez de son travail dans la conversation. Tous les réglages de la version web restent dans votre navigateur, et rien n’est envoyé.
 
-**Où la trouver.** La version web se lit en ligne, sur le site du guide, [https://gmag-dev.github.io/bien-demarrer-claude-code/](https://gmag-dev.github.io/bien-demarrer-claude-code/), ou hors ligne, dans le paquet du guide, un fichier `guide-claude-code-v<version>.zip`, où `<version>` est le numéro de version du guide, sans sa date. Le paquet de cette version se télécharge sur le même site : [`guide-claude-code-v3.2.3.zip`](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-claude-code-v3.2.3.zip). Il contient la page du guide, `guide-v3.2.3-publique-autonome.html`, la page « Préparez votre poste », [`preparez-votre-poste.html`](https://gmag-dev.github.io/bien-demarrer-claude-code/preparez-votre-poste.html), et le dossier `exemples/`, dont le dossier d’essai `exemples/mon-essai/` du [chapitre 2](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch2). Décompressez le paquet, par un double-clic ou « Extraire tout », puis ouvrez `guide-v3.2.3-publique-autonome.html` dans votre navigateur. Si vous n’avez reçu que la page, téléchargez le paquet sur le site du guide, ou demandez-le à la personne qui vous a transmis le guide, ou à l’autrice par la ligne de contact du bas de page ([section D.8](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-d-8)). Pour la semaine sans code, la [section A.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-a-3) donne en clair les trois documents du dossier d’essai.
+**Où la trouver.** La version web se lit en ligne, sur le site du guide, [https://gmag-dev.github.io/bien-demarrer-claude-code/](https://gmag-dev.github.io/bien-demarrer-claude-code/), ou hors ligne, dans le paquet du guide, un fichier `guide-claude-code-v<version>.zip`, où `<version>` est le numéro de version du guide, sans sa date. Le paquet de cette version se télécharge sur le même site : [`guide-claude-code-v3.2.4.zip`](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-claude-code-v3.2.4.zip). Il contient la page du guide, `guide-v3.2.4-publique-autonome.html`, la page « Préparez votre poste », [`preparez-votre-poste.html`](https://gmag-dev.github.io/bien-demarrer-claude-code/preparez-votre-poste.html), et le dossier `exemples/`, dont le dossier d’essai `exemples/mon-essai/` du [chapitre 2](https://gmag-dev.github.io/bien-demarrer-claude-code/#ch2). Décompressez le paquet, par un double-clic ou « Extraire tout », puis ouvrez `guide-v3.2.4-publique-autonome.html` dans votre navigateur. Si vous n’avez reçu que la page, téléchargez le paquet sur le site du guide, ou demandez-le à la personne qui vous a transmis le guide, ou à l’autrice par la ligne de contact du bas de page ([section D.8](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-d-8)). Pour la semaine sans code, la [section A.3](https://gmag-dev.github.io/bien-demarrer-claude-code/#s-a-3) donne en clair les trois documents du dossier d’essai.
 
 ### D.1 La barre du haut, le sommaire et la recherche
 
@@ -9472,6 +9500,8 @@ Soutenir ce guide
 
 Ce guide est gratuit, en entier. Le soutenir est libre et facultatif.
 
+Votre soutien aide son autrice à préparer d’autres publications et à mener des projets humanistes.
+
 Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel onglet.
 
 [Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
@@ -9496,7 +9526,7 @@ Bien démarrer avec Claude Code
 
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
 
-Autrice : Gabrielle Magnan · Version : 3.2.3+publique.web · 26 novembre 2026 · Édition publique
+Autrice : Gabrielle Magnan · Version : 3.2.4+publique.web · 26 novembre 2026 · Édition publique
 
 [Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 

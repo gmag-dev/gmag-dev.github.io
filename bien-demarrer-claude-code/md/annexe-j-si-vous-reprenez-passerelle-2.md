@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.3 : « Annexe J. Si vous reprenez Passerelle », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « Annexe J. Si vous reprenez Passerelle », partie 2 sur 2.
 >
 > - Précédent : [Annexe J. Si vous reprenez Passerelle (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-j-si-vous-reprenez-passerelle-1.md)
 > - Suivant : [Annexe K. Listes des figures et des tableaux (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-k-listes-des-figures-et-des-tableaux-1.md)
