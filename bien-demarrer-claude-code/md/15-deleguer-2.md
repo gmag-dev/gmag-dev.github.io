@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « 15. Déléguer », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « 15. Déléguer », partie 2 sur 2.
 >
 > - Précédent : [15. Déléguer (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/15-deleguer-1.md)
 > - Suivant : [16. Relire pour réfuter, corriger l’instance et la classe, capitaliser](https://gmag-dev.github.io/bien-demarrer-claude-code/md/16-relire-pour-refuter-corriger-l-instance-et-la-classe.md)

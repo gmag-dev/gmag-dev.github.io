@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « Annexe F. Grille de relecture experte ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « Annexe F. Grille de relecture experte ».
 >
 > - Précédent : [Annexe E. Gabarits](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-e-gabarits.md)
 > - Suivant : [Annexe G. Grille d’auto-évaluation](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-g-grille-d-auto-evaluation.md)

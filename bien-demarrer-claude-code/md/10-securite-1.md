@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « 10. Sécurité », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « 10. Sécurité », partie 1 sur 2.
 >
 > - Précédent : [9. Usage et coût sans crédits d’usage](https://gmag-dev.github.io/bien-demarrer-claude-code/md/9-usage-et-cout-sans-credits-d-usage.md)
 > - Suivant : [10. Sécurité (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/10-securite-2.md)

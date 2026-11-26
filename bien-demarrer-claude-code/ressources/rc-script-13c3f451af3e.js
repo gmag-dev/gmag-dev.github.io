@@ -520,23 +520,37 @@
 
   
   
-  var gl = C.glossary ? document.getElementById(C.glossary) : null;
+  // Termes du glossaire : ceux de la page (page intégrale, annexe du glossaire), sinon, sur une page
+  // de chapitre, le fichier que nomme main[data-glossaire] (mêmes termes, publiés par l'outil) ; un
+  // échec de chargement (file://, hors ligne) laisse les liens vers l'annexe comme repli.
+  var gl = C.glossary ? document.getElementById(C.glossary) : null, glSrc = main.getAttribute("data-glossaire");
   if (gl) {
-    var entries = [], tip = document.createElement("div"), tipFor = null, hideT;
-    tip.id = "rc-gl-tip"; tip.className = "rc-gl-tip"; tip.setAttribute("role", "tooltip"); tip.hidden = true;
-    document.body.appendChild(tip);
+    var glTermes = [];
     gl.querySelectorAll("dt").forEach(function (dt, i) {
       var dd = dt.nextElementSibling;
       if (!dd || dd.tagName !== "DD") return;
       if (!dt.id) dt.id = "rc-gl-" + i;
-      var label = dt.textContent.replace(/\s+/g, " ").trim(), base = label.replace(/\s*\(.*\)\s*$/, "");
+      glTermes.push({ id: dt.id, terme: dt.textContent, definition: dd.textContent });
+    });
+    glossaire(glTermes, "#");
+  } else if (glSrc && location.protocol !== "file:" && window.fetch) {
+    fetch(glSrc).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      if (d && typeof d.page === "string" && Array.isArray(d.termes)) glossaire(d.termes, d.page + "#");
+    }).catch(function () {});
+  }
+  function glossaire(termes, cible) {
+    var entries = [], tip = document.createElement("div"), tipFor = null, hideT;
+    tip.id = "rc-gl-tip"; tip.className = "rc-gl-tip"; tip.setAttribute("role", "tooltip"); tip.hidden = true;
+    document.body.appendChild(tip);
+    termes.forEach(function (t) {
+      var label = t.terme.replace(/\s+/g, " ").trim(), base = label.replace(/\s*\(.*\)\s*$/, "");
       var paren = (label.match(/\(([^)]*)\)/) || [])[1];
       var names = base.split(/,\s*/).concat(paren && /^[A-Za-z][\w.-]*$/.test(paren) ? [paren] : []);
       names.forEach(function (n) {
         n = n.trim();
         if (n.length < 2) return;
         var exact = /[A-Z].*[A-Z]|[a-z][A-Z]|[._/]/.test(n) || n.length <= 3;
-        entries.push({ name: n, exact: exact, id: dt.id, term: label, def: dd.textContent.replace(/\s+/g, " ").trim() });
+        entries.push({ name: n, exact: exact, id: t.id, term: label, def: t.definition.replace(/\s+/g, " ").trim() });
       });
     });
     entries.sort(function (a, b) { return b.name.length - a.name.length; });
@@ -588,7 +602,7 @@
       out.forEach(function (h) {
         frag.appendChild(document.createTextNode(text.slice(pos, h.i)));
         var a = document.createElement("a");
-        a.className = "rc-gl"; a.href = "#" + h.e.id; a.textContent = text.slice(h.i, h.i + h.len);
+        a.className = "rc-gl"; a.href = cible + h.e.id; a.textContent = text.slice(h.i, h.i + h.len);
         a.setAttribute("data-rc-gl", h.e.id);
         a.setAttribute("aria-describedby", "rc-gl-tip");
         frag.appendChild(a);

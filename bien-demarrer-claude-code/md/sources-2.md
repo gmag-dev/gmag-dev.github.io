@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « Sources », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « Sources », partie 2 sur 2.
 >
 > - Reprise : ce morceau poursuit une liste du morceau précédent, coupée entre deux entrées
 > - Précédent : [Sources (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-1.md)
@@ -63,6 +63,8 @@ Exemples de code : les fichiers du dossier `exemples/` et les blocs de code de c
 
 Permissions supplémentaires : le partage interne à une équipe ou à une entreprise, sans contrepartie, est autorisé. Une formation interne à une équipe ou à une organisation peut s’appuyer sur ce guide, sans contrepartie, en citant son titre, son autrice et sa licence. Toute utilisation dans une formation payante demande une autorisation écrite préalable de l’autrice : écrivez à [gmag.contact@pm.me](mailto:gmag.contact@pm.me).
 
+Moteurs de recherche et assistants d’IA : l’autrice autorise l’exploration, l’indexation, la citation et le résumé de ce guide, ainsi que son utilisation pour l’entraînement de modèles d’IA. La licence reste la règle pour toute republication du texte.
+
 Ce guide est indépendant : Anthropic ne l’a ni commandé ni approuvé. « Claude » et « Claude Code » sont des marques d’Anthropic. Les autres noms de produits et de marques cités dans le guide appartiennent à leurs titulaires.
 
 Éditrice, hébergeur et données personnelles : [mentions légales](https://gmag-dev.github.io/bien-demarrer-claude-code/mentions-legales.html).
@@ -71,7 +73,7 @@ Bien démarrer avec Claude Code
 
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte
 
-Autrice : Gabrielle Magnan · Version : 3.2.4+publique.web · 26 novembre 2026 · Édition publique
+Autrice : Gabrielle Magnan · Version : 3.3.0+publique.web · 26 novembre 2026 · Édition publique
 
 [Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 

@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « Annexe E. Gabarits ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « Annexe E. Gabarits ».
 >
 > - Précédent : [Annexe D. La version web](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-d-la-version-web.md)
 > - Suivant : [Annexe F. Grille de relecture experte](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-f-grille-de-relecture-experte.md)

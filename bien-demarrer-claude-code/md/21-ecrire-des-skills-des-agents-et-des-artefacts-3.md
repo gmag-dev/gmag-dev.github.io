@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.2.4 : « 21. Écrire des skills, des agents et des artefacts », partie 3 sur 3.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.3.0 : « 21. Écrire des skills, des agents et des artefacts », partie 3 sur 3.
 >
 > - Précédent : [21. Écrire des skills, des agents et des artefacts (partie 2 sur 3)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/21-ecrire-des-skills-des-agents-et-des-artefacts-2.md)
 > - Suivant : [22. Une architecture de référence du harnais](https://gmag-dev.github.io/bien-demarrer-claude-code/md/22-une-architecture-de-reference-du-harnais.md)

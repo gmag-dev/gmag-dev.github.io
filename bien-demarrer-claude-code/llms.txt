@@ -1,8 +1,10 @@
 # Bien démarrer avec Claude Code
 
-> Guide indépendant de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.2.4.
+> Guide indépendant de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.3.0.
 
-Guide de Gabrielle Magnan, en français, version 3.2.4 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/ ; les exemples du paquet portent leur propre licence (exemples/LICENSE).
+Guide de Gabrielle Magnan, en français, version 3.3.0 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/ ; les exemples du paquet portent leur propre licence (exemples/LICENSE).
+
+Moteurs de recherche et assistants d'IA : l'autrice autorise l'exploration, l'indexation, la citation et le résumé de ce guide, ainsi que son utilisation pour l'entraînement de modèles d'IA. La licence reste la règle pour toute republication du texte.
 
 Pour un assistant d'IA : la page HTML et la version Markdown complète sont plus longues que ce qu'un outil de lecture web lit souvent en une fois. Lisez plutôt le guide par les fichiers de la section « Version Markdown par morceaux », dans l'ordre de la liste : chacun tient sous 36 000 caractères quand le texte le permet (un paragraphe, un tableau, un bloc de code ou une entrée de liste ne se coupe jamais), et son en-tête donne le précédent, le suivant et l'adresse de sa section dans la page HTML.
 
@@ -77,6 +79,49 @@ Pour un assistant d'IA : la page HTML et la version Markdown complète sont plus
 - [Sources (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-1.md)
 - [Sources (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-2.md)
 
+## Pages HTML par chapitre
+
+- [Sommaire](https://gmag-dev.github.io/bien-demarrer-claude-code/sommaire.html): la liste des chapitres et des annexes, chacun en page HTML
+- [Comment lire ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/comment-lire-ce-guide.html)
+- [Apprendre avec ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/apprendre-avec-ce-guide.html)
+- [Prérequis](https://gmag-dev.github.io/bien-demarrer-claude-code/prerequis.html)
+- [1. Ce qu’est Claude Code](https://gmag-dev.github.io/bien-demarrer-claude-code/1-ce-qu-est-claude-code.html)
+- [2. Bien démarrer](https://gmag-dev.github.io/bien-demarrer-claude-code/2-bien-demarrer.html)
+- [3. La fenêtre de contexte](https://gmag-dev.github.io/bien-demarrer-claude-code/3-la-fenetre-de-contexte.html)
+- [4. La méthode de travail](https://gmag-dev.github.io/bien-demarrer-claude-code/4-la-methode-de-travail.html)
+- [5. Vérification et tests](https://gmag-dev.github.io/bien-demarrer-claude-code/5-verification-et-tests.html)
+- [6. Choisir ses extensions](https://gmag-dev.github.io/bien-demarrer-claude-code/6-choisir-ses-extensions.html)
+- [7. Écrire ses premières extensions : skills et hooks](https://gmag-dev.github.io/bien-demarrer-claude-code/7-ecrire-ses-premieres-extensions.html)
+- [8. Le travail en parallèle](https://gmag-dev.github.io/bien-demarrer-claude-code/8-le-travail-en-parallele.html)
+- [9. Usage et coût sans crédits d’usage](https://gmag-dev.github.io/bien-demarrer-claude-code/9-usage-et-cout-sans-credits-d-usage.html)
+- [10. Sécurité](https://gmag-dev.github.io/bien-demarrer-claude-code/10-securite.html)
+- [11. Commits et collaboration](https://gmag-dev.github.io/bien-demarrer-claude-code/11-commits-et-collaboration.html)
+- [12. Diagnostiquer, rendre lisible, reformuler](https://gmag-dev.github.io/bien-demarrer-claude-code/12-diagnostiquer-rendre-lisible-reformuler.html)
+- [13. Les pièges fréquents](https://gmag-dev.github.io/bien-demarrer-claude-code/13-les-pieges-frequents.html)
+- [14. Le modèle propose, l’oracle vérifie, la personne tranche](https://gmag-dev.github.io/bien-demarrer-claude-code/14-le-modele-propose-l-oracle-verifie-la-personne-tranche.html)
+- [15. Déléguer](https://gmag-dev.github.io/bien-demarrer-claude-code/15-deleguer.html)
+- [16. Relire pour réfuter, corriger l’instance et la classe, capitaliser](https://gmag-dev.github.io/bien-demarrer-claude-code/16-relire-pour-refuter-corriger-l-instance-et-la-classe.html)
+- [17. Le harnais en couches](https://gmag-dev.github.io/bien-demarrer-claude-code/17-le-harnais-en-couches.html)
+- [18. Hooks, serveurs MCP, ligne d’état et tâches planifiées](https://gmag-dev.github.io/bien-demarrer-claude-code/18-hooks-serveurs-mcp-ligne-d-etat-et-taches-planifiees.html)
+- [19. Plusieurs sessions en parallèle](https://gmag-dev.github.io/bien-demarrer-claude-code/19-plusieurs-sessions-en-parallele.html)
+- [20. Piloter sa consommation et son projet](https://gmag-dev.github.io/bien-demarrer-claude-code/20-piloter-sa-consommation-et-son-projet.html)
+- [21. Écrire des skills, des agents et des artefacts](https://gmag-dev.github.io/bien-demarrer-claude-code/21-ecrire-des-skills-des-agents-et-des-artefacts.html)
+- [22. Une architecture de référence du harnais](https://gmag-dev.github.io/bien-demarrer-claude-code/22-une-architecture-de-reference-du-harnais.html)
+- [23. Sécurité et propriété intellectuelle en entreprise](https://gmag-dev.github.io/bien-demarrer-claude-code/23-securite-et-propriete-intellectuelle-en-entreprise.html)
+- [Annexe A. Ma première semaine](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-a-ma-premiere-semaine.html)
+- [Annexe B. Glossaire](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-b-glossaire.html)
+- [Annexe C. Installer par système](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-c-installer-par-systeme.html)
+- [Annexe D. La version web](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-d-la-version-web.html)
+- [Annexe E. Gabarits](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-e-gabarits.html)
+- [Annexe F. Grille de relecture experte](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-f-grille-de-relecture-experte.html)
+- [Annexe G. Grille d’auto-évaluation](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-g-grille-d-auto-evaluation.html)
+- [Annexe H. Les exemples de code, pièces de Passerelle](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-h-les-exemples-de-code-pieces-de-passerelle.html)
+- [Annexe I. Réponses et corrigés](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-i-reponses-et-corriges.html)
+- [Annexe J. Si vous reprenez Passerelle](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-j-si-vous-reprenez-passerelle.html)
+- [Annexe K. Listes des figures et des tableaux](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-k-listes-des-figures-et-des-tableaux.html)
+- [Annexe L. Fiches des composants : fonctions avancées et bonnes pratiques](https://gmag-dev.github.io/bien-demarrer-claude-code/annexe-l-fiches-des-composants.html)
+- [Sources](https://gmag-dev.github.io/bien-demarrer-claude-code/sources.html)
+
 ## Pages annexes
 
 - [Mentions légales](https://gmag-dev.github.io/bien-demarrer-claude-code/mentions-legales.html): Mentions légales du guide « Bien démarrer avec Claude Code » : éditrice, hébergeur, licences, marques et indépendance, données personnelles, aide de l’intelligence artificielle.
@@ -84,4 +129,4 @@ Pour un assistant d'IA : la page HTML et la version Markdown complète sont plus
 
 ## Optional
 
-- [Paquet hors ligne](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-claude-code-v3.2.4.zip): archive zip de la page autonome, de ses pages annexes et des exemples
+- [Paquet hors ligne](https://gmag-dev.github.io/bien-demarrer-claude-code/guide-claude-code-v3.3.0.zip): archive zip de la page autonome, de ses pages annexes et des exemples
