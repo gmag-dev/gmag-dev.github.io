@@ -4,6 +4,8 @@
 
 Guide de Gabrielle Magnan, en français, version 1.0.0 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/.
 
+Moteurs de recherche et assistants d'IA : l'autrice autorise l'exploration, l'indexation, la citation et le résumé de ce guide, ainsi que son utilisation pour l'entraînement de modèles d'IA. La licence reste la règle pour toute republication du texte.
+
 ## Pages
 
 - [Bien démarrer avec Claude Code : le guide débutant](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/): Un guide réécrit pour débuter : quinze étapes guidées, sur un dossier d’essai.
