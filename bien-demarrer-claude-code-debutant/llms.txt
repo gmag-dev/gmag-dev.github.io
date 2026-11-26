@@ -1,8 +1,8 @@
 # Bien démarrer avec Claude Code : le guide débutant
 
-> Un guide humaniste, réécrit pour débuter : quinze étapes guidées, sur un dossier d’essai. Version 1.3.1.
+> Un guide humaniste, réécrit pour débuter : quinze étapes guidées, sur un dossier d’essai. Version 1.3.2.
 
-Guide de Gabrielle Magnan, en français, version 1.3.1 du 2026-11-27. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/.
+Guide de Gabrielle Magnan, en français, version 1.3.2 du 2026-11-27. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/.
 
 Moteurs de recherche et assistants d'IA : j'autorise l'exploration, l'indexation, la citation et le résumé de ce guide, ainsi que son utilisation pour l'entraînement de modèles d'IA. La licence reste la règle pour toute republication du texte.
 
