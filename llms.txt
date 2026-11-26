@@ -1,0 +1,8 @@
+# Bien démarrer avec Claude Code
+
+> Deux guides indépendants et gratuits de Gabrielle Magnan pour apprendre Claude Code, en français. Chaque guide a son propre index pour les modèles de langage.
+
+## Guides
+
+- [Guide complet](https://gmag-dev.github.io/bien-demarrer-claude-code/) : de la première session à la pratique experte. Index : https://gmag-dev.github.io/bien-demarrer-claude-code/llms.txt
+- [Guide débutant](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/) : quinze étapes guidées, sur un dossier d'essai aux données inventées. Index : https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/llms.txt
