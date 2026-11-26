@@ -1,14 +1,14 @@
 # Bien démarrer avec Claude Code : le guide débutant
 
-> Un guide réécrit pour débuter : quinze étapes guidées, sur un dossier d’essai. Version 1.0.0.
+> Un guide humaniste, réécrit pour débuter : quinze étapes guidées, sur un dossier d’essai. Version 1.0.1.
 
-Guide de Gabrielle Magnan, en français, version 1.0.0 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/.
+Guide de Gabrielle Magnan, en français, version 1.0.1 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/.
 
 Moteurs de recherche et assistants d'IA : l'autrice autorise l'exploration, l'indexation, la citation et le résumé de ce guide, ainsi que son utilisation pour l'entraînement de modèles d'IA. La licence reste la règle pour toute republication du texte.
 
 ## Pages
 
-- [Bien démarrer avec Claude Code : le guide débutant](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/): Un guide réécrit pour débuter : quinze étapes guidées, sur un dossier d’essai.
+- [Bien démarrer avec Claude Code : le guide débutant](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/): Un guide humaniste, réécrit pour débuter : quinze étapes guidées, sur un dossier d’essai.
 - [Avant de commencer](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/avant-de-commencer.html): Ce guide vous fait installer Claude Code, puis vous en servir pendant une première semaine, pas à pas, dans un dossier d’essai. Lisez cette page avant la…
 - [P01 · Copier le dossier d’essai](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p01-copier-le-dossier-d-essai.html): Avoir sur votre ordinateur un dossier d’essai, aux courriers inventés, et y placer votre terminal.
 - [P02 · Installer git et vous présenter](https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p02-installer-git.html): Donner une mémoire à votre dossier d’essai, et dire à cette mémoire qui vous êtes.
