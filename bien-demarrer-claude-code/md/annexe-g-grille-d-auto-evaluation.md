@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « Annexe G. Grille d’auto-évaluation ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.2 : « Annexe G. Grille d’auto-évaluation ».
 >
 > - Précédent : [Annexe F. Grille de relecture experte](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-f-grille-de-relecture-experte.md)
 > - Suivant : [Annexe H. Les exemples de code, pièces de Passerelle](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-h-les-exemples-de-code-pieces-de-passerelle.md)

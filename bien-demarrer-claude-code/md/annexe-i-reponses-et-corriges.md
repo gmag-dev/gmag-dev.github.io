@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « Annexe I. Réponses et corrigés ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.2 : « Annexe I. Réponses et corrigés ».
 >
 > - Précédent : [Annexe H. Les exemples de code, pièces de Passerelle](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-h-les-exemples-de-code-pieces-de-passerelle.md)
 > - Suivant : [Annexe J. Si vous reprenez Passerelle (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-j-si-vous-reprenez-passerelle-1.md)

@@ -1,8 +1,8 @@
 # Bien démarrer avec Claude Code
 
-> Guide indépendant de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.4.1.
+> Guide indépendant de bonnes pratiques pour bien démarrer avec Claude Code et progresser jusqu’à la pratique experte. Version 3.4.2.
 
-Guide de Gabrielle Magnan, en français, version 3.4.1 du 2026-11-26. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/ ; les fichiers d'exercice portent leur propre licence (exemples/LICENSE).
+Guide de Gabrielle Magnan, en français, version 3.4.2 du 2026-11-27. Licence du texte : https://creativecommons.org/licenses/by-nc-nd/4.0/ ; les fichiers d'exercice portent leur propre licence (exemples/LICENSE).
 
 Moteurs de recherche et assistants d'IA : j'autorise l'exploration, l'indexation, la citation et le résumé de ce guide, ainsi que son utilisation pour l'entraînement de modèles d'IA. La licence reste la règle pour toute republication du texte.
 
@@ -131,4 +131,4 @@ Pour un assistant d'IA : le guide en une seule page et la version Markdown compl
 
 ## Optional
 
-- [Fichiers d'exercice](https://gmag-dev.github.io/bien-demarrer-claude-code/fichiers-d-exercice-v3.4.1.zip): archive zip du dossier exemples/ (code, fil rouge, dossier d'essai)
+- [Fichiers d'exercice](https://gmag-dev.github.io/bien-demarrer-claude-code/fichiers-d-exercice-v3.4.2.zip): archive zip du dossier exemples/ (code, fil rouge, dossier d'essai)

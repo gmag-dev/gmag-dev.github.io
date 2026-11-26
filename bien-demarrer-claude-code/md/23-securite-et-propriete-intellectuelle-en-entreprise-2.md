@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.2 : « 23. Sécurité et propriété intellectuelle en entreprise », partie 2 sur 2.
 >
 > - Précédent : [23. Sécurité et propriété intellectuelle en entreprise (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/23-securite-et-propriete-intellectuelle-en-entreprise-1.md)
 > - Suivant : [Annexe A. Ma première semaine](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-a-ma-premiere-semaine.md)

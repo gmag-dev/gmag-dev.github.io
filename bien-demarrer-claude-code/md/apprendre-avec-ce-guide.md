@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.1 : « Apprendre avec ce guide ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.2 : « Apprendre avec ce guide ».
 >
 > - Précédent : [Comment lire ce guide](https://gmag-dev.github.io/bien-demarrer-claude-code/md/comment-lire-ce-guide.md)
 > - Suivant : [Prérequis](https://gmag-dev.github.io/bien-demarrer-claude-code/md/prerequis.md)
