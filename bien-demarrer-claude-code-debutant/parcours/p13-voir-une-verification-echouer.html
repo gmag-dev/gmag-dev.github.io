@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-5QxkEvowl+N9S74Rc+t8+fmNI0Fb8VuhXFvLFgG1tXk=' 'sha256-d+Wc+8hSitVTnGy5tkNQRXA7rD0vdUr6nq8BluS3LE0='; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-5QxkEvowl+N9S74Rc+t8+fmNI0Fb8VuhXFvLFgG1tXk=' 'sha256-fVlJj0GWB0kOFgzaQutCpS9j+uxy+iugrZ7japxBGSA=' 'sha256-d+Wc+8hSitVTnGy5tkNQRXA7rD0vdUr6nq8BluS3LE0='; style-src 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
 <title>P13 · Voir une vérification échouer, puis passer · Bien démarrer avec Claude Code : le guide débutant</title>
 <meta name="description" content="Vérifier vous-même l’explication écrite par Claude, contre une liste que vous avez dressée, et voir cette vérification échouer avant de la voir passer.">
 <link rel="canonical" href="https://gmag-dev.github.io/bien-demarrer-claude-code-debutant/parcours/p13-voir-une-verification-echouer.html">
@@ -121,7 +121,9 @@ html[data-style="classic"] .parallaxe,html[data-style="classic"] .titlepage::bef
   --px-pro:#2f8f5b;--px-pro-i:#55b574;--px-neon1:#f2b56b;--px-neon2:#7fd1c7;--px-neon3:#6cc56f;
   --px-veh:#fbfaf2;--px-veh-v:#2f8f5b;--px-feu-av:#fff4c2;--px-feu-ar:#ff6b4a;--px-vit1:#f8e7b8;--px-vit2:#cdeee6;
   --px-tronc:#8a5a3a;--px-panneau:#2b5f8a;--px-verre:#c9eef2;--px-sol:#8fd08a;--px-eol:#3f7fa3;
-  --px-voile:rgb(255 252 238 / .82);--px-voile-fort:rgb(255 252 238 / .94);--px-marge:.5}
+  --px-voile:rgb(255 252 238 / .82);--px-voile-fort:rgb(255 252 238 / .94);--px-marge:.5;
+  --fx-0d1520:#0d1520;--fx-4a5a6e:#4a5a6e;--fx-edf2f8:#edf2f8;--fx-e2f6ee:#e2f6ee;--fx-fdeedd:#fdeedd;--fx-ffffff:#ffffff;
+  --fx-00768f:#00768f;--fx-8a5c00:#8a5c00;--fx-087a55:#087a55;--fx-b8134f:#b8134f;--fx-0b5cad:#0b5cad}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --fond:#07120c;--texte:#e8f3ec;--discret:#a9c2b3;--trait:#7b978a;--code:#10231a;
   --lien:#7fe3b5;--lien-vu:#e6cf7a;--focus:#ffd447;
@@ -136,7 +138,9 @@ html[data-style="classic"] .parallaxe,html[data-style="classic"] .titlepage::bef
   --px-pro:#0d2a1e;--px-pro-i:#1b4a34;--px-neon1:#ffd447;--px-neon2:#5ef2c0;--px-neon3:#3f8f5a;
   --px-veh:#c9c4b0;--px-veh-v:#3f8f5a;--px-feu-av:#fff2b0;--px-feu-ar:#ff7a4d;--px-vit1:#c79a3a;--px-vit2:#2b8f77;
   --px-tronc:#3a2a22;--px-panneau:#16324f;--px-verre:#3f6f7a;--px-sol:#234d38;--px-eol:#f3e6c8;
-  --px-voile:rgb(7 18 12 / .8);--px-voile-fort:rgb(7 18 12 / .95);--px-marge:.35}}
+  --px-voile:rgb(7 18 12 / .8);--px-voile-fort:rgb(7 18 12 / .95);--px-marge:.35;
+  --fx-0d1520:#e6edf3;--fx-4a5a6e:#9fb0c3;--fx-edf2f8:#121a25;--fx-e2f6ee:#0d2822;--fx-fdeedd:#2c1b0e;--fx-ffffff:#0d1117;
+  --fx-00768f:#3ee8ff;--fx-8a5c00:#ffe14d;--fx-087a55:#5cf2b0;--fx-b8134f:#ff5c8a;--fx-0b5cad:#7cc7ff}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--fond)}
 body{margin:0;background:transparent;color:var(--texte);
@@ -212,6 +216,8 @@ main section:not(.rappel,.verifier,.garde,.plus-loin) > h2{color:var(--titre-2)}
 @keyframes px-tourne{to{transform:rotate(360deg)}}
 @keyframes px-flotte{50%{transform:translate3d(0,-8px,0)}}
 @media (prefers-reduced-motion: no-preference){
+  /* Le bouton « Animations : Désactivées » arrête aussi les dessins, boîte d'agrandissement comprise. */
+  html.rc-motion-off svg,html.rc-motion-off svg *{animation:none!important}
   html:not(.rc-motion-off) .parallaxe:not(.px-vide) .px-ballon{animation:px-flotte var(--duree,7s) ease-in-out var(--phase,0s) infinite}
   .px-ballon.px-b1{--duree:9s;--phase:-3s}
   html:not(.rc-motion-off) .parallaxe:not(.px-vide) .px-rotor{animation:px-tourne var(--duree,11s) linear var(--phase,0s) infinite}
@@ -253,10 +259,17 @@ pre code{background:none;padding:0}
 kbd{border:1px solid var(--trait);border-bottom-width:2px;border-radius:4px;padding:.02em .35em;background:var(--fond)}
 .dit{font-style:normal;font-weight:600}
 .but p{font-size:1.1rem}
-.rappel,.verifier,.garde,.plus-loin{border-left:6px solid var(--trait);border-radius:0 4px 4px 0;
+.rappel,.scene,.verifier,.garde,.plus-loin{border-left:6px solid var(--trait);border-radius:0 4px 4px 0;
   padding:.7rem 1rem .8rem;margin:1.6rem 0}
-.rappel > h2,.verifier > h2,.garde > h2,.plus-loin > h2{margin-top:0}
-.rappel > :last-child,.verifier > :last-child,.garde > :last-child,.plus-loin > :last-child{margin-bottom:0}
+.rappel > h2,.scene > h2,.verifier > h2,.garde > h2,.plus-loin > h2{margin-top:0}
+.rappel > :last-child,.scene > :last-child,.verifier > :last-child,.garde > :last-child,.plus-loin > :last-child{margin-bottom:0}
+.scene{border-left-color:var(--titre-2)}
+/* L'écho rappelle la scène : il en reprend le filet, pour ne pas se lire comme une consigne à constater. */
+.verifier .echo{border-left:3px solid var(--titre-2);padding-left:.6rem}
+/* Sous-titre du guide complet cité : gras, et sa densité en petites capitales. */
+.sous-titre-complet{font-weight:700}
+.dense{font-variant-caps:small-caps;letter-spacing:.02em}
+.second-degre{white-space:nowrap}
 .rappel{background:var(--rappel-fond);border-left-color:var(--rappel-trait)}
 .verifier{background:var(--preuve-fond);border-left-color:var(--preuve-trait)}
 .garde{background:var(--garde-fond);border-left-color:var(--garde-trait)}
@@ -273,19 +286,45 @@ summary{cursor:pointer;font-weight:600;padding:.2rem 0}
 .suite .suivante{margin-left:auto;font-weight:700}
 .pied{color:var(--discret);font-size:.92rem;border-top:1px solid var(--trait);padding-top:.8rem;padding-bottom:2.5rem}
 .pied p{margin:.3rem 0}
+/* Figures, reprises du guide complet ou propres au débutant : mêmes règles que le complet. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+figure{margin:1.4rem 0}
+.fig-scroll{overflow-x:auto;border:1px solid var(--trait);border-radius:4px;background:var(--fx-ffffff);padding:.4rem}
+.fig-scroll svg{display:block;width:100%;min-width:34rem;height:auto;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+figcaption{margin-top:.5rem;color:var(--discret)}
+.fig-desc{margin-top:1rem}
+.fig-zoom{cursor:zoom-in}
+.fig-zoom:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+dialog.zoom{border:0;padding:0;margin:0;width:100vw;height:100vh;max-width:none;max-height:none;background:var(--fond);color:var(--texte);overflow:auto}
+dialog.zoom::backdrop{background:rgb(0 0 0 / .92)}
+dialog.zoom .zoom-bar{position:fixed;top:.6rem;right:.8rem;display:flex;gap:.5rem;z-index:1}
+dialog.zoom .zoom-bar button{font:inherit;font-size:1.1rem;padding:.3rem .7rem;border-radius:.4rem;border:1px solid #fff;background:#000;color:#fff;cursor:pointer}
+dialog.zoom .zoom-bar button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+dialog.zoom .zoom-wrap{box-sizing:border-box;width:100%;height:100%;overflow:auto;background:inherit;color:inherit}
+dialog.zoom .zoom-body{box-sizing:border-box;min-height:100%;padding:3.5rem .75rem .75rem;cursor:zoom-in}
+dialog.zoom .zoom-body svg{display:block;margin:auto;width:calc(100vw - 1.5rem);height:calc(100vh - 4.5rem);max-width:none;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+dialog.zoom.full .zoom-body{cursor:zoom-out}
+dialog.zoom.full .zoom-body svg{width:200vw;height:auto}
+dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
 @media print{
   /* Tout texte en noir et tout fond effacé, quel que soit le thème, même si l'on imprime les arrière-plans :
      « !important » parce qu'une règle d'écran plus précise l'emporterait sinon. */
   *,*::before,*::after{background:transparent!important;box-shadow:none!important;text-shadow:none!important}
   html,body{background:#fff!important}
   body,body *{color:#000!important}
+  /* Les dessins sont peints par les jetons --fx-*, que « color » ne touche pas : à l'impression,
+     ils reprennent les valeurs du thème clair, texte sombre sur fond clair, quel que soit le thème. */
+  :root{--fx-0d1520:#0d1520!important;--fx-4a5a6e:#4a5a6e!important;--fx-edf2f8:#edf2f8!important;
+    --fx-e2f6ee:#e2f6ee!important;--fx-fdeedd:#fdeedd!important;--fx-ffffff:#ffffff!important;
+    --fx-00768f:#00768f!important;--fx-8a5c00:#8a5c00!important;--fx-087a55:#087a55!important;
+    --fx-b8134f:#b8134f!important;--fx-0b5cad:#0b5cad!important}
   body{font-size:11pt}
   .evitement,.suite,.options,.title-icon,.parallaxe{display:none!important}
   body>footer.pied{margin-top:0!important}
   .titlepage{padding:0;text-align:left}
   .edition{border-color:#000}
   .layout{border:0}
-  .rappel,.verifier,.garde,.plus-loin,.systemes,pre{border:1px solid #555;border-left-width:5px;break-inside:avoid}
+  .rappel,.scene,.verifier,.garde,.plus-loin,.systemes,pre{border:1px solid #555;border-left-width:5px;break-inside:avoid}
   li{break-inside:avoid}
   details > *{display:block}
   h2{break-after:avoid}
@@ -587,6 +626,7 @@ summary{cursor:pointer;font-weight:600;padding:.2rem 0}
 <section class="verifier">
 <h2>Vérifiez vous-même</h2>
 <p>Notez le résultat de la ligne 4, avec la valeur manquante&nbsp;: c’est la preuve&nbsp;5 du test d’arrivée. Notez celui de la ligne 6, où rien ne manque&nbsp;: c’est la preuve&nbsp;6. Les deux viennent de la même comparaison, faite par vous.</p>
+<p class="echo"><span role="img" aria-label="Passerelle">🌉</span>&nbsp;Votre liste est la version sans code du contrôle de Bernard, celle qu’a faite Inès. À Passerelle, quand un doute reste, Odile tranche. Ici, c’est vous.</p>
 </section>
 
 <section class="sinon">
@@ -623,11 +663,95 @@ summary{cursor:pointer;font-weight:600;padding:.2rem 0}
 </nav>
 </div>
 <footer class="pied">
-<p>Bien démarrer avec Claude Code : le guide débutant, version 1.0.1+legere.web · 26 novembre 2026</p>
+<p>Bien démarrer avec Claude Code : le guide débutant, version 1.1.0+legere.web · 26 novembre 2026</p>
 <p>Dernière relecture des faits dans la documentation de Claude Code 2.1.332&nbsp;: le 2026-11-26. Votre version et sa documentation font foi. Socle commun 0.1.0.</p>
 <p class="vers-complet">Vous lisez le guide débutant. Pour aller plus loin&nbsp;: <a href="https://gmag-dev.github.io/bien-demarrer-claude-code/">le guide complet</a>.</p>
 <p>Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré.</p>
 </footer>
+<dialog class="zoom" id="zoom" aria-label="Schéma agrandi"><div class="zoom-wrap" id="zoom-wrap"><div class="zoom-bar"><button type="button" id="zoom-fs">Plein écran</button><button type="button" id="zoom-close">Fermer (Échap)</button></div><div class="zoom-body" id="zoom-body" tabindex="0" role="button" aria-pressed="false" aria-label="Agrandir encore"></div></div></dialog>
+<script>
+
+(function () {
+  var d = document.getElementById("zoom"), body = document.getElementById("zoom-body"), back = null;
+  var fs = document.getElementById("zoom-fs"), wrap = document.getElementById("zoom-wrap");
+  if (!d || !d.showModal) { return; }
+  
+  var canFull = !!(wrap.requestFullscreen && document.fullscreenEnabled);
+  if (!canFull) { fs.hidden = true; }
+  function full(on) {
+    d.classList.toggle("full", on); body.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+  function open(fig) {
+    var svg = fig.querySelector("svg");
+    if (!svg) { return; }
+    back = fig; body.textContent = ""; body.appendChild(svg.cloneNode(true));
+    full(false); d.showModal(); body.focus();
+  }
+  function target(e) {
+    var f = e.target && e.target.closest ? e.target.closest(".fig-zoom") : null;
+    return f && !f.closest("dialog") ? f : null;
+  }
+  
+  function inPane(x, y) {
+    var panes = document.querySelectorAll(".rc-dp-pane");
+    for (var i = 0; i < panes.length; i++) {
+      var p = panes[i].getBoundingClientRect();
+      if (x < p.left || x > p.right || y < p.top || y > p.bottom) { continue; }
+      var figs = panes[i].querySelectorAll(".fig-zoom");
+      for (var j = 0; j < figs.length; j++) {
+        var r = figs[j].getBoundingClientRect();
+        if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) { return figs[j]; }
+      }
+    }
+    return null;
+  }
+  function twin(f) {  
+    if (!f || !f.closest(".rc-dp-pane")) { return f; }
+    var all = document.querySelectorAll(".fig-zoom");
+    for (var i = 0; i < all.length; i++) {
+      if (!all[i].closest(".rc-dp-pane") && all[i].getAttribute("data-zoom") === f.getAttribute("data-zoom")) { return all[i]; }
+    }
+    return null;
+  }
+  document.addEventListener("click", function (e) {
+    var f = target(e) || (e.target && e.target.closest && !e.target.closest("dialog") ? inPane(e.clientX, e.clientY) : null);
+    if (f) { open(f); }
+  });
+  var lay = null, tick = false;
+  document.addEventListener("mousemove", function (e) {
+    if (tick) { return; }
+    tick = true;
+    requestAnimationFrame(function () {
+      tick = false;
+      lay = lay || document.querySelector(".rc-layout");
+      if (lay) { lay.style.cursor = inPane(e.clientX, e.clientY) ? "zoom-in" : ""; }
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Enter" && e.key !== " ") { return; }
+    var f = target(e);
+    if (f && e.target === f) { e.preventDefault(); open(f); }
+  });
+  body.addEventListener("click", function () { full(!d.classList.contains("full")); });
+  body.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); full(!d.classList.contains("full")); }
+  });
+  fs.addEventListener("click", function () {
+    if (!canFull) { return; }
+    if (document.fullscreenElement) { document.exitFullscreen(); } else { wrap.requestFullscreen().catch(function () {}); }
+  });
+  document.addEventListener("fullscreenchange", function () {
+    fs.textContent = document.fullscreenElement === wrap ? "Quitter le plein écran" : "Plein écran";
+  });
+  document.getElementById("zoom-close").addEventListener("click", function () { d.close(); });
+  d.addEventListener("close", function () {
+    if (document.fullscreenElement === wrap) { document.exitFullscreen(); }
+    body.textContent = "";
+    var b = twin(back);
+    if (b) { b.focus(); }
+  });
+})();
+</script>
 <script>
 
 (function () {
