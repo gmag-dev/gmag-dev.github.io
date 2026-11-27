@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.2 : « 14. Le modèle propose, l’oracle vérifie, la personne tranche », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.5.0 : « 14. Le modèle propose, l’oracle vérifie, la personne tranche », partie 1 sur 2.
 >
 > - Précédent : [13. Les pièges fréquents](https://gmag-dev.github.io/bien-demarrer-claude-code/md/13-les-pieges-frequents.md)
 > - Suivant : [14. Le modèle propose, l’oracle vérifie, la personne tranche (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/14-le-modele-propose-l-oracle-verifie-la-personne-tranche-2.md)

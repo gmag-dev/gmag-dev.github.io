@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.2 : « 7. Écrire ses premières extensions : skills et hooks », partie 1 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.5.0 : « 7. Écrire ses premières extensions : skills et hooks », partie 1 sur 2.
 >
 > - Précédent : [6. Choisir ses extensions (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/6-choisir-ses-extensions-2.md)
 > - Suivant : [7. Écrire ses premières extensions : skills et hooks (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/7-ecrire-ses-premieres-extensions-2.md)

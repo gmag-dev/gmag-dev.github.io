@@ -1,11 +1,20 @@
 
 
+// Décor du guide complet (3.5.0) : dérivé de scripts/28-parallaxe-js.js (3.4.2), que le guide
+// débutant garde inchangé tant qu'une décision n'a pas étendu ce comportement à son décor. Feuille
+// associée : styles/13-parallaxe-complet.css.
 (function () {
   "use strict";
   var box = document.querySelector(".parallaxe"), titre = document.getElementById("titre");
   if (!box) { return; }
-  if (!titre || !window.requestAnimationFrame) { box.parentNode.removeChild(box); return; }
-  var root = document.documentElement, P = 4, MIN = 48;
+  if (!window.requestAnimationFrame) { box.parentNode.removeChild(box); return; }
+  // 3.5.0 : trois façons de tenir le décor. « page » (page unique, sommaire : une page de titre,
+  // puis le texte) : le décor s'atténue quand le texte arrive. « lecture » (page de chapitre, sans
+  // page de titre) : le décor est d'emblée à son opacité de lecture. « decor » (accueil, dont la
+  // grille de tuiles se pose sur le décor) : il garde sa pleine opacité.
+  var mode = !titre ? "lecture" : titre.classList.contains("titlepage") ? "page" : "decor";
+  // MIN : une gouttière plus étroite ne montre pas le décor (24 px : l'anneau du panneau en prend 16).
+  var root = document.documentElement, P = 4, MIN = 24;
   var calm = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
   var plans = [].map.call(box.querySelectorAll(".px-plan"), function (el) {
     return { el: el, v: +el.getAttribute("data-px-vitesse") || 0, base: +el.getAttribute("data-px-base") || 0,
@@ -16,7 +25,7 @@
   var rue = null, lune = box.querySelector(".px-lune"), docH = 0, vh = 0, pied = 0, revu = false, VIDE = 368;
   plans.forEach(function (pl) { if (pl.mode === "rue") { rue = pl; } });
   var sec = null, all = document.querySelectorAll("section"), i;
-  for (i = 0; i < all.length; i++) { if (titre.compareDocumentPosition(all[i]) & 4) { sec = all[i]; break; } }
+  for (i = 0; titre && i < all.length; i++) { if (titre.compareDocumentPosition(all[i]) & 4) { sec = all[i]; break; } }
   var debut = 0, fin = 1, marge = 0.35, still = true, attente = false, dernier = "", minuteur = null;
   function off() {
     try { return localStorage.getItem("rc-motion") === "off" || localStorage.getItem("rc-title-fx") === "off"; }
@@ -24,19 +33,23 @@
   }
   function image() {
     attente = false;
-    var y = window.pageYOffset || 0, p = fin > debut ? (y - debut) / (fin - debut) : 1;
+    var y = window.pageYOffset || 0, p = mode === "decor" ? 0 : fin > debut ? (y - debut) / (fin - debut) : 1;
     p = p < 0 ? 0 : p > 1 ? 1 : p;
     p = p * p * (3 - 2 * p);
-    
+
     var ft = pied - y, bh = Math.max(0, Math.min(vh, ft - VIDE)), bb = Math.max(0, Math.min(vh, ft)), b = bb - bh;
     var st = rue ? Math.max(-rue.h, Math.min(vh, ft - rue.h)) : 0;
     var vis = rue ? Math.max(0, Math.min(vh, st + rue.h) - Math.max(0, st)) : 0;
     if (b > 0 && !revu) { revu = true; plusTard(); } else if (b <= 0) { revu = false; }
-    var c = (1 - p).toFixed(3), m = (1 - p * (1 - marge)).toFixed(3), cle = c + "|" + m + "|" + bh + "|" + bb;
+    // 3.5.0 : le texte a son panneau opaque ; le décor prend la même opacité au centre et dans les
+    // marges (--px-c = --px-m), et la rue du bas entre par un fondu de 128 px au plus (--px-bf),
+    // jamais par un bord dur.
+    var m = (1 - p * (1 - marge)).toFixed(3), c = m, bf = bh - Math.min(128, b), cle = c + "|" + m + "|" + bh + "|" + bb;
     if (cle !== dernier) {
       dernier = cle;
       box.style.setProperty("--px-c", c);
       box.style.setProperty("--px-m", m);
+      box.style.setProperty("--px-bf", bf + "px");
       box.style.setProperty("--px-bh", bh + "px");
       box.style.setProperty("--px-bb", bb + "px");
       box.classList.toggle("px-calme", still && p >= 1);
@@ -59,9 +72,11 @@
     vh = root.clientHeight; docH = root.scrollHeight;
     var vw = root.clientWidth, y = window.pageYOffset || 0, pp = document.querySelector("body > footer");
     pied = pp ? pp.getBoundingClientRect().top + y : docH;   
-    var haut = sec ? sec.getBoundingClientRect().top + y : titre.getBoundingClientRect().bottom + y;
-    debut = Math.max(0, haut - vh);
-    fin = Math.max(debut + vh * 0.3, haut - vh * 0.35);
+    if (mode === "page") {
+      var haut = sec ? sec.getBoundingClientRect().top + y : titre.getBoundingClientRect().bottom + y;
+      debut = Math.max(0, haut - vh);
+      fin = Math.max(debut + vh * 0.3, haut - vh * 0.35);
+    } else { debut = fin = 0; }
     
     var L = vw, R = 0, lay = document.querySelector(".rc-layout");
     var zone = (lay ? [].slice.call(lay.children) : []).concat([document.querySelector("main"), document.getElementById("toc")]);

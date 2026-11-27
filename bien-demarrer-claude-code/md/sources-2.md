@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.2 : « Sources », partie 2 sur 2.
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.5.0 : « Sources », partie 2 sur 2.
 >
 > - Reprise : ce morceau poursuit une liste du morceau précédent, coupée entre deux entrées
 > - Précédent : [Sources (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/sources-1.md)
@@ -53,7 +53,7 @@ Le soutien passe par Tipeee, un site tiers : le lien s’ouvre dans un nouvel on
 
 Mention de transparence
 
-Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré. Les illustrations sont générées par une IA. Je porte la responsabilité éditoriale du guide. Cette mention est volontaire, écrite dans l’esprit de l’article 50 du règlement européen sur l’intelligence artificielle (règlement (UE) 2024/1689, dit AI Act). Le numéro et la date de version de la page de titre font foi.
+Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré, et a proposé des passages que j’ai validés. Les illustrations sont générées par une IA. Je porte la responsabilité éditoriale du guide. Cette mention est volontaire, écrite dans l’esprit de l’article 50 du règlement européen sur l’intelligence artificielle (règlement (UE) 2024/1689, dit AI Act). Le numéro et la date de version de la page de titre font foi.
 
 Licence et permissions
 
@@ -73,9 +73,9 @@ Bien démarrer avec Claude Code
 
 Guide de bonnes pratiques et exercices, du premier jour à la pratique experte humaniste
 
-Autrice : Gabrielle Magnan · Version : 3.4.2+publique.web · 27 novembre 2026 · Édition publique
+Autrice : Gabrielle Magnan · Version : 3.5.0+publique.web · 27 novembre 2026 · Édition publique
 
-Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré.
+Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré, et a proposé des passages que j’ai validés. Les illustrations sont générées par une IA.
 
 [Soutenir ce guide sur Tipeee](https://fr.tipeee.com/gmag-dev)
 

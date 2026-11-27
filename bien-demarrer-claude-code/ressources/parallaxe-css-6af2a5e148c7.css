@@ -90,3 +90,14 @@ html[data-style="classic"] .parallaxe,html[data-style="classic"] .titlepage::bef
   .titlepage .copy{background:none!important;box-shadow:none!important}}
 @media print{.parallaxe{display:none!important}.titlepage::before{display:none!important}
   .titlepage .copy{background:none!important;box-shadow:none!important}}
+/* Décor du guide complet, 3.5.0 : complément de styles/10-parallaxe-css.css, inclus après elle par
+   src/squelette.html seulement. Le guide débutant garde la feuille commune seule, inchangée, tant
+   qu'une décision n'a pas étendu ce comportement à son décor.
+   1. La rue du bas entre par un fondu de 128 px au plus (--px-bf, posé par
+      scripts/30-parallaxe-complet-js.js), jamais par un bord dur au milieu de l'écran.
+   2. Le fond opaque passe de la rangée entière (.layout) au panneau du texte (main, élargi d'un
+      anneau de 1rem) ; le sommaire latéral a le sien. Le décor se voit autour, pendant la lecture. */
+.parallaxe{
+  -webkit-mask-image:linear-gradient(90deg,rgb(0 0 0/var(--px-m,1)) 0,rgb(0 0 0/var(--px-m,1)) calc(var(--px-l,0px) - 1.5rem),rgb(0 0 0/var(--px-c,1)) var(--px-l,0px),rgb(0 0 0/var(--px-c,1)) var(--px-r,100%),rgb(0 0 0/var(--px-m,1)) calc(var(--px-r,100%) + 1.5rem),rgb(0 0 0/var(--px-m,1)) 100%),linear-gradient(180deg,transparent var(--px-bf,0px),#000 var(--px-bh,0px),#000 var(--px-bb,0px),transparent var(--px-bb,0px));mask-image:linear-gradient(90deg,rgb(0 0 0/var(--px-m,1)) 0,rgb(0 0 0/var(--px-m,1)) calc(var(--px-l,0px) - 1.5rem),rgb(0 0 0/var(--px-c,1)) var(--px-l,0px),rgb(0 0 0/var(--px-c,1)) var(--px-r,100%),rgb(0 0 0/var(--px-m,1)) calc(var(--px-r,100%) + 1.5rem),rgb(0 0 0/var(--px-m,1)) 100%),linear-gradient(180deg,transparent var(--px-bf,0px),#000 var(--px-bh,0px),#000 var(--px-bb,0px),transparent var(--px-bb,0px))}
+html:not([data-style="classic"]) body>.layout{background:none}
+html:not([data-style="classic"]) body>.layout>main{background:var(--bg);box-shadow:0 0 0 1rem var(--bg)}

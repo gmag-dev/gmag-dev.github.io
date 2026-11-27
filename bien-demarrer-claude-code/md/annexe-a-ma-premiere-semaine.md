@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.2 : « Annexe A. Ma première semaine ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.5.0 : « Annexe A. Ma première semaine ».
 >
 > - Précédent : [23. Sécurité et propriété intellectuelle en entreprise (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/23-securite-et-propriete-intellectuelle-en-entreprise-2.md)
 > - Suivant : [Annexe B. Glossaire (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/annexe-b-glossaire-1.md)
@@ -98,7 +98,7 @@ Le dossier d’essai est livré dans les fichiers d’exercice, `fichiers-d-exer
 
 > **📦 Les fichiers d’exercice**
 >
-> Le dossier `exemples/`, avec le dossier d’essai `exemples/mon-essai/`, le code des exemples et le fil rouge : [**Télécharger les fichiers d’exercice** (zip, 0,2 Mo)](https://gmag-dev.github.io/bien-demarrer-claude-code/fichiers-d-exercice-v3.4.2.zip).
+> Le dossier `exemples/`, avec le dossier d’essai `exemples/mon-essai/`, le code des exemples et le fil rouge : [**Télécharger les fichiers d’exercice** (zip, 0,2 Mo)](https://gmag-dev.github.io/bien-demarrer-claude-code/fichiers-d-exercice-v3.5.0.zip).
 
 Le document `ESSAI-C-001.txt` :
 

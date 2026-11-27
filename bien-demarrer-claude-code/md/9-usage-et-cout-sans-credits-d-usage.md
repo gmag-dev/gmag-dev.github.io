@@ -1,4 +1,4 @@
-> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.4.2 : « 9. Usage et coût sans crédits d’usage ».
+> Morceau de la version Markdown de **Bien démarrer avec Claude Code**, version 3.5.0 : « 9. Usage et coût sans crédits d’usage ».
 >
 > - Précédent : [8. Le travail en parallèle (partie 2 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/8-le-travail-en-parallele-2.md)
 > - Suivant : [10. Sécurité (partie 1 sur 2)](https://gmag-dev.github.io/bien-demarrer-claude-code/md/10-securite-1.md)
