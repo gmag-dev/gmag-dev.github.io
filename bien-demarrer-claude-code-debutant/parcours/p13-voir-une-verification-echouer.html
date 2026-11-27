@@ -154,7 +154,7 @@ html[data-style="classic"] .parallaxe,html[data-style="classic"] .titlepage::bef
   --garde-fond:#fdeae2;--garde-trait:#a8380f;
   --preuve-fond:#e2f4e6;--preuve-trait:#1b6e3a;
   --rappel-fond:#fbf2cc;--rappel-trait:#7d5f00;
-  --titre:#6b4a00;--titre-2:#185a93;--accent:#8a3500;--bg:var(--fond);
+  --titre:#6b4a00;--titre-2:#185a93;--icone:#9a6700;--accent:#8a3500;--bg:var(--fond);
   --px-ciel1:#7cc4ee;--px-ciel2:#93cff0;--px-ciel3:#abdaf2;--px-ciel4:#c5e6f3;--px-ciel5:#def0ee;--px-ciel6:#f4f3d6;
   --px-et1:#ffffff;--px-et2:#dfeef6;--px-lune:#ffd84a;--px-lune-o:#fff0a0;
   --px-loin:#9fd3a6;--px-loin-f:#c4e6cf;--px-mil:#f4f0e2;--px-mil-a:#d6cfb8;
@@ -171,7 +171,7 @@ html[data-style="classic"] .parallaxe,html[data-style="classic"] .titlepage::bef
   --garde-fond:#2e150b;--garde-trait:#ff8a5c;
   --preuve-fond:#0d2a18;--preuve-trait:#5fd08a;
   --rappel-fond:#2a2408;--rappel-trait:#f2c94c;
-  --titre:#ffd447;--titre-2:#8ccfff;--accent:#ff9d6b;
+  --titre:#ffd447;--titre-2:#8ccfff;--icone:#ffc94a;--accent:#ff9d6b;
   --px-ciel1:#24365e;--px-ciel2:#4a4f84;--px-ciel3:#b8738a;--px-ciel4:#e8956f;--px-ciel5:#f6b26b;--px-ciel6:#ffd08a;
   --px-et1:#ffc9a8;--px-et2:#b07a9a;--px-lune:#ffc247;--px-lune-o:#ffe2a0;
   --px-loin:#1d3d3b;--px-loin-f:#2f5752;--px-mil:#2b3b4b;--px-mil-a:#1c2935;
@@ -309,8 +309,9 @@ kbd{border:1px solid var(--trait);border-bottom-width:2px;border-radius:4px;padd
 .scene{border-left-color:var(--titre-2)}
 /* L'écho rappelle la scène : il en reprend le filet, pour ne pas se lire comme une consigne à constater. */
 .verifier .echo{border-left:3px solid var(--titre-2);padding-left:.6rem}
-/* Icône de chaque titre de section : jeu Tabler du guide complet, à la couleur du titre. */
-h2 > .ico{width:1.15em;height:1.15em;vertical-align:-.18em;margin-right:.45em}
+/* Icône de chaque titre de section : jeu Tabler du guide complet, en ambre, distincte du bleu des
+   titres et du vert des liens (retour de Gabrielle du 2026-11-26). */
+h2 > .ico{color:var(--icone);width:1.15em;height:1.15em;vertical-align:-.18em;margin-right:.45em}
 /* Sous-titre du guide complet cité : gras, et sa densité en petites capitales. */
 .sous-titre-complet{font-weight:700}
 .dense{font-variant-caps:small-caps;letter-spacing:.02em}
@@ -739,7 +740,7 @@ dialog.zoom .zoom-body:focus-visible{outline:3px solid var(--focus);outline-offs
   <path d="M5 18l0 .01" /></svg><span>Sommaire, étape 13 sur 15</span></a></nav>
 </div>
 <footer class="pied">
-<p>Bien démarrer avec Claude Code : le guide débutant, version 1.4.0+legere.web · 27 novembre 2026</p>
+<p>Bien démarrer avec Claude Code : le guide débutant, version 1.4.1+legere.web · 27 novembre 2026</p>
 <p>Dernière relecture des faits dans la documentation de Claude Code 2.1.332&nbsp;: le 2026-11-26. Votre version et sa documentation font foi. Socle commun 0.1.0.</p>
 <p class="vers-complet">Vous lisez le guide débutant. Pour aller plus loin&nbsp;: <a href="https://gmag-dev.github.io/bien-demarrer-claude-code/">le guide complet</a>.</p>
 <p>Texte de Gabrielle Magnan. Le fond vient de mes années d’expérience. Je l’ai rédigé, puis une IA l’a relu et amélioré.</p>
